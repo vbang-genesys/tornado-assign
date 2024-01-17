@@ -1,7 +1,7 @@
 <h1>Tornado client-server assignment</h1>
 
-<p>
-Server -> server.py
-Simple client -> client.py
+<br>
+Server -> server.py <br>
+Simple client -> client.py <br>
 Multi-request client -> n_client.py
-</p>
+
