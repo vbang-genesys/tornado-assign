@@ -50,19 +50,18 @@ async def main():
     }
 
     async with httpx.AsyncClient() as client:
-        tasks = [send_request(client, "POST", url, data) for _ in range(10)]
+        tasks = [send_request(client, "POST", url, data) for _ in range(800)]
         post_responses = await asyncio.gather(*tasks)
         for i, post_response in enumerate(post_responses, start=1):
             print(f"Response {i}: {post_response.text}")
-        await asyncio.sleep(10)
-        # get_tasks = [send_request(client, "GET", url + f"?c_id={post_responze.text}") for post_responze in post_responses]
-        # get_responses = await asyncio.gather(*get_tasks)
-        # for i, get_response in enumerate(get_responses, start=1):
-        #     print(f"Response {i}: {get_response.text}")
-        c_id = input("Enter c_id: ")
-        task = [send_request(client, "GET", url + f"?c_id={c_id}")]
-        response = await asyncio.gather(*task)
-        print(response)
+        get_tasks = [send_request(client, "GET", url + f"?c_id={post_responze.text}") for post_responze in post_responses]
+        get_responses = await asyncio.gather(*get_tasks)
+        for i, get_response in enumerate(get_responses, start=1):
+            print(f"Response {i}: {get_response.text}")
+        # c_id = input("Enter c_id: ")
+        # task = [send_request(client, "GET", url + f"?c_id={c_id}")]
+        # response = await asyncio.gather(*task)
+        # print(response[0].text)
 
 if __name__ == "__main__":
     asyncio.run(main())

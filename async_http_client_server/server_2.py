@@ -79,11 +79,10 @@ class MainHandler(tornado.web.RequestHandler):
         -> Fetch data from the database/file system
         -> Send the json to the client
         """
-        c_id = str(self.get_argument(c_id))
-        print(c_id)
+        c_id = str(self.get_argument("c_id"))
         if c_id in self.all_responses:
             logging.info(f"Data with client_id - {c_id} sent.")
-            self.finish({self.all_responses[c_id]})
+            self.finish(self.all_responses[c_id])
         else:
             logging.error(f"No client with client_id - {c_id} found.")
             self.finish({"Error": "Client not found"})
