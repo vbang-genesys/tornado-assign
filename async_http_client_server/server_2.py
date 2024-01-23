@@ -93,7 +93,7 @@ class MainHandler(tornado.web.RequestHandler):
         lookup = client_database.data_lookup(cur, c_id)
         if lookup:
             logging.info(f"Data with client_id - {c_id} sent.")
-            self.finish(lookup)
+            self.finish(str(lookup))
         else:
             logging.error(f"No client with client_id - {c_id} found.")
             self.finish({"Error": "Client not found"})

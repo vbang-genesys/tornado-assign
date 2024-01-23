@@ -12,7 +12,7 @@ db = MySQLdb.connect(host="localhost",    # your host, usually localhost
 cur = db.cursor()
 
 # Use all the SQL you like
-client_id = "C0122"
+client_id = "C121031"
 data = []
 response_data = {
     "client_id": client_id,
@@ -22,16 +22,16 @@ response_data = {
     "salary": "200",
     "city": "Tokyo",
 }
-# response_data = json.dumps(response_data)
+response_data = json.dumps(response_data)
 data.append(client_id)
 data.append(response_data)
-tuple(data)
 # data = json.dumps(data)
 print(data)
 
-cur.execute("INSERT INTO test_table (id, data) VALUES (%s, %s)", data)
-
-
+cur.execute("INSERT INTO test_table (id, data) VALUES (%s, %s)", (client_id, response_data))
+cur.execute("SELECT data from test_table WHERE id = %s", (client_id,))
+result = cur.fetchall()
+print(result)
 # print all the first cell of all the rows
 # for row in cur.fetchall():
 #     print(row)

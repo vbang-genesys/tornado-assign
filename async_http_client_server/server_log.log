@@ -168,3 +168,419 @@ Traceback (most recent call last):
     _mysql.connection.query(self, query)
 MySQLdb.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<html><title>500: Internal Server Error</title><body>500: Internal Server Error<' at line 1")
 ERROR [2024-01-23 15:22:36] tornado.access - 500 GET /?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E (::1) 1.11ms
+DEBUG [2024-01-23 15:37:37] asyncio - Using selector: KqueueSelector
+INFO [2024-01-23 15:37:37] root - Listening on port 8888
+INFO [2024-01-23 15:37:59] root - Response from client e374c561-dcbf-4a16-a84c-c4699b4f02df: {'client_id': 'e374c561-dcbf-4a16-a84c-c4699b4f02df', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+ERROR [2024-01-23 15:37:59] tornado.application - Uncaught exception POST / (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='POST', uri='/', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 74, in post
+    self.save_response(client_id, response_data)
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 107, in save_response
+    client_database.insert_data(cur, client_id, response_data)
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 19, in insert_data
+    cursor.execute("INSERT INTO client_details (client_id, data) VALUES (%s, %s)", (client_id, data))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (3140, 'Invalid JSON text: "Missing a name for object member." at position 1 in value for column \'client_details.data\'.')
+ERROR [2024-01-23 15:37:59] tornado.access - 500 POST / (::1) 7.30ms
+INFO [2024-01-23 15:37:59] root - Response from client 2b4be12e-8a5c-4111-9b02-2bc7738fba3c: {'client_id': '2b4be12e-8a5c-4111-9b02-2bc7738fba3c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+ERROR [2024-01-23 15:37:59] tornado.application - Uncaught exception POST / (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='POST', uri='/', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 74, in post
+    self.save_response(client_id, response_data)
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 107, in save_response
+    client_database.insert_data(cur, client_id, response_data)
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 19, in insert_data
+    cursor.execute("INSERT INTO client_details (client_id, data) VALUES (%s, %s)", (client_id, data))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (3140, 'Invalid JSON text: "Missing a name for object member." at position 1 in value for column \'client_details.data\'.')
+ERROR [2024-01-23 15:37:59] tornado.access - 500 POST / (::1) 1.70ms
+ERROR [2024-01-23 15:37:59] tornado.application - Uncaught exception GET /?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 93, in get
+    lookup = client_database.data_lookup(cur, c_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 26, in data_lookup
+    cursor.execute(f"SELECT data from client_details WHERE client_id = {client_id}")
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<html><title>500: Internal Server Error</title><body>500: Internal Server Error<' at line 1")
+ERROR [2024-01-23 15:37:59] tornado.access - 500 GET /?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E (::1) 1.10ms
+ERROR [2024-01-23 15:37:59] tornado.application - Uncaught exception GET /?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 93, in get
+    lookup = client_database.data_lookup(cur, c_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 26, in data_lookup
+    cursor.execute(f"SELECT data from client_details WHERE client_id = {client_id}")
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<html><title>500: Internal Server Error</title><body>500: Internal Server Error<' at line 1")
+ERROR [2024-01-23 15:37:59] tornado.access - 500 GET /?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E (::1) 0.74ms
+DEBUG [2024-01-23 15:52:49] asyncio - Using selector: KqueueSelector
+INFO [2024-01-23 15:52:49] root - Listening on port 8888
+INFO [2024-01-23 15:52:52] root - Response from client 671adeba-d076-4e55-8483-14ef8cf23b7f: {'client_id': '671adeba-d076-4e55-8483-14ef8cf23b7f', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+ERROR [2024-01-23 15:52:52] tornado.application - Uncaught exception POST / (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='POST', uri='/', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 74, in post
+    self.save_response(client_id, response_data)
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 107, in save_response
+    client_database.insert_data(cur, client_id, response_data)
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 19, in insert_data
+    cursor.execute("INSERT INTO client_details (client_id, data) VALUES (%s, %s)", (client_id, data))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (3140, 'Invalid JSON text: "Missing a name for object member." at position 1 in value for column \'client_details.data\'.')
+ERROR [2024-01-23 15:52:52] tornado.access - 500 POST / (::1) 7.64ms
+INFO [2024-01-23 15:52:52] root - Response from client 5a536a12-1f4a-4a7a-958f-2909a496144f: {'client_id': '5a536a12-1f4a-4a7a-958f-2909a496144f', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+ERROR [2024-01-23 15:52:52] tornado.application - Uncaught exception POST / (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='POST', uri='/', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 74, in post
+    self.save_response(client_id, response_data)
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 107, in save_response
+    client_database.insert_data(cur, client_id, response_data)
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 19, in insert_data
+    cursor.execute("INSERT INTO client_details (client_id, data) VALUES (%s, %s)", (client_id, data))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (3140, 'Invalid JSON text: "Missing a name for object member." at position 1 in value for column \'client_details.data\'.')
+ERROR [2024-01-23 15:52:52] tornado.access - 500 POST / (::1) 9.30ms
+ERROR [2024-01-23 15:52:52] tornado.application - Uncaught exception GET /?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 93, in get
+    lookup = client_database.data_lookup(cur, c_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 26, in data_lookup
+    cursor.execute(f"SELECT data from client_details WHERE client_id = {client_id}")
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<html><title>500: Internal Server Error</title><body>500: Internal Server Error<' at line 1")
+ERROR [2024-01-23 15:52:52] tornado.access - 500 GET /?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E (::1) 1.31ms
+ERROR [2024-01-23 15:52:52] tornado.application - Uncaught exception GET /?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 93, in get
+    lookup = client_database.data_lookup(cur, c_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 26, in data_lookup
+    cursor.execute(f"SELECT data from client_details WHERE client_id = {client_id}")
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<html><title>500: Internal Server Error</title><body>500: Internal Server Error<' at line 1")
+ERROR [2024-01-23 15:52:52] tornado.access - 500 GET /?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E (::1) 0.93ms
+DEBUG [2024-01-23 15:55:38] asyncio - Using selector: KqueueSelector
+INFO [2024-01-23 15:55:38] root - Listening on port 8888
+INFO [2024-01-23 15:55:41] root - Response from client e5fd29ab-4827-4bd0-8966-caff8460e862: {'client_id': 'e5fd29ab-4827-4bd0-8966-caff8460e862', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 15:55:41] tornado.access - 200 POST / (::1) 7.46ms
+INFO [2024-01-23 15:55:41] root - Client_id (e5fd29ab-4827-4bd0-8966-caff8460e862) sent to the client.
+INFO [2024-01-23 15:55:41] root - Response from client df63644a-ead0-4859-a4fa-13eb2e36f12c: {'client_id': 'df63644a-ead0-4859-a4fa-13eb2e36f12c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 15:55:41] tornado.access - 200 POST / (::1) 8.62ms
+INFO [2024-01-23 15:55:41] root - Client_id (df63644a-ead0-4859-a4fa-13eb2e36f12c) sent to the client.
+ERROR [2024-01-23 15:55:41] tornado.application - Uncaught exception GET /?c_id=e5fd29ab-4827-4bd0-8966-caff8460e862 (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=e5fd29ab-4827-4bd0-8966-caff8460e862', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 93, in get
+    lookup = client_database.data_lookup(cur, c_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 27, in data_lookup
+    cursor.execute(f"SELECT data from client_details WHERE client_id = {client_id}")
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'e5fd29ab' in 'where clause'")
+ERROR [2024-01-23 15:55:41] tornado.access - 500 GET /?c_id=e5fd29ab-4827-4bd0-8966-caff8460e862 (::1) 2.73ms
+ERROR [2024-01-23 15:55:41] tornado.application - Uncaught exception GET /?c_id=df63644a-ead0-4859-a4fa-13eb2e36f12c (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=df63644a-ead0-4859-a4fa-13eb2e36f12c', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 93, in get
+    lookup = client_database.data_lookup(cur, c_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 27, in data_lookup
+    cursor.execute(f"SELECT data from client_details WHERE client_id = {client_id}")
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'df63644a' in 'where clause'")
+ERROR [2024-01-23 15:55:41] tornado.access - 500 GET /?c_id=df63644a-ead0-4859-a4fa-13eb2e36f12c (::1) 1.71ms
+DEBUG [2024-01-23 16:00:09] asyncio - Using selector: KqueueSelector
+INFO [2024-01-23 16:00:09] root - Listening on port 8888
+INFO [2024-01-23 16:00:12] root - Response from client 2e68ed6d-d61f-4d1d-883d-117856ded29c: {'client_id': '2e68ed6d-d61f-4d1d-883d-117856ded29c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:00:12] tornado.access - 200 POST / (::1) 7.15ms
+INFO [2024-01-23 16:00:12] root - Client_id (2e68ed6d-d61f-4d1d-883d-117856ded29c) sent to the client.
+INFO [2024-01-23 16:00:12] root - Response from client 074d3c10-94ab-4e65-af32-4b27e67a7621: {'client_id': '074d3c10-94ab-4e65-af32-4b27e67a7621', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:00:12] tornado.access - 200 POST / (::1) 8.93ms
+INFO [2024-01-23 16:00:12] root - Client_id (074d3c10-94ab-4e65-af32-4b27e67a7621) sent to the client.
+ERROR [2024-01-23 16:00:12] tornado.application - Uncaught exception GET /?c_id=074d3c10-94ab-4e65-af32-4b27e67a7621 (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=074d3c10-94ab-4e65-af32-4b27e67a7621', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 93, in get
+    lookup = client_database.data_lookup(cur, c_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 27, in data_lookup
+    cursor.execute(f"SELECT data from client_details WHERE client_id = {client_id}")
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column '074d3c10' in 'where clause'")
+ERROR [2024-01-23 16:00:12] tornado.access - 500 GET /?c_id=074d3c10-94ab-4e65-af32-4b27e67a7621 (::1) 2.29ms
+ERROR [2024-01-23 16:00:12] tornado.application - Uncaught exception GET /?c_id=2e68ed6d-d61f-4d1d-883d-117856ded29c (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=2e68ed6d-d61f-4d1d-883d-117856ded29c', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 93, in get
+    lookup = client_database.data_lookup(cur, c_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 27, in data_lookup
+    cursor.execute(f"SELECT data from client_details WHERE client_id = {client_id}")
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ed6d-d61f-4d1d-883d-117856ded29c' at line 1")
+ERROR [2024-01-23 16:00:12] tornado.access - 500 GET /?c_id=2e68ed6d-d61f-4d1d-883d-117856ded29c (::1) 1.14ms
+DEBUG [2024-01-23 16:02:55] asyncio - Using selector: KqueueSelector
+INFO [2024-01-23 16:02:55] root - Listening on port 8888
+INFO [2024-01-23 16:02:57] root - Response from client 1a6ef0e5-f7af-4f01-9f3d-19677e90128a: {'client_id': '1a6ef0e5-f7af-4f01-9f3d-19677e90128a', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:02:57] tornado.access - 200 POST / (::1) 7.10ms
+INFO [2024-01-23 16:02:57] root - Client_id (1a6ef0e5-f7af-4f01-9f3d-19677e90128a) sent to the client.
+INFO [2024-01-23 16:02:57] root - Response from client a9537e8d-40c1-41cc-8388-82f789ed4393: {'client_id': 'a9537e8d-40c1-41cc-8388-82f789ed4393', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:02:57] tornado.access - 200 POST / (::1) 8.92ms
+INFO [2024-01-23 16:02:57] root - Client_id (a9537e8d-40c1-41cc-8388-82f789ed4393) sent to the client.
+ERROR [2024-01-23 16:02:57] tornado.application - Uncaught exception GET /?c_id=1a6ef0e5-f7af-4f01-9f3d-19677e90128a (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=1a6ef0e5-f7af-4f01-9f3d-19677e90128a', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 200, in _mogrify
+    query = query % args
+            ~~~~~~^~~~~~
+TypeError: not all arguments converted during bytes formatting
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 93, in get
+    lookup = client_database.data_lookup(cur, c_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 27, in data_lookup
+    cursor.execute("SELECT data from client_details WHERE client_id = (%s)", client_id)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 176, in execute
+    mogrified_query = self._mogrify(query, args)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 202, in _mogrify
+    raise ProgrammingError(str(m))
+MySQLdb.ProgrammingError: not all arguments converted during bytes formatting
+ERROR [2024-01-23 16:02:57] tornado.access - 500 GET /?c_id=1a6ef0e5-f7af-4f01-9f3d-19677e90128a (::1) 1.99ms
+ERROR [2024-01-23 16:02:57] tornado.application - Uncaught exception GET /?c_id=a9537e8d-40c1-41cc-8388-82f789ed4393 (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=a9537e8d-40c1-41cc-8388-82f789ed4393', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 200, in _mogrify
+    query = query % args
+            ~~~~~~^~~~~~
+TypeError: not all arguments converted during bytes formatting
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 93, in get
+    lookup = client_database.data_lookup(cur, c_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 27, in data_lookup
+    cursor.execute("SELECT data from client_details WHERE client_id = (%s)", client_id)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 176, in execute
+    mogrified_query = self._mogrify(query, args)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 202, in _mogrify
+    raise ProgrammingError(str(m))
+MySQLdb.ProgrammingError: not all arguments converted during bytes formatting
+ERROR [2024-01-23 16:02:57] tornado.access - 500 GET /?c_id=a9537e8d-40c1-41cc-8388-82f789ed4393 (::1) 1.12ms
+DEBUG [2024-01-23 16:04:58] asyncio - Using selector: KqueueSelector
+INFO [2024-01-23 16:04:58] root - Listening on port 8888
+INFO [2024-01-23 16:05:01] root - Response from client 568011b1-5cd2-4071-83e8-53161650257c: {'client_id': '568011b1-5cd2-4071-83e8-53161650257c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:05:01] tornado.access - 200 POST / (::1) 6.74ms
+INFO [2024-01-23 16:05:01] root - Client_id (568011b1-5cd2-4071-83e8-53161650257c) sent to the client.
+INFO [2024-01-23 16:05:01] root - Response from client e79b6647-21ab-4434-8886-df67aa36e70c: {'client_id': 'e79b6647-21ab-4434-8886-df67aa36e70c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:05:01] tornado.access - 200 POST / (::1) 8.77ms
+INFO [2024-01-23 16:05:01] root - Client_id (e79b6647-21ab-4434-8886-df67aa36e70c) sent to the client.
+INFO [2024-01-23 16:05:01] root - Data with client_id - 568011b1-5cd2-4071-83e8-53161650257c sent.
+ERROR [2024-01-23 16:05:01] tornado.application - Uncaught exception GET /?c_id=568011b1-5cd2-4071-83e8-53161650257c (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=568011b1-5cd2-4071-83e8-53161650257c', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 96, in get
+    self.finish(lookup)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1208, in finish
+    self.write(chunk)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 922, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+ERROR [2024-01-23 16:05:01] tornado.access - 500 GET /?c_id=568011b1-5cd2-4071-83e8-53161650257c (::1) 1.73ms
+INFO [2024-01-23 16:05:01] root - Data with client_id - e79b6647-21ab-4434-8886-df67aa36e70c sent.
+ERROR [2024-01-23 16:05:01] tornado.application - Uncaught exception GET /?c_id=e79b6647-21ab-4434-8886-df67aa36e70c (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=e79b6647-21ab-4434-8886-df67aa36e70c', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 96, in get
+    self.finish(lookup)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1208, in finish
+    self.write(chunk)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 922, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+ERROR [2024-01-23 16:05:01] tornado.access - 500 GET /?c_id=e79b6647-21ab-4434-8886-df67aa36e70c (::1) 1.25ms
+DEBUG [2024-01-23 16:05:22] asyncio - Using selector: KqueueSelector
+INFO [2024-01-23 16:05:22] root - Listening on port 8888
+INFO [2024-01-23 16:05:24] root - Response from client c26e597a-d114-40aa-93c2-6fb1040fd7f2: {'client_id': 'c26e597a-d114-40aa-93c2-6fb1040fd7f2', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:05:24] tornado.access - 200 POST / (::1) 6.64ms
+INFO [2024-01-23 16:05:24] root - Client_id (c26e597a-d114-40aa-93c2-6fb1040fd7f2) sent to the client.
+INFO [2024-01-23 16:05:24] root - Response from client 1401d11b-cfb0-4ecb-91a9-d7382612b292: {'client_id': '1401d11b-cfb0-4ecb-91a9-d7382612b292', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:05:24] tornado.access - 200 POST / (::1) 8.74ms
+INFO [2024-01-23 16:05:24] root - Client_id (1401d11b-cfb0-4ecb-91a9-d7382612b292) sent to the client.
+INFO [2024-01-23 16:05:24] root - Data with client_id - c26e597a-d114-40aa-93c2-6fb1040fd7f2 sent.
+ERROR [2024-01-23 16:05:24] tornado.application - Uncaught exception GET /?c_id=c26e597a-d114-40aa-93c2-6fb1040fd7f2 (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=c26e597a-d114-40aa-93c2-6fb1040fd7f2', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 96, in get
+    self.finish(lookup)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1208, in finish
+    self.write(chunk)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 922, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+ERROR [2024-01-23 16:05:25] tornado.access - 500 GET /?c_id=c26e597a-d114-40aa-93c2-6fb1040fd7f2 (::1) 1.83ms
+INFO [2024-01-23 16:05:25] root - Data with client_id - 1401d11b-cfb0-4ecb-91a9-d7382612b292 sent.
+ERROR [2024-01-23 16:05:25] tornado.application - Uncaught exception GET /?c_id=1401d11b-cfb0-4ecb-91a9-d7382612b292 (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=1401d11b-cfb0-4ecb-91a9-d7382612b292', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 96, in get
+    self.finish(lookup)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1208, in finish
+    self.write(chunk)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 922, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+ERROR [2024-01-23 16:05:25] tornado.access - 500 GET /?c_id=1401d11b-cfb0-4ecb-91a9-d7382612b292 (::1) 1.18ms
+DEBUG [2024-01-23 16:25:56] asyncio - Using selector: KqueueSelector
+INFO [2024-01-23 16:25:56] root - Listening on port 8888
+INFO [2024-01-23 16:25:59] root - Response from client 6c703ca4-6d26-4f51-949c-77e42099f139: {'client_id': '6c703ca4-6d26-4f51-949c-77e42099f139', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:25:59] tornado.access - 200 POST / (::1) 6.88ms
+INFO [2024-01-23 16:25:59] root - Client_id (6c703ca4-6d26-4f51-949c-77e42099f139) sent to the client.
+INFO [2024-01-23 16:25:59] root - Response from client c18fc120-6f41-4ec4-99d3-f4e76b781af0: {'client_id': 'c18fc120-6f41-4ec4-99d3-f4e76b781af0', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:25:59] tornado.access - 200 POST / (::1) 8.79ms
+INFO [2024-01-23 16:25:59] root - Client_id (c18fc120-6f41-4ec4-99d3-f4e76b781af0) sent to the client.
+INFO [2024-01-23 16:25:59] root - Data with client_id - 6c703ca4-6d26-4f51-949c-77e42099f139 sent.
+INFO [2024-01-23 16:25:59] tornado.access - 200 GET /?c_id=6c703ca4-6d26-4f51-949c-77e42099f139 (::1) 1.22ms
+INFO [2024-01-23 16:25:59] root - Data with client_id - c18fc120-6f41-4ec4-99d3-f4e76b781af0 sent.
+INFO [2024-01-23 16:25:59] tornado.access - 200 GET /?c_id=c18fc120-6f41-4ec4-99d3-f4e76b781af0 (::1) 1.11ms
