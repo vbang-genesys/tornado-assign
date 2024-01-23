@@ -1,24 +1,26 @@
 import MySQLdb
 import json
 
+
 def db_connect():
     """
     returns db object
     """
     return MySQLdb.connect(
-        host = "localhost",
-        user = "root",
-        password = "vidoosh123",
-        db = "client_data"
+        host="localhost", user="root", password="vidoosh123", db="client_data"
     )
+
 
 def insert_data(cursor, client_id, data):
     """
     insert data into the db
     """
     data = json.dumps(data)
-    cursor.execute("INSERT INTO client_details (client_id, data) VALUES (%s, %s)", (client_id, data))
-    
+    cursor.execute(
+        "INSERT INTO client_details (client_id, data) VALUES (%s, %s)",
+        (client_id, data),
+    )
+
 
 def data_lookup(cursor, client_id):
     """
@@ -28,5 +30,3 @@ def data_lookup(cursor, client_id):
     result = cursor.fetchall()
 
     return result
-
-

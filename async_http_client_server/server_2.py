@@ -29,13 +29,13 @@ import client_database
 logging.basicConfig(
     filename="server_log.log",
     format="%(levelname)s [%(asctime)s] %(name)s - %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S", 
-    encoding="utf-8", 
-    level=logging.DEBUG)
+    datefmt="%Y-%m-%d %H:%M:%S",
+    encoding="utf-8",
+    level=logging.DEBUG,
+)
 
 
 class MainHandler(tornado.web.RequestHandler):
-
     async def post(self):
         """
         post(self):-
@@ -69,7 +69,7 @@ class MainHandler(tornado.web.RequestHandler):
                     logging.error("Bad request. Unknown city.")
                     self.set_status(400)
                     self.finish({"error": "Input a valid city."})
-                
+
                 else:
                     self.save_response(client_id, response_data)
                     self.finish(client_id)
@@ -107,12 +107,6 @@ class MainHandler(tornado.web.RequestHandler):
         client_database.insert_data(cur, client_id, response_data)
         db.commit()
         db.close()
-
-
-    # def on_finish(self):
-    #     """On finish save all_responses"""
-    #     with open("client_responses.json", "w") as json_file:
-    #         json.dump(self.all_responses, json_file, indent=2)
 
 
 def make_app():

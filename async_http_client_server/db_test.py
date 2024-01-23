@@ -2,10 +2,12 @@
 import MySQLdb
 import json
 
-db = MySQLdb.connect(host="localhost",    # your host, usually localhost
-                     user="root",         # your username
-                     passwd="vidoosh123",  # your password
-                     db="test_db")        # name of the data base
+db = MySQLdb.connect(
+    host="localhost",  # your host, usually localhost
+    user="root",  # your username
+    passwd="vidoosh123",  # your password
+    db="test_db",
+)  # name of the data base
 
 # you must create a Cursor object. It will let
 #  you execute all the queries you need
@@ -28,7 +30,9 @@ data.append(response_data)
 # data = json.dumps(data)
 print(data)
 
-cur.execute("INSERT INTO test_table (id, data) VALUES (%s, %s)", (client_id, response_data))
+cur.execute(
+    "INSERT INTO test_table (id, data) VALUES (%s, %s)", (client_id, response_data)
+)
 cur.execute("SELECT data from test_table WHERE id = %s", (client_id,))
 result = cur.fetchall()
 print(result)

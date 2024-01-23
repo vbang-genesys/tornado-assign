@@ -1,5 +1,6 @@
 import json
 
+
 def clean(data):
     """
     -> city in [Paris, Chennai, New York, Dhaka, Budapest, Tokyo, Sydney]
@@ -7,21 +8,22 @@ def clean(data):
     -> Returns cleaned data
     """
     city = {
-        "Paris": "EURO", 
-        "Chennai": "INR", 
-        "New York": "USD", 
-        "Dhaka": "BDT", 
-        "Budapest": "HUF", 
-        "Tokyo": "JPY", 
-        "Sydney": "AU"
-        }
-    
+        "Paris": "EURO",
+        "Chennai": "INR",
+        "New York": "USD",
+        "Dhaka": "BDT",
+        "Budapest": "HUF",
+        "Tokyo": "JPY",
+        "Sydney": "AU",
+    }
+
     if data["city"] not in city:
         return "bad request"
-    
+
     data["salary"] = city[str(data["city"])] + data["salary"]
 
     return data
+
 
 # if __name__ == "__main__":
 #     d = {

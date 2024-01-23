@@ -19,8 +19,9 @@ logging.basicConfig(
     format="%(levelname)s [%(asctime)s] %(name)s - %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
     encoding="utf-8",
-    level=logging.DEBUG
+    level=logging.DEBUG,
 )
+
 
 async def send_request(client, method, url, data=None):
     """
@@ -34,6 +35,7 @@ async def send_request(client, method, url, data=None):
         response = await client.get(url)
 
     return response
+
 
 async def main():
     """
@@ -54,7 +56,10 @@ async def main():
         post_responses = await asyncio.gather(*tasks)
         for i, post_response in enumerate(post_responses, start=1):
             print(f"Response {i}: {post_response.text}")
-        get_tasks = [send_request(client, "GET", url + f"?c_id={post_responze.text}") for post_responze in post_responses]
+        get_tasks = [
+            send_request(client, "GET", url + f"?c_id={post_responze.text}")
+            for post_responze in post_responses
+        ]
         get_responses = await asyncio.gather(*get_tasks)
         for i, get_response in enumerate(get_responses, start=1):
             print(f"Response {i}: {get_response.text}")
@@ -62,6 +67,7 @@ async def main():
         # task = [send_request(client, "GET", url + f"?c_id={c_id}")]
         # response = await asyncio.gather(*task)
         # print(response[0].text)
+
 
 if __name__ == "__main__":
     asyncio.run(main())
