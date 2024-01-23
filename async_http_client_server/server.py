@@ -1,62 +1,58 @@
+"""
+
+Server details:
+-> Tornado Server
+-> Database / file system
+-> Data preprocessing (clean, fill null)
+-> Replace print with logging
+-> Add comments and docstrings wherever necessary
+-> Apply Black formating to all files
+
+Functions:-
+post()
+get()
+clean()
+save_response()
+on_finish()
+
+"""
+
+
 import tornado.ioloop
 import tornado.web
 import json
 import uuid
+import logging
+import clean_data
+import client_database
 
-
-count = 0
+logging.basicConfig(
+    filename="./logs/server_log.log",
+    format="%(levelname)s [%(asctime)s] %(name)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+    encoding="utf-8",
+    level=logging.DEBUG,
+)
 
 
 class MainHandler(tornado.web.RequestHandler):
-    all_responses = {}
-
-    async def get(self):
-        # client_id = str(uuid.uuid4())
-        global count
-        client_id = "C" + str(count)
-        count = count + 1
-        name = self.get_argument("name", default=None)
-        age = self.get_argument("age", default=None)
-        industry = self.get_argument("industry", default="private")
-        salary = self.get_argument("salary", default="50000")
-        city = self.get_argument("city", default="New York")
-
-        if name is None or age is None:
-            self.set_status(400)
-            self.finish({"error": "Name and age are required."})
-        else:
-            response_data = {
-                "client_id": client_id,
-                "name": name,
-                "age": age,
-                "industry": industry,
-                "salary": salary,
-                "city": city,
-            }
-            self.save_response(client_id, response_data)
-            self.finish(response_data)
-
     async def post(self):
-        # client_id = str(uuid.uuid4())
-        global count
-        client_id = "C" + str(count)
-        count = count + 1
+        """
+        post(self):-
+        -> Load the json file sent by the client
+        -> If name or age is null, sent a bad request error (400)
+        -> Else generate a new client_id, save the json in the mysql database, and send the client ID with status 200
+        """
+        client_id = str(uuid.uuid4())
         try:
             data = json.loads(self.request.body.decode())
             name = data.get("name", None)
             age = data.get("age", None)
-            industry = data.get("industry", None)
-            salary = data.get("salary", None)
-            city = data.get("city", None)
-            # name = self.get_body_argument("name", default=None)
-            # age = self.get_body_argument("age", default=None)
-            # industry = self.get_body_argument("industry", default="private")
-            # salary = self.get_body_argument("salary", default="50000")
-            # city = self.get_body_argument("city", default="New York")
-
-            # print("Received data:", name, age, industry, salary, city)
-
+            industry = data.get("industry", "Private")
+            salary = data.get("salary", "50000")
+            city = data.get("city", "New York")
             if name is None or age is None:
+                logging.error("Bad request: Name/age not mentioned.")
                 self.set_status(400)
                 self.finish({"error": "Name and age are required."})
             else:
@@ -68,23 +64,53 @@ class MainHandler(tornado.web.RequestHandler):
                     "salary": salary,
                     "city": city,
                 }
-                self.save_response(client_id, response_data)
-                self.finish(response_data)
+                response_data = clean_data.clean(response_data)
+                if response_data == "bad request":
+                    logging.error("Bad request. Unknown city.")
+                    self.set_status(400)
+                    self.finish({"error": "Input a valid city."})
+
+                else:
+                    self.save_response(client_id, response_data)
+                    self.finish(client_id)
+                    logging.info(f"Client_id ({client_id}) sent to the client.")
 
         except json.JSONDecodeError:
+            logging.error("Bad request. Json dump not found.")
             self.set_status(400)
             self.finish({"Error": "Invalid json"})
 
-    def save_response(self, client_id, response_data):
-        # print(f"Response from client {client_id}: {response_data}")
-        self.all_responses[client_id] = response_data
+    async def get(self):
+        """
+        get(self):-
+        -> Get client_id
+        -> Fetch data from the database/file system
+        -> Send the json to the client
+        """
+        c_id = str(self.get_argument("c_id"))
+        db = client_database.db_connect()
+        cur = db.cursor()
+        lookup = client_database.data_lookup(cur, c_id)
+        if lookup:
+            logging.info(f"Data with client_id - {c_id} sent.")
+            self.finish(str(lookup))
+        else:
+            logging.error(f"No client with client_id - {c_id} found.")
+            self.finish({"Error": "Client not found"})
+        db.close()
 
-    def on_finish(self):
-        with open("client_responses.json", "w") as json_file:
-            json.dump(self.all_responses, json_file, indent=2)
+    def save_response(self, client_id, response_data):
+        """Save response in the database"""
+        db = client_database.db_connect()
+        cur = db.cursor()
+        logging.info(f"Response from client {client_id}: {response_data}")
+        client_database.insert_data(cur, client_id, response_data)
+        db.commit()
+        db.close()
 
 
 def make_app():
+    """Returns tornado web application"""
     return tornado.web.Application([(r"/", MainHandler)])
 
 
@@ -92,5 +118,5 @@ if __name__ == "__main__":
     app = make_app()
     port = 8888
     app.listen(port)
-    print(f"listening on port {port}")
+    logging.info(f"Listening on port {port}")
     tornado.ioloop.IOLoop.current().start()

@@ -1,0 +1,1590 @@
+DEBUG [2024-01-23 15:20:43] asyncio - Using selector: KqueueSelector
+INFO [2024-01-23 15:20:43] root - Listening on port 8888
+INFO [2024-01-23 15:20:47] root - Response from client 186e5699-2b1e-4c08-a1f6-76825ed69d69: {'client_id': '186e5699-2b1e-4c08-a1f6-76825ed69d69', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+ERROR [2024-01-23 15:20:47] tornado.application - Uncaught exception POST / (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='POST', uri='/', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 74, in post
+    self.save_response(client_id, response_data)
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 107, in save_response
+    client_database.insert_data(cur, client_id, response_data)
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 19, in insert_data
+    cursor.execute("INSERT INTO client_details (client_id, data) VALUES (%s, %s)", (client_id, data))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (3140, 'Invalid JSON text: "Missing a name for object member." at position 1 in value for column \'client_details.data\'.')
+ERROR [2024-01-23 15:20:47] tornado.access - 500 POST / (::1) 5.62ms
+INFO [2024-01-23 15:20:47] root - Response from client cbb39f8e-49f8-4235-9929-6c8f831ebc51: {'client_id': 'cbb39f8e-49f8-4235-9929-6c8f831ebc51', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+ERROR [2024-01-23 15:20:47] tornado.application - Uncaught exception POST / (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='POST', uri='/', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 74, in post
+    self.save_response(client_id, response_data)
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 107, in save_response
+    client_database.insert_data(cur, client_id, response_data)
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 19, in insert_data
+    cursor.execute("INSERT INTO client_details (client_id, data) VALUES (%s, %s)", (client_id, data))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (3140, 'Invalid JSON text: "Missing a name for object member." at position 1 in value for column \'client_details.data\'.')
+ERROR [2024-01-23 15:20:47] tornado.access - 500 POST / (::1) 1.43ms
+ERROR [2024-01-23 15:20:47] tornado.application - Uncaught exception GET /?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 93, in get
+    lookup = client_database.data_lookup(cur, c_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 26, in data_lookup
+    cursor.execute(f"SELECT data from client_details WHERE client_id = {client_id}")
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<html><title>500: Internal Server Error</title><body>500: Internal Server Error<' at line 1")
+ERROR [2024-01-23 15:20:47] tornado.access - 500 GET /?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E (::1) 1.41ms
+ERROR [2024-01-23 15:20:47] tornado.application - Uncaught exception GET /?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 93, in get
+    lookup = client_database.data_lookup(cur, c_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 26, in data_lookup
+    cursor.execute(f"SELECT data from client_details WHERE client_id = {client_id}")
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<html><title>500: Internal Server Error</title><body>500: Internal Server Error<' at line 1")
+ERROR [2024-01-23 15:20:47] tornado.access - 500 GET /?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E (::1) 1.18ms
+INFO [2024-01-23 15:22:36] root - Response from client cdf7ee57-cca0-420e-b8f4-96f645a8dc10: {'client_id': 'cdf7ee57-cca0-420e-b8f4-96f645a8dc10', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+ERROR [2024-01-23 15:22:36] tornado.application - Uncaught exception POST / (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='POST', uri='/', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 74, in post
+    self.save_response(client_id, response_data)
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 107, in save_response
+    client_database.insert_data(cur, client_id, response_data)
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 19, in insert_data
+    cursor.execute("INSERT INTO client_details (client_id, data) VALUES (%s, %s)", (client_id, data))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (3140, 'Invalid JSON text: "Missing a name for object member." at position 1 in value for column \'client_details.data\'.')
+ERROR [2024-01-23 15:22:36] tornado.access - 500 POST / (::1) 2.50ms
+INFO [2024-01-23 15:22:36] root - Response from client b550679b-69d8-4dcb-b32b-9a1299eb5337: {'client_id': 'b550679b-69d8-4dcb-b32b-9a1299eb5337', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+ERROR [2024-01-23 15:22:36] tornado.application - Uncaught exception POST / (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='POST', uri='/', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 74, in post
+    self.save_response(client_id, response_data)
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 107, in save_response
+    client_database.insert_data(cur, client_id, response_data)
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 19, in insert_data
+    cursor.execute("INSERT INTO client_details (client_id, data) VALUES (%s, %s)", (client_id, data))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (3140, 'Invalid JSON text: "Missing a name for object member." at position 1 in value for column \'client_details.data\'.')
+ERROR [2024-01-23 15:22:36] tornado.access - 500 POST / (::1) 1.64ms
+ERROR [2024-01-23 15:22:36] tornado.application - Uncaught exception GET /?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 93, in get
+    lookup = client_database.data_lookup(cur, c_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 26, in data_lookup
+    cursor.execute(f"SELECT data from client_details WHERE client_id = {client_id}")
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<html><title>500: Internal Server Error</title><body>500: Internal Server Error<' at line 1")
+ERROR [2024-01-23 15:22:36] tornado.access - 500 GET /?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E (::1) 1.39ms
+ERROR [2024-01-23 15:22:36] tornado.application - Uncaught exception GET /?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 93, in get
+    lookup = client_database.data_lookup(cur, c_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 26, in data_lookup
+    cursor.execute(f"SELECT data from client_details WHERE client_id = {client_id}")
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<html><title>500: Internal Server Error</title><body>500: Internal Server Error<' at line 1")
+ERROR [2024-01-23 15:22:36] tornado.access - 500 GET /?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E (::1) 1.11ms
+DEBUG [2024-01-23 15:37:37] asyncio - Using selector: KqueueSelector
+INFO [2024-01-23 15:37:37] root - Listening on port 8888
+INFO [2024-01-23 15:37:59] root - Response from client e374c561-dcbf-4a16-a84c-c4699b4f02df: {'client_id': 'e374c561-dcbf-4a16-a84c-c4699b4f02df', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+ERROR [2024-01-23 15:37:59] tornado.application - Uncaught exception POST / (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='POST', uri='/', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 74, in post
+    self.save_response(client_id, response_data)
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 107, in save_response
+    client_database.insert_data(cur, client_id, response_data)
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 19, in insert_data
+    cursor.execute("INSERT INTO client_details (client_id, data) VALUES (%s, %s)", (client_id, data))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (3140, 'Invalid JSON text: "Missing a name for object member." at position 1 in value for column \'client_details.data\'.')
+ERROR [2024-01-23 15:37:59] tornado.access - 500 POST / (::1) 7.30ms
+INFO [2024-01-23 15:37:59] root - Response from client 2b4be12e-8a5c-4111-9b02-2bc7738fba3c: {'client_id': '2b4be12e-8a5c-4111-9b02-2bc7738fba3c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+ERROR [2024-01-23 15:37:59] tornado.application - Uncaught exception POST / (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='POST', uri='/', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 74, in post
+    self.save_response(client_id, response_data)
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 107, in save_response
+    client_database.insert_data(cur, client_id, response_data)
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 19, in insert_data
+    cursor.execute("INSERT INTO client_details (client_id, data) VALUES (%s, %s)", (client_id, data))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (3140, 'Invalid JSON text: "Missing a name for object member." at position 1 in value for column \'client_details.data\'.')
+ERROR [2024-01-23 15:37:59] tornado.access - 500 POST / (::1) 1.70ms
+ERROR [2024-01-23 15:37:59] tornado.application - Uncaught exception GET /?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 93, in get
+    lookup = client_database.data_lookup(cur, c_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 26, in data_lookup
+    cursor.execute(f"SELECT data from client_details WHERE client_id = {client_id}")
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<html><title>500: Internal Server Error</title><body>500: Internal Server Error<' at line 1")
+ERROR [2024-01-23 15:37:59] tornado.access - 500 GET /?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E (::1) 1.10ms
+ERROR [2024-01-23 15:37:59] tornado.application - Uncaught exception GET /?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 93, in get
+    lookup = client_database.data_lookup(cur, c_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 26, in data_lookup
+    cursor.execute(f"SELECT data from client_details WHERE client_id = {client_id}")
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<html><title>500: Internal Server Error</title><body>500: Internal Server Error<' at line 1")
+ERROR [2024-01-23 15:37:59] tornado.access - 500 GET /?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E (::1) 0.74ms
+DEBUG [2024-01-23 15:52:49] asyncio - Using selector: KqueueSelector
+INFO [2024-01-23 15:52:49] root - Listening on port 8888
+INFO [2024-01-23 15:52:52] root - Response from client 671adeba-d076-4e55-8483-14ef8cf23b7f: {'client_id': '671adeba-d076-4e55-8483-14ef8cf23b7f', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+ERROR [2024-01-23 15:52:52] tornado.application - Uncaught exception POST / (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='POST', uri='/', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 74, in post
+    self.save_response(client_id, response_data)
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 107, in save_response
+    client_database.insert_data(cur, client_id, response_data)
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 19, in insert_data
+    cursor.execute("INSERT INTO client_details (client_id, data) VALUES (%s, %s)", (client_id, data))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (3140, 'Invalid JSON text: "Missing a name for object member." at position 1 in value for column \'client_details.data\'.')
+ERROR [2024-01-23 15:52:52] tornado.access - 500 POST / (::1) 7.64ms
+INFO [2024-01-23 15:52:52] root - Response from client 5a536a12-1f4a-4a7a-958f-2909a496144f: {'client_id': '5a536a12-1f4a-4a7a-958f-2909a496144f', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+ERROR [2024-01-23 15:52:52] tornado.application - Uncaught exception POST / (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='POST', uri='/', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 74, in post
+    self.save_response(client_id, response_data)
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 107, in save_response
+    client_database.insert_data(cur, client_id, response_data)
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 19, in insert_data
+    cursor.execute("INSERT INTO client_details (client_id, data) VALUES (%s, %s)", (client_id, data))
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (3140, 'Invalid JSON text: "Missing a name for object member." at position 1 in value for column \'client_details.data\'.')
+ERROR [2024-01-23 15:52:52] tornado.access - 500 POST / (::1) 9.30ms
+ERROR [2024-01-23 15:52:52] tornado.application - Uncaught exception GET /?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 93, in get
+    lookup = client_database.data_lookup(cur, c_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 26, in data_lookup
+    cursor.execute(f"SELECT data from client_details WHERE client_id = {client_id}")
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<html><title>500: Internal Server Error</title><body>500: Internal Server Error<' at line 1")
+ERROR [2024-01-23 15:52:52] tornado.access - 500 GET /?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E (::1) 1.31ms
+ERROR [2024-01-23 15:52:52] tornado.application - Uncaught exception GET /?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 93, in get
+    lookup = client_database.data_lookup(cur, c_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 26, in data_lookup
+    cursor.execute(f"SELECT data from client_details WHERE client_id = {client_id}")
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '<html><title>500: Internal Server Error</title><body>500: Internal Server Error<' at line 1")
+ERROR [2024-01-23 15:52:52] tornado.access - 500 GET /?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E (::1) 0.93ms
+DEBUG [2024-01-23 15:55:38] asyncio - Using selector: KqueueSelector
+INFO [2024-01-23 15:55:38] root - Listening on port 8888
+INFO [2024-01-23 15:55:41] root - Response from client e5fd29ab-4827-4bd0-8966-caff8460e862: {'client_id': 'e5fd29ab-4827-4bd0-8966-caff8460e862', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 15:55:41] tornado.access - 200 POST / (::1) 7.46ms
+INFO [2024-01-23 15:55:41] root - Client_id (e5fd29ab-4827-4bd0-8966-caff8460e862) sent to the client.
+INFO [2024-01-23 15:55:41] root - Response from client df63644a-ead0-4859-a4fa-13eb2e36f12c: {'client_id': 'df63644a-ead0-4859-a4fa-13eb2e36f12c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 15:55:41] tornado.access - 200 POST / (::1) 8.62ms
+INFO [2024-01-23 15:55:41] root - Client_id (df63644a-ead0-4859-a4fa-13eb2e36f12c) sent to the client.
+ERROR [2024-01-23 15:55:41] tornado.application - Uncaught exception GET /?c_id=e5fd29ab-4827-4bd0-8966-caff8460e862 (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=e5fd29ab-4827-4bd0-8966-caff8460e862', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 93, in get
+    lookup = client_database.data_lookup(cur, c_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 27, in data_lookup
+    cursor.execute(f"SELECT data from client_details WHERE client_id = {client_id}")
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'e5fd29ab' in 'where clause'")
+ERROR [2024-01-23 15:55:41] tornado.access - 500 GET /?c_id=e5fd29ab-4827-4bd0-8966-caff8460e862 (::1) 2.73ms
+ERROR [2024-01-23 15:55:41] tornado.application - Uncaught exception GET /?c_id=df63644a-ead0-4859-a4fa-13eb2e36f12c (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=df63644a-ead0-4859-a4fa-13eb2e36f12c', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 93, in get
+    lookup = client_database.data_lookup(cur, c_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 27, in data_lookup
+    cursor.execute(f"SELECT data from client_details WHERE client_id = {client_id}")
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column 'df63644a' in 'where clause'")
+ERROR [2024-01-23 15:55:41] tornado.access - 500 GET /?c_id=df63644a-ead0-4859-a4fa-13eb2e36f12c (::1) 1.71ms
+DEBUG [2024-01-23 16:00:09] asyncio - Using selector: KqueueSelector
+INFO [2024-01-23 16:00:09] root - Listening on port 8888
+INFO [2024-01-23 16:00:12] root - Response from client 2e68ed6d-d61f-4d1d-883d-117856ded29c: {'client_id': '2e68ed6d-d61f-4d1d-883d-117856ded29c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:00:12] tornado.access - 200 POST / (::1) 7.15ms
+INFO [2024-01-23 16:00:12] root - Client_id (2e68ed6d-d61f-4d1d-883d-117856ded29c) sent to the client.
+INFO [2024-01-23 16:00:12] root - Response from client 074d3c10-94ab-4e65-af32-4b27e67a7621: {'client_id': '074d3c10-94ab-4e65-af32-4b27e67a7621', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:00:12] tornado.access - 200 POST / (::1) 8.93ms
+INFO [2024-01-23 16:00:12] root - Client_id (074d3c10-94ab-4e65-af32-4b27e67a7621) sent to the client.
+ERROR [2024-01-23 16:00:12] tornado.application - Uncaught exception GET /?c_id=074d3c10-94ab-4e65-af32-4b27e67a7621 (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=074d3c10-94ab-4e65-af32-4b27e67a7621', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 93, in get
+    lookup = client_database.data_lookup(cur, c_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 27, in data_lookup
+    cursor.execute(f"SELECT data from client_details WHERE client_id = {client_id}")
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.OperationalError: (1054, "Unknown column '074d3c10' in 'where clause'")
+ERROR [2024-01-23 16:00:12] tornado.access - 500 GET /?c_id=074d3c10-94ab-4e65-af32-4b27e67a7621 (::1) 2.29ms
+ERROR [2024-01-23 16:00:12] tornado.application - Uncaught exception GET /?c_id=2e68ed6d-d61f-4d1d-883d-117856ded29c (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=2e68ed6d-d61f-4d1d-883d-117856ded29c', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 93, in get
+    lookup = client_database.data_lookup(cur, c_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 27, in data_lookup
+    cursor.execute(f"SELECT data from client_details WHERE client_id = {client_id}")
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 330, in _query
+    db.query(q)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ed6d-d61f-4d1d-883d-117856ded29c' at line 1")
+ERROR [2024-01-23 16:00:12] tornado.access - 500 GET /?c_id=2e68ed6d-d61f-4d1d-883d-117856ded29c (::1) 1.14ms
+DEBUG [2024-01-23 16:02:55] asyncio - Using selector: KqueueSelector
+INFO [2024-01-23 16:02:55] root - Listening on port 8888
+INFO [2024-01-23 16:02:57] root - Response from client 1a6ef0e5-f7af-4f01-9f3d-19677e90128a: {'client_id': '1a6ef0e5-f7af-4f01-9f3d-19677e90128a', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:02:57] tornado.access - 200 POST / (::1) 7.10ms
+INFO [2024-01-23 16:02:57] root - Client_id (1a6ef0e5-f7af-4f01-9f3d-19677e90128a) sent to the client.
+INFO [2024-01-23 16:02:57] root - Response from client a9537e8d-40c1-41cc-8388-82f789ed4393: {'client_id': 'a9537e8d-40c1-41cc-8388-82f789ed4393', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:02:57] tornado.access - 200 POST / (::1) 8.92ms
+INFO [2024-01-23 16:02:57] root - Client_id (a9537e8d-40c1-41cc-8388-82f789ed4393) sent to the client.
+ERROR [2024-01-23 16:02:57] tornado.application - Uncaught exception GET /?c_id=1a6ef0e5-f7af-4f01-9f3d-19677e90128a (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=1a6ef0e5-f7af-4f01-9f3d-19677e90128a', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 200, in _mogrify
+    query = query % args
+            ~~~~~~^~~~~~
+TypeError: not all arguments converted during bytes formatting
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 93, in get
+    lookup = client_database.data_lookup(cur, c_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 27, in data_lookup
+    cursor.execute("SELECT data from client_details WHERE client_id = (%s)", client_id)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 176, in execute
+    mogrified_query = self._mogrify(query, args)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 202, in _mogrify
+    raise ProgrammingError(str(m))
+MySQLdb.ProgrammingError: not all arguments converted during bytes formatting
+ERROR [2024-01-23 16:02:57] tornado.access - 500 GET /?c_id=1a6ef0e5-f7af-4f01-9f3d-19677e90128a (::1) 1.99ms
+ERROR [2024-01-23 16:02:57] tornado.application - Uncaught exception GET /?c_id=a9537e8d-40c1-41cc-8388-82f789ed4393 (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=a9537e8d-40c1-41cc-8388-82f789ed4393', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 200, in _mogrify
+    query = query % args
+            ~~~~~~^~~~~~
+TypeError: not all arguments converted during bytes formatting
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 93, in get
+    lookup = client_database.data_lookup(cur, c_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/client_database.py", line 27, in data_lookup
+    cursor.execute("SELECT data from client_details WHERE client_id = (%s)", client_id)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 176, in execute
+    mogrified_query = self._mogrify(query, args)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/MySQLdb/cursors.py", line 202, in _mogrify
+    raise ProgrammingError(str(m))
+MySQLdb.ProgrammingError: not all arguments converted during bytes formatting
+ERROR [2024-01-23 16:02:57] tornado.access - 500 GET /?c_id=a9537e8d-40c1-41cc-8388-82f789ed4393 (::1) 1.12ms
+DEBUG [2024-01-23 16:04:58] asyncio - Using selector: KqueueSelector
+INFO [2024-01-23 16:04:58] root - Listening on port 8888
+INFO [2024-01-23 16:05:01] root - Response from client 568011b1-5cd2-4071-83e8-53161650257c: {'client_id': '568011b1-5cd2-4071-83e8-53161650257c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:05:01] tornado.access - 200 POST / (::1) 6.74ms
+INFO [2024-01-23 16:05:01] root - Client_id (568011b1-5cd2-4071-83e8-53161650257c) sent to the client.
+INFO [2024-01-23 16:05:01] root - Response from client e79b6647-21ab-4434-8886-df67aa36e70c: {'client_id': 'e79b6647-21ab-4434-8886-df67aa36e70c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:05:01] tornado.access - 200 POST / (::1) 8.77ms
+INFO [2024-01-23 16:05:01] root - Client_id (e79b6647-21ab-4434-8886-df67aa36e70c) sent to the client.
+INFO [2024-01-23 16:05:01] root - Data with client_id - 568011b1-5cd2-4071-83e8-53161650257c sent.
+ERROR [2024-01-23 16:05:01] tornado.application - Uncaught exception GET /?c_id=568011b1-5cd2-4071-83e8-53161650257c (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=568011b1-5cd2-4071-83e8-53161650257c', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 96, in get
+    self.finish(lookup)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1208, in finish
+    self.write(chunk)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 922, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+ERROR [2024-01-23 16:05:01] tornado.access - 500 GET /?c_id=568011b1-5cd2-4071-83e8-53161650257c (::1) 1.73ms
+INFO [2024-01-23 16:05:01] root - Data with client_id - e79b6647-21ab-4434-8886-df67aa36e70c sent.
+ERROR [2024-01-23 16:05:01] tornado.application - Uncaught exception GET /?c_id=e79b6647-21ab-4434-8886-df67aa36e70c (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=e79b6647-21ab-4434-8886-df67aa36e70c', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 96, in get
+    self.finish(lookup)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1208, in finish
+    self.write(chunk)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 922, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+ERROR [2024-01-23 16:05:01] tornado.access - 500 GET /?c_id=e79b6647-21ab-4434-8886-df67aa36e70c (::1) 1.25ms
+DEBUG [2024-01-23 16:05:22] asyncio - Using selector: KqueueSelector
+INFO [2024-01-23 16:05:22] root - Listening on port 8888
+INFO [2024-01-23 16:05:24] root - Response from client c26e597a-d114-40aa-93c2-6fb1040fd7f2: {'client_id': 'c26e597a-d114-40aa-93c2-6fb1040fd7f2', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:05:24] tornado.access - 200 POST / (::1) 6.64ms
+INFO [2024-01-23 16:05:24] root - Client_id (c26e597a-d114-40aa-93c2-6fb1040fd7f2) sent to the client.
+INFO [2024-01-23 16:05:24] root - Response from client 1401d11b-cfb0-4ecb-91a9-d7382612b292: {'client_id': '1401d11b-cfb0-4ecb-91a9-d7382612b292', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:05:24] tornado.access - 200 POST / (::1) 8.74ms
+INFO [2024-01-23 16:05:24] root - Client_id (1401d11b-cfb0-4ecb-91a9-d7382612b292) sent to the client.
+INFO [2024-01-23 16:05:24] root - Data with client_id - c26e597a-d114-40aa-93c2-6fb1040fd7f2 sent.
+ERROR [2024-01-23 16:05:24] tornado.application - Uncaught exception GET /?c_id=c26e597a-d114-40aa-93c2-6fb1040fd7f2 (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=c26e597a-d114-40aa-93c2-6fb1040fd7f2', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 96, in get
+    self.finish(lookup)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1208, in finish
+    self.write(chunk)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 922, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+ERROR [2024-01-23 16:05:25] tornado.access - 500 GET /?c_id=c26e597a-d114-40aa-93c2-6fb1040fd7f2 (::1) 1.83ms
+INFO [2024-01-23 16:05:25] root - Data with client_id - 1401d11b-cfb0-4ecb-91a9-d7382612b292 sent.
+ERROR [2024-01-23 16:05:25] tornado.application - Uncaught exception GET /?c_id=1401d11b-cfb0-4ecb-91a9-d7382612b292 (::1)
+HTTPServerRequest(protocol='http', host='localhost:8888', method='GET', uri='/?c_id=1401d11b-cfb0-4ecb-91a9-d7382612b292', version='HTTP/1.1', remote_ip='::1')
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1790, in _execute
+    result = await result
+             ^^^^^^^^^^^^
+  File "/Users/vbang/test_folder/async_http_client_server/server_2.py", line 96, in get
+    self.finish(lookup)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 1208, in finish
+    self.write(chunk)
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/tornado/web.py", line 922, in write
+    raise TypeError(message)
+TypeError: write() only accepts bytes, unicode, and dict objects
+ERROR [2024-01-23 16:05:25] tornado.access - 500 GET /?c_id=1401d11b-cfb0-4ecb-91a9-d7382612b292 (::1) 1.18ms
+DEBUG [2024-01-23 16:25:56] asyncio - Using selector: KqueueSelector
+INFO [2024-01-23 16:25:56] root - Listening on port 8888
+INFO [2024-01-23 16:25:59] root - Response from client 6c703ca4-6d26-4f51-949c-77e42099f139: {'client_id': '6c703ca4-6d26-4f51-949c-77e42099f139', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:25:59] tornado.access - 200 POST / (::1) 6.88ms
+INFO [2024-01-23 16:25:59] root - Client_id (6c703ca4-6d26-4f51-949c-77e42099f139) sent to the client.
+INFO [2024-01-23 16:25:59] root - Response from client c18fc120-6f41-4ec4-99d3-f4e76b781af0: {'client_id': 'c18fc120-6f41-4ec4-99d3-f4e76b781af0', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:25:59] tornado.access - 200 POST / (::1) 8.79ms
+INFO [2024-01-23 16:25:59] root - Client_id (c18fc120-6f41-4ec4-99d3-f4e76b781af0) sent to the client.
+INFO [2024-01-23 16:25:59] root - Data with client_id - 6c703ca4-6d26-4f51-949c-77e42099f139 sent.
+INFO [2024-01-23 16:25:59] tornado.access - 200 GET /?c_id=6c703ca4-6d26-4f51-949c-77e42099f139 (::1) 1.22ms
+INFO [2024-01-23 16:25:59] root - Data with client_id - c18fc120-6f41-4ec4-99d3-f4e76b781af0 sent.
+INFO [2024-01-23 16:25:59] tornado.access - 200 GET /?c_id=c18fc120-6f41-4ec4-99d3-f4e76b781af0 (::1) 1.11ms
+DEBUG [2024-01-23 16:35:16] asyncio - Using selector: KqueueSelector
+INFO [2024-01-23 16:35:16] root - Listening on port 8888
+INFO [2024-01-23 16:35:22] root - Response from client ea741258-8e7c-48b0-a29e-be8c953a569b: {'client_id': 'ea741258-8e7c-48b0-a29e-be8c953a569b', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 6.44ms
+INFO [2024-01-23 16:35:22] root - Client_id (ea741258-8e7c-48b0-a29e-be8c953a569b) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client da389675-b0c3-44f9-8ac6-d15406435e81: {'client_id': 'da389675-b0c3-44f9-8ac6-d15406435e81', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 2.19ms
+INFO [2024-01-23 16:35:22] root - Client_id (da389675-b0c3-44f9-8ac6-d15406435e81) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 5693a0fa-ca32-425b-bb45-fbcdd016433c: {'client_id': '5693a0fa-ca32-425b-bb45-fbcdd016433c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 3.41ms
+INFO [2024-01-23 16:35:22] root - Client_id (5693a0fa-ca32-425b-bb45-fbcdd016433c) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client cae62909-803b-4aa3-9364-7d1576f535dd: {'client_id': 'cae62909-803b-4aa3-9364-7d1576f535dd', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 2.19ms
+INFO [2024-01-23 16:35:22] root - Client_id (cae62909-803b-4aa3-9364-7d1576f535dd) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 4763c626-0066-40e8-b3e9-0058833aa732: {'client_id': '4763c626-0066-40e8-b3e9-0058833aa732', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 3.40ms
+INFO [2024-01-23 16:35:22] root - Client_id (4763c626-0066-40e8-b3e9-0058833aa732) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client a9b1e585-1f95-49d1-a7b8-47321ca651e6: {'client_id': 'a9b1e585-1f95-49d1-a7b8-47321ca651e6', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 4.62ms
+INFO [2024-01-23 16:35:22] root - Client_id (a9b1e585-1f95-49d1-a7b8-47321ca651e6) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client c5cbf618-b6ac-4f9d-8151-2d7d3888de1d: {'client_id': 'c5cbf618-b6ac-4f9d-8151-2d7d3888de1d', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 5.77ms
+INFO [2024-01-23 16:35:22] root - Client_id (c5cbf618-b6ac-4f9d-8151-2d7d3888de1d) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client c3573bef-1b99-4009-aaef-513589668998: {'client_id': 'c3573bef-1b99-4009-aaef-513589668998', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 6.96ms
+INFO [2024-01-23 16:35:22] root - Client_id (c3573bef-1b99-4009-aaef-513589668998) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 7a2a5492-054e-489f-afd1-79062b7e9ce4: {'client_id': '7a2a5492-054e-489f-afd1-79062b7e9ce4', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 8.18ms
+INFO [2024-01-23 16:35:22] root - Client_id (7a2a5492-054e-489f-afd1-79062b7e9ce4) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 1e233ea2-259a-4690-bf88-0862303fefbb: {'client_id': '1e233ea2-259a-4690-bf88-0862303fefbb', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 9.27ms
+INFO [2024-01-23 16:35:22] root - Client_id (1e233ea2-259a-4690-bf88-0862303fefbb) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 43b891ab-2b50-4dce-beed-f4a094dccb31: {'client_id': '43b891ab-2b50-4dce-beed-f4a094dccb31', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 10.31ms
+INFO [2024-01-23 16:35:22] root - Client_id (43b891ab-2b50-4dce-beed-f4a094dccb31) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client df978092-b0d3-4ad7-9f06-096782fea9d0: {'client_id': 'df978092-b0d3-4ad7-9f06-096782fea9d0', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 11.20ms
+INFO [2024-01-23 16:35:22] root - Client_id (df978092-b0d3-4ad7-9f06-096782fea9d0) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 207e9cf0-fcfb-4c49-8960-6f9ce77cb032: {'client_id': '207e9cf0-fcfb-4c49-8960-6f9ce77cb032', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 12.38ms
+INFO [2024-01-23 16:35:22] root - Client_id (207e9cf0-fcfb-4c49-8960-6f9ce77cb032) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client e3acec7f-cfef-4f35-a302-b0b736fcfbb8: {'client_id': 'e3acec7f-cfef-4f35-a302-b0b736fcfbb8', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 13.44ms
+INFO [2024-01-23 16:35:22] root - Client_id (e3acec7f-cfef-4f35-a302-b0b736fcfbb8) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 3f4d1e67-b236-4817-94ab-60e115d1b6d0: {'client_id': '3f4d1e67-b236-4817-94ab-60e115d1b6d0', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 1.48ms
+INFO [2024-01-23 16:35:22] root - Client_id (3f4d1e67-b236-4817-94ab-60e115d1b6d0) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 204a6ba3-d470-4de1-8380-bd533f7ceed7: {'client_id': '204a6ba3-d470-4de1-8380-bd533f7ceed7', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 2.48ms
+INFO [2024-01-23 16:35:22] root - Client_id (204a6ba3-d470-4de1-8380-bd533f7ceed7) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client dcccebb2-ab30-4735-874c-03792f79ab76: {'client_id': 'dcccebb2-ab30-4735-874c-03792f79ab76', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 3.47ms
+INFO [2024-01-23 16:35:22] root - Client_id (dcccebb2-ab30-4735-874c-03792f79ab76) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client a63bfb7f-9230-4003-8840-c68d82ad4ce9: {'client_id': 'a63bfb7f-9230-4003-8840-c68d82ad4ce9', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 4.35ms
+INFO [2024-01-23 16:35:22] root - Client_id (a63bfb7f-9230-4003-8840-c68d82ad4ce9) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 48b63345-41ac-4068-8d0d-3c53937ee86f: {'client_id': '48b63345-41ac-4068-8d0d-3c53937ee86f', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 5.33ms
+INFO [2024-01-23 16:35:22] root - Client_id (48b63345-41ac-4068-8d0d-3c53937ee86f) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client a90a4f19-9d1d-4933-ad0d-085f39857db3: {'client_id': 'a90a4f19-9d1d-4933-ad0d-085f39857db3', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 5.97ms
+INFO [2024-01-23 16:35:22] root - Client_id (a90a4f19-9d1d-4933-ad0d-085f39857db3) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 60ea41b6-c8dc-4972-8bfe-9451d950eeb9: {'client_id': '60ea41b6-c8dc-4972-8bfe-9451d950eeb9', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 6.48ms
+INFO [2024-01-23 16:35:22] root - Client_id (60ea41b6-c8dc-4972-8bfe-9451d950eeb9) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client d02ec494-86b7-453b-8f15-5bdda9a20e3e: {'client_id': 'd02ec494-86b7-453b-8f15-5bdda9a20e3e', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 6.88ms
+INFO [2024-01-23 16:35:22] root - Client_id (d02ec494-86b7-453b-8f15-5bdda9a20e3e) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client e3943e01-3fd0-4b45-8ac5-7337976b4f8f: {'client_id': 'e3943e01-3fd0-4b45-8ac5-7337976b4f8f', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 22.55ms
+INFO [2024-01-23 16:35:22] root - Client_id (e3943e01-3fd0-4b45-8ac5-7337976b4f8f) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client e5ad125b-3e76-4920-8bbf-f601cb322356: {'client_id': 'e5ad125b-3e76-4920-8bbf-f601cb322356', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 23.07ms
+INFO [2024-01-23 16:35:22] root - Client_id (e5ad125b-3e76-4920-8bbf-f601cb322356) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 4d3c8bf2-e276-480a-8005-c0b8130c2b84: {'client_id': '4d3c8bf2-e276-480a-8005-c0b8130c2b84', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 23.65ms
+INFO [2024-01-23 16:35:22] root - Client_id (4d3c8bf2-e276-480a-8005-c0b8130c2b84) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 585cd851-8f40-4ed9-820a-8c2974fcfa9f: {'client_id': '585cd851-8f40-4ed9-820a-8c2974fcfa9f', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 2.36ms
+INFO [2024-01-23 16:35:22] root - Client_id (585cd851-8f40-4ed9-820a-8c2974fcfa9f) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 9ac301a3-7dbf-48fe-847a-93095db133ba: {'client_id': '9ac301a3-7dbf-48fe-847a-93095db133ba', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 2.84ms
+INFO [2024-01-23 16:35:22] root - Client_id (9ac301a3-7dbf-48fe-847a-93095db133ba) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client f4cdb25d-e218-46c1-b96c-30503732b1a9: {'client_id': 'f4cdb25d-e218-46c1-b96c-30503732b1a9', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 3.27ms
+INFO [2024-01-23 16:35:22] root - Client_id (f4cdb25d-e218-46c1-b96c-30503732b1a9) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client cfa11153-4c6d-4b0f-9a90-94ecc92e2f97: {'client_id': 'cfa11153-4c6d-4b0f-9a90-94ecc92e2f97', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 3.73ms
+INFO [2024-01-23 16:35:22] root - Client_id (cfa11153-4c6d-4b0f-9a90-94ecc92e2f97) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client b71d48b8-7b5b-4f2d-abfc-dd577832dac5: {'client_id': 'b71d48b8-7b5b-4f2d-abfc-dd577832dac5', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 4.20ms
+INFO [2024-01-23 16:35:22] root - Client_id (b71d48b8-7b5b-4f2d-abfc-dd577832dac5) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 56dc6131-a58a-45a0-a67b-d2e69361340a: {'client_id': '56dc6131-a58a-45a0-a67b-d2e69361340a', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 4.66ms
+INFO [2024-01-23 16:35:22] root - Client_id (56dc6131-a58a-45a0-a67b-d2e69361340a) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 738e668d-005d-47b0-a8d7-6004c8200f79: {'client_id': '738e668d-005d-47b0-a8d7-6004c8200f79', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 5.08ms
+INFO [2024-01-23 16:35:22] root - Client_id (738e668d-005d-47b0-a8d7-6004c8200f79) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client a77c6fe9-e418-40fe-901b-a74d1690a715: {'client_id': 'a77c6fe9-e418-40fe-901b-a74d1690a715', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 5.50ms
+INFO [2024-01-23 16:35:22] root - Client_id (a77c6fe9-e418-40fe-901b-a74d1690a715) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client e27f34c3-c4c0-4755-8c04-596d269738bd: {'client_id': 'e27f34c3-c4c0-4755-8c04-596d269738bd', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 6.00ms
+INFO [2024-01-23 16:35:22] root - Client_id (e27f34c3-c4c0-4755-8c04-596d269738bd) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client cde9d35f-d128-49e6-abef-ecaa277060c9: {'client_id': 'cde9d35f-d128-49e6-abef-ecaa277060c9', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 6.49ms
+INFO [2024-01-23 16:35:22] root - Client_id (cde9d35f-d128-49e6-abef-ecaa277060c9) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client e387e1ab-98b9-4554-992b-181a097c930f: {'client_id': 'e387e1ab-98b9-4554-992b-181a097c930f', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 6.95ms
+INFO [2024-01-23 16:35:22] root - Client_id (e387e1ab-98b9-4554-992b-181a097c930f) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client b67621b5-822f-4213-8acb-2efba787202c: {'client_id': 'b67621b5-822f-4213-8acb-2efba787202c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 7.40ms
+INFO [2024-01-23 16:35:22] root - Client_id (b67621b5-822f-4213-8acb-2efba787202c) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 46ff280c-8952-4789-99fd-46203a2d2e6f: {'client_id': '46ff280c-8952-4789-99fd-46203a2d2e6f', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 7.87ms
+INFO [2024-01-23 16:35:22] root - Client_id (46ff280c-8952-4789-99fd-46203a2d2e6f) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 63bfbe3a-3898-4c96-8f86-205b4985d511: {'client_id': '63bfbe3a-3898-4c96-8f86-205b4985d511', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 8.34ms
+INFO [2024-01-23 16:35:22] root - Client_id (63bfbe3a-3898-4c96-8f86-205b4985d511) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client ca8aa109-7e8c-424e-89b6-20a7b953302e: {'client_id': 'ca8aa109-7e8c-424e-89b6-20a7b953302e', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 8.78ms
+INFO [2024-01-23 16:35:22] root - Client_id (ca8aa109-7e8c-424e-89b6-20a7b953302e) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 0dad4608-2ccb-4d53-a98f-9270c56c0770: {'client_id': '0dad4608-2ccb-4d53-a98f-9270c56c0770', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 9.10ms
+INFO [2024-01-23 16:35:22] root - Client_id (0dad4608-2ccb-4d53-a98f-9270c56c0770) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client b96f91ad-1c12-4cbf-a531-72608596b279: {'client_id': 'b96f91ad-1c12-4cbf-a531-72608596b279', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 9.56ms
+INFO [2024-01-23 16:35:22] root - Client_id (b96f91ad-1c12-4cbf-a531-72608596b279) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 9df61385-c48a-41ec-bf98-72c86e1dbde0: {'client_id': '9df61385-c48a-41ec-bf98-72c86e1dbde0', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 9.96ms
+INFO [2024-01-23 16:35:22] root - Client_id (9df61385-c48a-41ec-bf98-72c86e1dbde0) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 2e755121-64c0-4dc3-b723-1b49df14092d: {'client_id': '2e755121-64c0-4dc3-b723-1b49df14092d', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 10.38ms
+INFO [2024-01-23 16:35:22] root - Client_id (2e755121-64c0-4dc3-b723-1b49df14092d) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 8d5d2760-bd8c-4594-8525-fec573c72235: {'client_id': '8d5d2760-bd8c-4594-8525-fec573c72235', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 10.81ms
+INFO [2024-01-23 16:35:22] root - Client_id (8d5d2760-bd8c-4594-8525-fec573c72235) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 2ee857c4-69e4-461d-b5cf-c46561097493: {'client_id': '2ee857c4-69e4-461d-b5cf-c46561097493', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 11.24ms
+INFO [2024-01-23 16:35:22] root - Client_id (2ee857c4-69e4-461d-b5cf-c46561097493) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 8b7041d1-061c-4d9c-b95a-71e2b3a72951: {'client_id': '8b7041d1-061c-4d9c-b95a-71e2b3a72951', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 11.66ms
+INFO [2024-01-23 16:35:22] root - Client_id (8b7041d1-061c-4d9c-b95a-71e2b3a72951) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client ba081bfb-6b46-4df1-af56-56d403a1aca8: {'client_id': 'ba081bfb-6b46-4df1-af56-56d403a1aca8', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 12.09ms
+INFO [2024-01-23 16:35:22] root - Client_id (ba081bfb-6b46-4df1-af56-56d403a1aca8) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 1200e7b2-2dfd-4e5c-b0b8-f9a019e1a512: {'client_id': '1200e7b2-2dfd-4e5c-b0b8-f9a019e1a512', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 12.46ms
+INFO [2024-01-23 16:35:22] root - Client_id (1200e7b2-2dfd-4e5c-b0b8-f9a019e1a512) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 6198bf8d-b347-41a1-b669-ee2f59e7a07a: {'client_id': '6198bf8d-b347-41a1-b669-ee2f59e7a07a', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 12.91ms
+INFO [2024-01-23 16:35:22] root - Client_id (6198bf8d-b347-41a1-b669-ee2f59e7a07a) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client b7f63c35-1ea6-4b46-aeae-d4531d03aeb4: {'client_id': 'b7f63c35-1ea6-4b46-aeae-d4531d03aeb4', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 13.31ms
+INFO [2024-01-23 16:35:22] root - Client_id (b7f63c35-1ea6-4b46-aeae-d4531d03aeb4) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 5e839ce3-b166-4772-b23c-13f7d21723d1: {'client_id': '5e839ce3-b166-4772-b23c-13f7d21723d1', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 13.68ms
+INFO [2024-01-23 16:35:22] root - Client_id (5e839ce3-b166-4772-b23c-13f7d21723d1) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 2050f390-0690-45e9-8b7b-8687890c2e62: {'client_id': '2050f390-0690-45e9-8b7b-8687890c2e62', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 14.11ms
+INFO [2024-01-23 16:35:22] root - Client_id (2050f390-0690-45e9-8b7b-8687890c2e62) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client aedd48d0-2c1a-4301-aac5-65d5544f819b: {'client_id': 'aedd48d0-2c1a-4301-aac5-65d5544f819b', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 14.52ms
+INFO [2024-01-23 16:35:22] root - Client_id (aedd48d0-2c1a-4301-aac5-65d5544f819b) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 9c6063ba-2f7c-4fdb-8f44-6611d9970e6a: {'client_id': '9c6063ba-2f7c-4fdb-8f44-6611d9970e6a', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 1.01ms
+INFO [2024-01-23 16:35:22] root - Client_id (9c6063ba-2f7c-4fdb-8f44-6611d9970e6a) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client f4581038-2edc-42b5-9188-f46ce6829677: {'client_id': 'f4581038-2edc-42b5-9188-f46ce6829677', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 1.44ms
+INFO [2024-01-23 16:35:22] root - Client_id (f4581038-2edc-42b5-9188-f46ce6829677) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 17734516-4778-459e-9514-52c45282bf64: {'client_id': '17734516-4778-459e-9514-52c45282bf64', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 1.90ms
+INFO [2024-01-23 16:35:22] root - Client_id (17734516-4778-459e-9514-52c45282bf64) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 49a1a2e1-3f57-4f6a-b8f6-0b063ffd3036: {'client_id': '49a1a2e1-3f57-4f6a-b8f6-0b063ffd3036', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 2.40ms
+INFO [2024-01-23 16:35:22] root - Client_id (49a1a2e1-3f57-4f6a-b8f6-0b063ffd3036) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client fd5d905c-e594-4431-a0ff-9afe4661c6e7: {'client_id': 'fd5d905c-e594-4431-a0ff-9afe4661c6e7', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 2.83ms
+INFO [2024-01-23 16:35:22] root - Client_id (fd5d905c-e594-4431-a0ff-9afe4661c6e7) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client aaefbc7d-d5f1-487f-9a9d-2240446a3cd3: {'client_id': 'aaefbc7d-d5f1-487f-9a9d-2240446a3cd3', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 3.28ms
+INFO [2024-01-23 16:35:22] root - Client_id (aaefbc7d-d5f1-487f-9a9d-2240446a3cd3) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 665fe40e-0a4a-4955-9de8-8fa874a25cc1: {'client_id': '665fe40e-0a4a-4955-9de8-8fa874a25cc1', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 3.80ms
+INFO [2024-01-23 16:35:22] root - Client_id (665fe40e-0a4a-4955-9de8-8fa874a25cc1) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client e649c36e-d06e-4dd1-b2d0-17f6db1f88e5: {'client_id': 'e649c36e-d06e-4dd1-b2d0-17f6db1f88e5', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 1.70ms
+INFO [2024-01-23 16:35:22] root - Client_id (e649c36e-d06e-4dd1-b2d0-17f6db1f88e5) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 552b25d7-55b4-427b-b8ce-2bcaf0bf53e9: {'client_id': '552b25d7-55b4-427b-b8ce-2bcaf0bf53e9', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 2.11ms
+INFO [2024-01-23 16:35:22] root - Client_id (552b25d7-55b4-427b-b8ce-2bcaf0bf53e9) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 23b7d210-5a08-4b0e-b739-66d5bd4b9e12: {'client_id': '23b7d210-5a08-4b0e-b739-66d5bd4b9e12', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 2.59ms
+INFO [2024-01-23 16:35:22] root - Client_id (23b7d210-5a08-4b0e-b739-66d5bd4b9e12) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 2452527c-3e63-40fd-bf54-e0378a936acb: {'client_id': '2452527c-3e63-40fd-bf54-e0378a936acb', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 3.40ms
+INFO [2024-01-23 16:35:22] root - Client_id (2452527c-3e63-40fd-bf54-e0378a936acb) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 1e86bf00-5331-4b1f-aa9b-470d732bf9a8: {'client_id': '1e86bf00-5331-4b1f-aa9b-470d732bf9a8', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 3.85ms
+INFO [2024-01-23 16:35:22] root - Client_id (1e86bf00-5331-4b1f-aa9b-470d732bf9a8) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 1ef5f915-b5e0-4f38-a971-b772f44a3e24: {'client_id': '1ef5f915-b5e0-4f38-a971-b772f44a3e24', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 4.35ms
+INFO [2024-01-23 16:35:22] root - Client_id (1ef5f915-b5e0-4f38-a971-b772f44a3e24) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client f0163bd4-b0d3-47ea-ab54-f9fbebf73a24: {'client_id': 'f0163bd4-b0d3-47ea-ab54-f9fbebf73a24', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 4.80ms
+INFO [2024-01-23 16:35:22] root - Client_id (f0163bd4-b0d3-47ea-ab54-f9fbebf73a24) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 87e41029-c480-4b7d-baa0-094029a99b1c: {'client_id': '87e41029-c480-4b7d-baa0-094029a99b1c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 5.24ms
+INFO [2024-01-23 16:35:22] root - Client_id (87e41029-c480-4b7d-baa0-094029a99b1c) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client c6ba389f-d560-4e13-907f-b4a94ce0486f: {'client_id': 'c6ba389f-d560-4e13-907f-b4a94ce0486f', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 5.68ms
+INFO [2024-01-23 16:35:22] root - Client_id (c6ba389f-d560-4e13-907f-b4a94ce0486f) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 133661a9-8b54-4c98-89cc-1312d3d0b7ec: {'client_id': '133661a9-8b54-4c98-89cc-1312d3d0b7ec', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 6.10ms
+INFO [2024-01-23 16:35:22] root - Client_id (133661a9-8b54-4c98-89cc-1312d3d0b7ec) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 1baa4c11-e2c5-4d7f-a903-16eea27a2714: {'client_id': '1baa4c11-e2c5-4d7f-a903-16eea27a2714', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 6.47ms
+INFO [2024-01-23 16:35:22] root - Client_id (1baa4c11-e2c5-4d7f-a903-16eea27a2714) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 63f3bda1-4c23-499e-adb2-f8b094cea2c9: {'client_id': '63f3bda1-4c23-499e-adb2-f8b094cea2c9', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 6.87ms
+INFO [2024-01-23 16:35:22] root - Client_id (63f3bda1-4c23-499e-adb2-f8b094cea2c9) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client e3030db6-3e4d-4cd3-ab71-e009aadecd2a: {'client_id': 'e3030db6-3e4d-4cd3-ab71-e009aadecd2a', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 7.03ms
+INFO [2024-01-23 16:35:22] root - Client_id (e3030db6-3e4d-4cd3-ab71-e009aadecd2a) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 28650dc9-098c-40bd-9782-9bf6c8aace8e: {'client_id': '28650dc9-098c-40bd-9782-9bf6c8aace8e', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 1.04ms
+INFO [2024-01-23 16:35:22] root - Client_id (28650dc9-098c-40bd-9782-9bf6c8aace8e) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client b82e3139-b50a-42cd-978c-1120ca12a565: {'client_id': 'b82e3139-b50a-42cd-978c-1120ca12a565', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 1.46ms
+INFO [2024-01-23 16:35:22] root - Client_id (b82e3139-b50a-42cd-978c-1120ca12a565) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client cf194820-0b88-4a14-98a5-065bc332d4aa: {'client_id': 'cf194820-0b88-4a14-98a5-065bc332d4aa', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 1.86ms
+INFO [2024-01-23 16:35:22] root - Client_id (cf194820-0b88-4a14-98a5-065bc332d4aa) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client eb877967-f172-4475-aff4-ba72d46a5097: {'client_id': 'eb877967-f172-4475-aff4-ba72d46a5097', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 2.26ms
+INFO [2024-01-23 16:35:22] root - Client_id (eb877967-f172-4475-aff4-ba72d46a5097) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 4303acc2-d4f1-4053-9c9d-a48129769304: {'client_id': '4303acc2-d4f1-4053-9c9d-a48129769304', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 2.64ms
+INFO [2024-01-23 16:35:22] root - Client_id (4303acc2-d4f1-4053-9c9d-a48129769304) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client efb18f11-bfa2-40b4-8e83-dd8dfdbcbe9c: {'client_id': 'efb18f11-bfa2-40b4-8e83-dd8dfdbcbe9c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 3.02ms
+INFO [2024-01-23 16:35:22] root - Client_id (efb18f11-bfa2-40b4-8e83-dd8dfdbcbe9c) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 05abd76b-e63a-4dfa-9b50-bb686b9d26a4: {'client_id': '05abd76b-e63a-4dfa-9b50-bb686b9d26a4', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 3.36ms
+INFO [2024-01-23 16:35:22] root - Client_id (05abd76b-e63a-4dfa-9b50-bb686b9d26a4) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client ef630f85-f4b1-4636-bc21-e39fa876ea94: {'client_id': 'ef630f85-f4b1-4636-bc21-e39fa876ea94', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 3.80ms
+INFO [2024-01-23 16:35:22] root - Client_id (ef630f85-f4b1-4636-bc21-e39fa876ea94) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 11056407-6f17-4d8b-a8eb-dc5fef8bc07d: {'client_id': '11056407-6f17-4d8b-a8eb-dc5fef8bc07d', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 0.60ms
+INFO [2024-01-23 16:35:22] root - Client_id (11056407-6f17-4d8b-a8eb-dc5fef8bc07d) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client edb1ae47-5772-4efd-841b-539ed16aa33a: {'client_id': 'edb1ae47-5772-4efd-841b-539ed16aa33a', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 1.00ms
+INFO [2024-01-23 16:35:22] root - Client_id (edb1ae47-5772-4efd-841b-539ed16aa33a) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 35b69787-189d-4ee8-a29a-d4e5519bdeaf: {'client_id': '35b69787-189d-4ee8-a29a-d4e5519bdeaf', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 1.43ms
+INFO [2024-01-23 16:35:22] root - Client_id (35b69787-189d-4ee8-a29a-d4e5519bdeaf) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client f6cebc13-ac72-40ab-992f-8a68aa82a150: {'client_id': 'f6cebc13-ac72-40ab-992f-8a68aa82a150', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 1.85ms
+INFO [2024-01-23 16:35:22] root - Client_id (f6cebc13-ac72-40ab-992f-8a68aa82a150) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client a7f27026-2eca-4624-b1a2-b438ec642996: {'client_id': 'a7f27026-2eca-4624-b1a2-b438ec642996', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 0.49ms
+INFO [2024-01-23 16:35:22] root - Client_id (a7f27026-2eca-4624-b1a2-b438ec642996) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client b7cbd610-5ff5-469e-b296-012b00ff2b31: {'client_id': 'b7cbd610-5ff5-469e-b296-012b00ff2b31', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 0.53ms
+INFO [2024-01-23 16:35:22] root - Client_id (b7cbd610-5ff5-469e-b296-012b00ff2b31) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 2b88404f-20b5-4fdb-b5b3-c02dc33366e9: {'client_id': '2b88404f-20b5-4fdb-b5b3-c02dc33366e9', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 0.93ms
+INFO [2024-01-23 16:35:22] root - Client_id (2b88404f-20b5-4fdb-b5b3-c02dc33366e9) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client ee92b665-b2a5-4041-a839-917bd6e73e01: {'client_id': 'ee92b665-b2a5-4041-a839-917bd6e73e01', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 0.45ms
+INFO [2024-01-23 16:35:22] root - Client_id (ee92b665-b2a5-4041-a839-917bd6e73e01) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 0a91d1fd-dd5d-46f9-b42e-3de92d6c738a: {'client_id': '0a91d1fd-dd5d-46f9-b42e-3de92d6c738a', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 0.79ms
+INFO [2024-01-23 16:35:22] root - Client_id (0a91d1fd-dd5d-46f9-b42e-3de92d6c738a) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 63627a20-9d72-4047-9922-19be30d9adc3: {'client_id': '63627a20-9d72-4047-9922-19be30d9adc3', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 0.75ms
+INFO [2024-01-23 16:35:22] root - Client_id (63627a20-9d72-4047-9922-19be30d9adc3) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 5ad68b94-6ff0-413e-899f-8ec16b3da1b6: {'client_id': '5ad68b94-6ff0-413e-899f-8ec16b3da1b6', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 0.75ms
+INFO [2024-01-23 16:35:22] root - Client_id (5ad68b94-6ff0-413e-899f-8ec16b3da1b6) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client c997426b-9bdd-42bb-8c8b-473567ce4c41: {'client_id': 'c997426b-9bdd-42bb-8c8b-473567ce4c41', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 0.50ms
+INFO [2024-01-23 16:35:22] root - Client_id (c997426b-9bdd-42bb-8c8b-473567ce4c41) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 300ca584-9ba8-4d36-8e58-9c61849b9d53: {'client_id': '300ca584-9ba8-4d36-8e58-9c61849b9d53', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 0.83ms
+INFO [2024-01-23 16:35:22] root - Client_id (300ca584-9ba8-4d36-8e58-9c61849b9d53) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 2c4d44f8-a551-4cc5-a3e1-68038141e44d: {'client_id': '2c4d44f8-a551-4cc5-a3e1-68038141e44d', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 0.77ms
+INFO [2024-01-23 16:35:22] root - Client_id (2c4d44f8-a551-4cc5-a3e1-68038141e44d) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client daefc5a6-abd1-49b7-9cd9-26011541cae9: {'client_id': 'daefc5a6-abd1-49b7-9cd9-26011541cae9', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 0.50ms
+INFO [2024-01-23 16:35:22] root - Client_id (daefc5a6-abd1-49b7-9cd9-26011541cae9) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client e526bbde-d078-41fe-bdfb-2775127855be: {'client_id': 'e526bbde-d078-41fe-bdfb-2775127855be', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 0.93ms
+INFO [2024-01-23 16:35:22] root - Client_id (e526bbde-d078-41fe-bdfb-2775127855be) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 6d6b5a41-f60d-416d-9852-4ca9147448c5: {'client_id': '6d6b5a41-f60d-416d-9852-4ca9147448c5', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 0.53ms
+INFO [2024-01-23 16:35:22] root - Client_id (6d6b5a41-f60d-416d-9852-4ca9147448c5) sent to the client.
+INFO [2024-01-23 16:35:22] root - Response from client 967508c1-4213-4a32-a35d-a5d7039caba4: {'client_id': '967508c1-4213-4a32-a35d-a5d7039caba4', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:35:22] tornado.access - 200 POST / (::1) 0.49ms
+INFO [2024-01-23 16:35:22] root - Client_id (967508c1-4213-4a32-a35d-a5d7039caba4) sent to the client.
+INFO [2024-01-23 16:35:22] root - Data with client_id - ea741258-8e7c-48b0-a29e-be8c953a569b sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=ea741258-8e7c-48b0-a29e-be8c953a569b (::1) 0.49ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 204a6ba3-d470-4de1-8380-bd533f7ceed7 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=204a6ba3-d470-4de1-8380-bd533f7ceed7 (::1) 0.36ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - a63bfb7f-9230-4003-8840-c68d82ad4ce9 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=a63bfb7f-9230-4003-8840-c68d82ad4ce9 (::1) 0.32ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 60ea41b6-c8dc-4972-8bfe-9451d950eeb9 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=60ea41b6-c8dc-4972-8bfe-9451d950eeb9 (::1) 0.31ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - a9b1e585-1f95-49d1-a7b8-47321ca651e6 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=a9b1e585-1f95-49d1-a7b8-47321ca651e6 (::1) 0.29ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 1e233ea2-259a-4690-bf88-0862303fefbb sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=1e233ea2-259a-4690-bf88-0862303fefbb (::1) 0.35ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - df978092-b0d3-4ad7-9f06-096782fea9d0 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=df978092-b0d3-4ad7-9f06-096782fea9d0 (::1) 0.33ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - e3943e01-3fd0-4b45-8ac5-7337976b4f8f sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=e3943e01-3fd0-4b45-8ac5-7337976b4f8f (::1) 0.32ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 585cd851-8f40-4ed9-820a-8c2974fcfa9f sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=585cd851-8f40-4ed9-820a-8c2974fcfa9f (::1) 0.29ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - cfa11153-4c6d-4b0f-9a90-94ecc92e2f97 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=cfa11153-4c6d-4b0f-9a90-94ecc92e2f97 (::1) 0.33ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 17734516-4778-459e-9514-52c45282bf64 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=17734516-4778-459e-9514-52c45282bf64 (::1) 0.32ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - aaefbc7d-d5f1-487f-9a9d-2240446a3cd3 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=aaefbc7d-d5f1-487f-9a9d-2240446a3cd3 (::1) 0.30ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - b71d48b8-7b5b-4f2d-abfc-dd577832dac5 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=b71d48b8-7b5b-4f2d-abfc-dd577832dac5 (::1) 0.35ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - a77c6fe9-e418-40fe-901b-a74d1690a715 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=a77c6fe9-e418-40fe-901b-a74d1690a715 (::1) 0.32ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - e387e1ab-98b9-4554-992b-181a097c930f sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=e387e1ab-98b9-4554-992b-181a097c930f (::1) 0.30ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 63bfbe3a-3898-4c96-8f86-205b4985d511 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=63bfbe3a-3898-4c96-8f86-205b4985d511 (::1) 0.30ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - b96f91ad-1c12-4cbf-a531-72608596b279 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=b96f91ad-1c12-4cbf-a531-72608596b279 (::1) 0.30ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 8d5d2760-bd8c-4594-8525-fec573c72235 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=8d5d2760-bd8c-4594-8525-fec573c72235 (::1) 0.30ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - ba081bfb-6b46-4df1-af56-56d403a1aca8 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=ba081bfb-6b46-4df1-af56-56d403a1aca8 (::1) 0.29ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - b7f63c35-1ea6-4b46-aeae-d4531d03aeb4 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=b7f63c35-1ea6-4b46-aeae-d4531d03aeb4 (::1) 0.30ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - aedd48d0-2c1a-4301-aac5-65d5544f819b sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=aedd48d0-2c1a-4301-aac5-65d5544f819b (::1) 0.31ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 23b7d210-5a08-4b0e-b739-66d5bd4b9e12 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=23b7d210-5a08-4b0e-b739-66d5bd4b9e12 (::1) 0.38ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 2c4d44f8-a551-4cc5-a3e1-68038141e44d sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=2c4d44f8-a551-4cc5-a3e1-68038141e44d (::1) 0.33ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 1ef5f915-b5e0-4f38-a971-b772f44a3e24 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=1ef5f915-b5e0-4f38-a971-b772f44a3e24 (::1) 0.31ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - c6ba389f-d560-4e13-907f-b4a94ce0486f sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=c6ba389f-d560-4e13-907f-b4a94ce0486f (::1) 0.33ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 63f3bda1-4c23-499e-adb2-f8b094cea2c9 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=63f3bda1-4c23-499e-adb2-f8b094cea2c9 (::1) 0.31ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 63627a20-9d72-4047-9922-19be30d9adc3 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=63627a20-9d72-4047-9922-19be30d9adc3 (::1) 0.29ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - cf194820-0b88-4a14-98a5-065bc332d4aa sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=cf194820-0b88-4a14-98a5-065bc332d4aa (::1) 0.29ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - efb18f11-bfa2-40b4-8e83-dd8dfdbcbe9c sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=efb18f11-bfa2-40b4-8e83-dd8dfdbcbe9c (::1) 0.28ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 35b69787-189d-4ee8-a29a-d4e5519bdeaf sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=35b69787-189d-4ee8-a29a-d4e5519bdeaf (::1) 0.30ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - ef630f85-f4b1-4636-bc21-e39fa876ea94 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=ef630f85-f4b1-4636-bc21-e39fa876ea94 (::1) 0.31ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 11056407-6f17-4d8b-a8eb-dc5fef8bc07d sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=11056407-6f17-4d8b-a8eb-dc5fef8bc07d (::1) 0.29ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - a7f27026-2eca-4624-b1a2-b438ec642996 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=a7f27026-2eca-4624-b1a2-b438ec642996 (::1) 0.28ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 2b88404f-20b5-4fdb-b5b3-c02dc33366e9 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=2b88404f-20b5-4fdb-b5b3-c02dc33366e9 (::1) 0.40ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 5693a0fa-ca32-425b-bb45-fbcdd016433c sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=5693a0fa-ca32-425b-bb45-fbcdd016433c (::1) 0.30ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 48b63345-41ac-4068-8d0d-3c53937ee86f sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=48b63345-41ac-4068-8d0d-3c53937ee86f (::1) 0.29ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 4763c626-0066-40e8-b3e9-0058833aa732 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=4763c626-0066-40e8-b3e9-0058833aa732 (::1) 0.28ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - c3573bef-1b99-4009-aaef-513589668998 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=c3573bef-1b99-4009-aaef-513589668998 (::1) 0.29ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 43b891ab-2b50-4dce-beed-f4a094dccb31 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=43b891ab-2b50-4dce-beed-f4a094dccb31 (::1) 0.29ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - e3acec7f-cfef-4f35-a302-b0b736fcfbb8 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=e3acec7f-cfef-4f35-a302-b0b736fcfbb8 (::1) 0.29ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 4d3c8bf2-e276-480a-8005-c0b8130c2b84 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=4d3c8bf2-e276-480a-8005-c0b8130c2b84 (::1) 0.30ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - f4cdb25d-e218-46c1-b96c-30503732b1a9 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=f4cdb25d-e218-46c1-b96c-30503732b1a9 (::1) 0.29ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - f4581038-2edc-42b5-9188-f46ce6829677 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=f4581038-2edc-42b5-9188-f46ce6829677 (::1) 0.31ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - fd5d905c-e594-4431-a0ff-9afe4661c6e7 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=fd5d905c-e594-4431-a0ff-9afe4661c6e7 (::1) 0.29ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - d02ec494-86b7-453b-8f15-5bdda9a20e3e sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=d02ec494-86b7-453b-8f15-5bdda9a20e3e (::1) 0.29ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 738e668d-005d-47b0-a8d7-6004c8200f79 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=738e668d-005d-47b0-a8d7-6004c8200f79 (::1) 0.28ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - cde9d35f-d128-49e6-abef-ecaa277060c9 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=cde9d35f-d128-49e6-abef-ecaa277060c9 (::1) 0.29ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 46ff280c-8952-4789-99fd-46203a2d2e6f sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=46ff280c-8952-4789-99fd-46203a2d2e6f (::1) 0.27ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 0dad4608-2ccb-4d53-a98f-9270c56c0770 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=0dad4608-2ccb-4d53-a98f-9270c56c0770 (::1) 0.27ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 2e755121-64c0-4dc3-b723-1b49df14092d sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=2e755121-64c0-4dc3-b723-1b49df14092d (::1) 0.32ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 8b7041d1-061c-4d9c-b95a-71e2b3a72951 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=8b7041d1-061c-4d9c-b95a-71e2b3a72951 (::1) 0.30ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 6198bf8d-b347-41a1-b669-ee2f59e7a07a sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=6198bf8d-b347-41a1-b669-ee2f59e7a07a (::1) 0.27ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 2050f390-0690-45e9-8b7b-8687890c2e62 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=2050f390-0690-45e9-8b7b-8687890c2e62 (::1) 0.30ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 552b25d7-55b4-427b-b8ce-2bcaf0bf53e9 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=552b25d7-55b4-427b-b8ce-2bcaf0bf53e9 (::1) 0.28ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - ee92b665-b2a5-4041-a839-917bd6e73e01 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=ee92b665-b2a5-4041-a839-917bd6e73e01 (::1) 0.27ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 1e86bf00-5331-4b1f-aa9b-470d732bf9a8 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=1e86bf00-5331-4b1f-aa9b-470d732bf9a8 (::1) 0.30ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 87e41029-c480-4b7d-baa0-094029a99b1c sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=87e41029-c480-4b7d-baa0-094029a99b1c (::1) 0.28ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 1baa4c11-e2c5-4d7f-a903-16eea27a2714 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=1baa4c11-e2c5-4d7f-a903-16eea27a2714 (::1) 0.27ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - daefc5a6-abd1-49b7-9cd9-26011541cae9 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=daefc5a6-abd1-49b7-9cd9-26011541cae9 (::1) 0.28ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - b82e3139-b50a-42cd-978c-1120ca12a565 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=b82e3139-b50a-42cd-978c-1120ca12a565 (::1) 0.27ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 4303acc2-d4f1-4053-9c9d-a48129769304 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=4303acc2-d4f1-4053-9c9d-a48129769304 (::1) 0.28ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - edb1ae47-5772-4efd-841b-539ed16aa33a sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=edb1ae47-5772-4efd-841b-539ed16aa33a (::1) 0.27ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - b7cbd610-5ff5-469e-b296-012b00ff2b31 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=b7cbd610-5ff5-469e-b296-012b00ff2b31 (::1) 0.28ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 5ad68b94-6ff0-413e-899f-8ec16b3da1b6 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=5ad68b94-6ff0-413e-899f-8ec16b3da1b6 (::1) 0.28ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - c997426b-9bdd-42bb-8c8b-473567ce4c41 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=c997426b-9bdd-42bb-8c8b-473567ce4c41 (::1) 0.29ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 300ca584-9ba8-4d36-8e58-9c61849b9d53 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=300ca584-9ba8-4d36-8e58-9c61849b9d53 (::1) 0.39ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - da389675-b0c3-44f9-8ac6-d15406435e81 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=da389675-b0c3-44f9-8ac6-d15406435e81 (::1) 0.36ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 3f4d1e67-b236-4817-94ab-60e115d1b6d0 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=3f4d1e67-b236-4817-94ab-60e115d1b6d0 (::1) 0.30ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - cae62909-803b-4aa3-9364-7d1576f535dd sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=cae62909-803b-4aa3-9364-7d1576f535dd (::1) 0.31ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 7a2a5492-054e-489f-afd1-79062b7e9ce4 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=7a2a5492-054e-489f-afd1-79062b7e9ce4 (::1) 0.29ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - e5ad125b-3e76-4920-8bbf-f601cb322356 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=e5ad125b-3e76-4920-8bbf-f601cb322356 (::1) 0.30ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 9c6063ba-2f7c-4fdb-8f44-6611d9970e6a sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=9c6063ba-2f7c-4fdb-8f44-6611d9970e6a (::1) 0.32ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 665fe40e-0a4a-4955-9de8-8fa874a25cc1 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=665fe40e-0a4a-4955-9de8-8fa874a25cc1 (::1) 0.31ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - e27f34c3-c4c0-4755-8c04-596d269738bd sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=e27f34c3-c4c0-4755-8c04-596d269738bd (::1) 0.30ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - ca8aa109-7e8c-424e-89b6-20a7b953302e sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=ca8aa109-7e8c-424e-89b6-20a7b953302e (::1) 0.33ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 2ee857c4-69e4-461d-b5cf-c46561097493 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=2ee857c4-69e4-461d-b5cf-c46561097493 (::1) 0.36ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 5e839ce3-b166-4772-b23c-13f7d21723d1 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=5e839ce3-b166-4772-b23c-13f7d21723d1 (::1) 0.32ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 2452527c-3e63-40fd-bf54-e0378a936acb sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=2452527c-3e63-40fd-bf54-e0378a936acb (::1) 0.59ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - f0163bd4-b0d3-47ea-ab54-f9fbebf73a24 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=f0163bd4-b0d3-47ea-ab54-f9fbebf73a24 (::1) 0.60ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - e3030db6-3e4d-4cd3-ab71-e009aadecd2a sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=e3030db6-3e4d-4cd3-ab71-e009aadecd2a (::1) 0.32ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - eb877967-f172-4475-aff4-ba72d46a5097 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=eb877967-f172-4475-aff4-ba72d46a5097 (::1) 0.28ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - f6cebc13-ac72-40ab-992f-8a68aa82a150 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=f6cebc13-ac72-40ab-992f-8a68aa82a150 (::1) 0.26ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - e526bbde-d078-41fe-bdfb-2775127855be sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=e526bbde-d078-41fe-bdfb-2775127855be (::1) 0.24ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - a90a4f19-9d1d-4933-ad0d-085f39857db3 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=a90a4f19-9d1d-4933-ad0d-085f39857db3 (::1) 0.28ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - c5cbf618-b6ac-4f9d-8151-2d7d3888de1d sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=c5cbf618-b6ac-4f9d-8151-2d7d3888de1d (::1) 0.29ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 9ac301a3-7dbf-48fe-847a-93095db133ba sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=9ac301a3-7dbf-48fe-847a-93095db133ba (::1) 0.26ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 56dc6131-a58a-45a0-a67b-d2e69361340a sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=56dc6131-a58a-45a0-a67b-d2e69361340a (::1) 0.25ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 9df61385-c48a-41ec-bf98-72c86e1dbde0 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=9df61385-c48a-41ec-bf98-72c86e1dbde0 (::1) 0.28ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - e649c36e-d06e-4dd1-b2d0-17f6db1f88e5 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=e649c36e-d06e-4dd1-b2d0-17f6db1f88e5 (::1) 0.25ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 133661a9-8b54-4c98-89cc-1312d3d0b7ec sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=133661a9-8b54-4c98-89cc-1312d3d0b7ec (::1) 0.28ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 05abd76b-e63a-4dfa-9b50-bb686b9d26a4 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=05abd76b-e63a-4dfa-9b50-bb686b9d26a4 (::1) 0.28ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 967508c1-4213-4a32-a35d-a5d7039caba4 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=967508c1-4213-4a32-a35d-a5d7039caba4 (::1) 0.30ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 207e9cf0-fcfb-4c49-8960-6f9ce77cb032 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=207e9cf0-fcfb-4c49-8960-6f9ce77cb032 (::1) 0.25ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - b67621b5-822f-4213-8acb-2efba787202c sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=b67621b5-822f-4213-8acb-2efba787202c (::1) 0.30ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 0a91d1fd-dd5d-46f9-b42e-3de92d6c738a sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=0a91d1fd-dd5d-46f9-b42e-3de92d6c738a (::1) 0.26ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 6d6b5a41-f60d-416d-9852-4ca9147448c5 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=6d6b5a41-f60d-416d-9852-4ca9147448c5 (::1) 0.27ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 49a1a2e1-3f57-4f6a-b8f6-0b063ffd3036 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=49a1a2e1-3f57-4f6a-b8f6-0b063ffd3036 (::1) 0.27ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 28650dc9-098c-40bd-9782-9bf6c8aace8e sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=28650dc9-098c-40bd-9782-9bf6c8aace8e (::1) 0.28ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - 1200e7b2-2dfd-4e5c-b0b8-f9a019e1a512 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=1200e7b2-2dfd-4e5c-b0b8-f9a019e1a512 (::1) 0.24ms
+INFO [2024-01-23 16:35:22] root - Data with client_id - dcccebb2-ab30-4735-874c-03792f79ab76 sent.
+INFO [2024-01-23 16:35:22] tornado.access - 200 GET /?c_id=dcccebb2-ab30-4735-874c-03792f79ab76 (::1) 0.33ms
+DEBUG [2024-01-23 16:38:15] asyncio - Using selector: KqueueSelector
+INFO [2024-01-23 16:38:15] root - Listening on port 8888
+INFO [2024-01-23 16:38:18] root - Response from client c9524c46-54c2-469c-8222-60b3c31ba4ca: {'client_id': 'c9524c46-54c2-469c-8222-60b3c31ba4ca', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 6.81ms
+INFO [2024-01-23 16:38:18] root - Client_id (c9524c46-54c2-469c-8222-60b3c31ba4ca) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client c1181d70-485a-4fca-a785-57a10457087d: {'client_id': 'c1181d70-485a-4fca-a785-57a10457087d', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 7.77ms
+INFO [2024-01-23 16:38:18] root - Client_id (c1181d70-485a-4fca-a785-57a10457087d) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 5c59fc10-266a-4fca-8b2d-4863e617e0f3: {'client_id': '5c59fc10-266a-4fca-8b2d-4863e617e0f3', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 1.75ms
+INFO [2024-01-23 16:38:18] root - Client_id (5c59fc10-266a-4fca-8b2d-4863e617e0f3) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 054633ef-2a69-45e7-bbbb-50fde0a1243c: {'client_id': '054633ef-2a69-45e7-bbbb-50fde0a1243c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 2.61ms
+INFO [2024-01-23 16:38:18] root - Client_id (054633ef-2a69-45e7-bbbb-50fde0a1243c) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client aee648c0-5ddf-4585-a847-fdc85fa7e670: {'client_id': 'aee648c0-5ddf-4585-a847-fdc85fa7e670', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 3.38ms
+INFO [2024-01-23 16:38:18] root - Client_id (aee648c0-5ddf-4585-a847-fdc85fa7e670) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 76e7e4f9-082d-4e31-a23d-f1b2abbcab89: {'client_id': '76e7e4f9-082d-4e31-a23d-f1b2abbcab89', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 4.45ms
+INFO [2024-01-23 16:38:18] root - Client_id (76e7e4f9-082d-4e31-a23d-f1b2abbcab89) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 939bbaa1-faa3-4030-a890-32dbc3112138: {'client_id': '939bbaa1-faa3-4030-a890-32dbc3112138', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 5.31ms
+INFO [2024-01-23 16:38:18] root - Client_id (939bbaa1-faa3-4030-a890-32dbc3112138) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client a98e25ed-9e34-46fb-a18b-ba9857dc4b45: {'client_id': 'a98e25ed-9e34-46fb-a18b-ba9857dc4b45', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 3.27ms
+INFO [2024-01-23 16:38:18] root - Client_id (a98e25ed-9e34-46fb-a18b-ba9857dc4b45) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 1f7a67ee-4662-4b17-b5f2-70606323351a: {'client_id': '1f7a67ee-4662-4b17-b5f2-70606323351a', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 4.18ms
+INFO [2024-01-23 16:38:18] root - Client_id (1f7a67ee-4662-4b17-b5f2-70606323351a) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client cb038048-e95d-4e13-9568-1232b2cc6691: {'client_id': 'cb038048-e95d-4e13-9568-1232b2cc6691', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 5.05ms
+INFO [2024-01-23 16:38:18] root - Client_id (cb038048-e95d-4e13-9568-1232b2cc6691) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 5ea13cc4-5c7c-4f69-8eb5-185196a8a007: {'client_id': '5ea13cc4-5c7c-4f69-8eb5-185196a8a007', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 5.93ms
+INFO [2024-01-23 16:38:18] root - Client_id (5ea13cc4-5c7c-4f69-8eb5-185196a8a007) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 41c871aa-77c9-469b-803e-99935ad4830f: {'client_id': '41c871aa-77c9-469b-803e-99935ad4830f', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 6.98ms
+INFO [2024-01-23 16:38:18] root - Client_id (41c871aa-77c9-469b-803e-99935ad4830f) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 82cbd5d7-96cc-497d-b76f-7a2991877a4c: {'client_id': '82cbd5d7-96cc-497d-b76f-7a2991877a4c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 8.21ms
+INFO [2024-01-23 16:38:18] root - Client_id (82cbd5d7-96cc-497d-b76f-7a2991877a4c) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client bb2b8b82-230f-4b54-a957-dfb5eb2a23bf: {'client_id': 'bb2b8b82-230f-4b54-a957-dfb5eb2a23bf', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 9.53ms
+INFO [2024-01-23 16:38:18] root - Client_id (bb2b8b82-230f-4b54-a957-dfb5eb2a23bf) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 0e697789-d4ce-4896-be65-df61aebe92ac: {'client_id': '0e697789-d4ce-4896-be65-df61aebe92ac', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 10.71ms
+INFO [2024-01-23 16:38:18] root - Client_id (0e697789-d4ce-4896-be65-df61aebe92ac) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 7c7dd2fd-0d61-41e3-b0a4-f05b0fb99f31: {'client_id': '7c7dd2fd-0d61-41e3-b0a4-f05b0fb99f31', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 11.94ms
+INFO [2024-01-23 16:38:18] root - Client_id (7c7dd2fd-0d61-41e3-b0a4-f05b0fb99f31) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 14a68af9-1634-488a-a144-0fbadc80bdb6: {'client_id': '14a68af9-1634-488a-a144-0fbadc80bdb6', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 13.17ms
+INFO [2024-01-23 16:38:18] root - Client_id (14a68af9-1634-488a-a144-0fbadc80bdb6) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 71d3b666-95cd-43f3-9831-9ff75fb8cf18: {'client_id': '71d3b666-95cd-43f3-9831-9ff75fb8cf18', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 14.23ms
+INFO [2024-01-23 16:38:18] root - Client_id (71d3b666-95cd-43f3-9831-9ff75fb8cf18) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 53d4defe-b637-44ff-b98c-9d78bb9caa87: {'client_id': '53d4defe-b637-44ff-b98c-9d78bb9caa87', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 15.18ms
+INFO [2024-01-23 16:38:18] root - Client_id (53d4defe-b637-44ff-b98c-9d78bb9caa87) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 62c2cbb7-51e7-44e9-877e-92352ef13bb6: {'client_id': '62c2cbb7-51e7-44e9-877e-92352ef13bb6', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 16.05ms
+INFO [2024-01-23 16:38:18] root - Client_id (62c2cbb7-51e7-44e9-877e-92352ef13bb6) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client ad1ac035-4382-422f-8b36-f2d1fbf7e2c2: {'client_id': 'ad1ac035-4382-422f-8b36-f2d1fbf7e2c2', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 16.95ms
+INFO [2024-01-23 16:38:18] root - Client_id (ad1ac035-4382-422f-8b36-f2d1fbf7e2c2) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client d11b8610-55f5-4cf6-aa31-c6a54313c3e1: {'client_id': 'd11b8610-55f5-4cf6-aa31-c6a54313c3e1', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 17.67ms
+INFO [2024-01-23 16:38:18] root - Client_id (d11b8610-55f5-4cf6-aa31-c6a54313c3e1) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client cd0bd6bd-0075-4208-80c2-d189f84f81fd: {'client_id': 'cd0bd6bd-0075-4208-80c2-d189f84f81fd', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 18.38ms
+INFO [2024-01-23 16:38:18] root - Client_id (cd0bd6bd-0075-4208-80c2-d189f84f81fd) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 8a0fc165-51cf-4149-9a8a-68e45ec50c6a: {'client_id': '8a0fc165-51cf-4149-9a8a-68e45ec50c6a', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 18.89ms
+INFO [2024-01-23 16:38:18] root - Client_id (8a0fc165-51cf-4149-9a8a-68e45ec50c6a) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 031ec3d7-6d08-4193-b5dd-228ca141b62c: {'client_id': '031ec3d7-6d08-4193-b5dd-228ca141b62c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 19.41ms
+INFO [2024-01-23 16:38:18] root - Client_id (031ec3d7-6d08-4193-b5dd-228ca141b62c) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client c1a7363d-609b-4cbc-a6fb-ce9c507bdfb3: {'client_id': 'c1a7363d-609b-4cbc-a6fb-ce9c507bdfb3', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 19.95ms
+INFO [2024-01-23 16:38:18] root - Client_id (c1a7363d-609b-4cbc-a6fb-ce9c507bdfb3) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 001793cf-b51e-44df-a4fd-4c592467a9c2: {'client_id': '001793cf-b51e-44df-a4fd-4c592467a9c2', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 20.57ms
+INFO [2024-01-23 16:38:18] root - Client_id (001793cf-b51e-44df-a4fd-4c592467a9c2) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 6199151d-6bec-41d9-9ba8-0853ce403fd2: {'client_id': '6199151d-6bec-41d9-9ba8-0853ce403fd2', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 20.99ms
+INFO [2024-01-23 16:38:18] root - Client_id (6199151d-6bec-41d9-9ba8-0853ce403fd2) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client a045f2d1-b33b-45f3-9aad-f6bd30ad5089: {'client_id': 'a045f2d1-b33b-45f3-9aad-f6bd30ad5089', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 21.44ms
+INFO [2024-01-23 16:38:18] root - Client_id (a045f2d1-b33b-45f3-9aad-f6bd30ad5089) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 4244042e-416a-4ff1-ac23-d7529c7a5f3d: {'client_id': '4244042e-416a-4ff1-ac23-d7529c7a5f3d', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 21.91ms
+INFO [2024-01-23 16:38:18] root - Client_id (4244042e-416a-4ff1-ac23-d7529c7a5f3d) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client f22684c9-456f-4fd8-b67b-af0fc73a3adc: {'client_id': 'f22684c9-456f-4fd8-b67b-af0fc73a3adc', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 22.35ms
+INFO [2024-01-23 16:38:18] root - Client_id (f22684c9-456f-4fd8-b67b-af0fc73a3adc) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 4e75ea9e-fcb1-45f8-a9da-fe2777e2cfd4: {'client_id': '4e75ea9e-fcb1-45f8-a9da-fe2777e2cfd4', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 22.75ms
+INFO [2024-01-23 16:38:18] root - Client_id (4e75ea9e-fcb1-45f8-a9da-fe2777e2cfd4) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client b39d407b-bcf8-42bb-9c30-13fdf51cf4eb: {'client_id': 'b39d407b-bcf8-42bb-9c30-13fdf51cf4eb', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 23.19ms
+INFO [2024-01-23 16:38:18] root - Client_id (b39d407b-bcf8-42bb-9c30-13fdf51cf4eb) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 96261e55-6262-43af-8371-3f889982f102: {'client_id': '96261e55-6262-43af-8371-3f889982f102', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 23.70ms
+INFO [2024-01-23 16:38:18] root - Client_id (96261e55-6262-43af-8371-3f889982f102) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client ee8d712f-53a7-4a91-934d-4254d1eda230: {'client_id': 'ee8d712f-53a7-4a91-934d-4254d1eda230', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 24.13ms
+INFO [2024-01-23 16:38:18] root - Client_id (ee8d712f-53a7-4a91-934d-4254d1eda230) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 4c86f133-4284-46df-a61b-bdef8e0fabab: {'client_id': '4c86f133-4284-46df-a61b-bdef8e0fabab', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 24.50ms
+INFO [2024-01-23 16:38:18] root - Client_id (4c86f133-4284-46df-a61b-bdef8e0fabab) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 76a59de4-8526-423f-b5c7-bdcf20ede766: {'client_id': '76a59de4-8526-423f-b5c7-bdcf20ede766', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 24.89ms
+INFO [2024-01-23 16:38:18] root - Client_id (76a59de4-8526-423f-b5c7-bdcf20ede766) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 918d6585-4de7-410e-962a-28bdd1d6043c: {'client_id': '918d6585-4de7-410e-962a-28bdd1d6043c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 25.24ms
+INFO [2024-01-23 16:38:18] root - Client_id (918d6585-4de7-410e-962a-28bdd1d6043c) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client eeec26ad-bbb3-4e37-b6cd-035fcc0a9d17: {'client_id': 'eeec26ad-bbb3-4e37-b6cd-035fcc0a9d17', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 25.63ms
+INFO [2024-01-23 16:38:18] root - Client_id (eeec26ad-bbb3-4e37-b6cd-035fcc0a9d17) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 144354c1-ceee-4e9e-907c-3c25070a68f8: {'client_id': '144354c1-ceee-4e9e-907c-3c25070a68f8', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 26.13ms
+INFO [2024-01-23 16:38:18] root - Client_id (144354c1-ceee-4e9e-907c-3c25070a68f8) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 2a8e4f2e-5491-472e-b067-517235ad1e11: {'client_id': '2a8e4f2e-5491-472e-b067-517235ad1e11', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 1.39ms
+INFO [2024-01-23 16:38:18] root - Client_id (2a8e4f2e-5491-472e-b067-517235ad1e11) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 1b4166ea-bcf2-434f-ac58-dae55b333caf: {'client_id': '1b4166ea-bcf2-434f-ac58-dae55b333caf', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 1.82ms
+INFO [2024-01-23 16:38:18] root - Client_id (1b4166ea-bcf2-434f-ac58-dae55b333caf) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client bd50fbe9-e2a3-4ed7-b1c2-6ac926c596c4: {'client_id': 'bd50fbe9-e2a3-4ed7-b1c2-6ac926c596c4', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 2.28ms
+INFO [2024-01-23 16:38:18] root - Client_id (bd50fbe9-e2a3-4ed7-b1c2-6ac926c596c4) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client b00b30bb-473b-4e92-a69c-296d63e28fd1: {'client_id': 'b00b30bb-473b-4e92-a69c-296d63e28fd1', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 2.78ms
+INFO [2024-01-23 16:38:18] root - Client_id (b00b30bb-473b-4e92-a69c-296d63e28fd1) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client ef939680-ddaa-4317-8268-ec9ff48f71e9: {'client_id': 'ef939680-ddaa-4317-8268-ec9ff48f71e9', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 3.25ms
+INFO [2024-01-23 16:38:18] root - Client_id (ef939680-ddaa-4317-8268-ec9ff48f71e9) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client a4c8897e-233b-4f64-a543-ce078ac2ef03: {'client_id': 'a4c8897e-233b-4f64-a543-ce078ac2ef03', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 3.76ms
+INFO [2024-01-23 16:38:18] root - Client_id (a4c8897e-233b-4f64-a543-ce078ac2ef03) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 827492f5-aade-4208-98da-c7099e8138a8: {'client_id': '827492f5-aade-4208-98da-c7099e8138a8', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 4.19ms
+INFO [2024-01-23 16:38:18] root - Client_id (827492f5-aade-4208-98da-c7099e8138a8) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client de70a302-1db4-433c-a608-31344a344e67: {'client_id': 'de70a302-1db4-433c-a608-31344a344e67', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 4.61ms
+INFO [2024-01-23 16:38:18] root - Client_id (de70a302-1db4-433c-a608-31344a344e67) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client f203d15b-066e-4046-910a-83a5cd427648: {'client_id': 'f203d15b-066e-4046-910a-83a5cd427648', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 2.46ms
+INFO [2024-01-23 16:38:18] root - Client_id (f203d15b-066e-4046-910a-83a5cd427648) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client fa9bde91-c8de-48cb-a2ac-7d4299c4885c: {'client_id': 'fa9bde91-c8de-48cb-a2ac-7d4299c4885c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 2.85ms
+INFO [2024-01-23 16:38:18] root - Client_id (fa9bde91-c8de-48cb-a2ac-7d4299c4885c) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 2eaec060-b3a2-40b9-83c0-ea72dc4b653a: {'client_id': '2eaec060-b3a2-40b9-83c0-ea72dc4b653a', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 3.36ms
+INFO [2024-01-23 16:38:18] root - Client_id (2eaec060-b3a2-40b9-83c0-ea72dc4b653a) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 1dc0c760-a469-4b5b-867f-f7e4c06b159f: {'client_id': '1dc0c760-a469-4b5b-867f-f7e4c06b159f', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 3.81ms
+INFO [2024-01-23 16:38:18] root - Client_id (1dc0c760-a469-4b5b-867f-f7e4c06b159f) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 6360b606-d16c-482a-8753-bcdea4ed7215: {'client_id': '6360b606-d16c-482a-8753-bcdea4ed7215', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 4.28ms
+INFO [2024-01-23 16:38:18] root - Client_id (6360b606-d16c-482a-8753-bcdea4ed7215) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 9c8b6014-1e55-42ff-a82e-3a8cf4dc7aa4: {'client_id': '9c8b6014-1e55-42ff-a82e-3a8cf4dc7aa4', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 4.72ms
+INFO [2024-01-23 16:38:18] root - Client_id (9c8b6014-1e55-42ff-a82e-3a8cf4dc7aa4) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 4b18bf17-5552-46ce-9a51-cfa44f56fc1b: {'client_id': '4b18bf17-5552-46ce-9a51-cfa44f56fc1b', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 5.14ms
+INFO [2024-01-23 16:38:18] root - Client_id (4b18bf17-5552-46ce-9a51-cfa44f56fc1b) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 003fc3be-73fa-43a4-b5d7-0b52f3762ddc: {'client_id': '003fc3be-73fa-43a4-b5d7-0b52f3762ddc', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 5.54ms
+INFO [2024-01-23 16:38:18] root - Client_id (003fc3be-73fa-43a4-b5d7-0b52f3762ddc) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client f85f5462-2b42-412f-8c9d-dae6c545f0fa: {'client_id': 'f85f5462-2b42-412f-8c9d-dae6c545f0fa', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 6.14ms
+INFO [2024-01-23 16:38:18] root - Client_id (f85f5462-2b42-412f-8c9d-dae6c545f0fa) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 26749d44-77ff-4502-be53-02c7a76ca504: {'client_id': '26749d44-77ff-4502-be53-02c7a76ca504', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 6.60ms
+INFO [2024-01-23 16:38:18] root - Client_id (26749d44-77ff-4502-be53-02c7a76ca504) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client db06faa1-cc21-44df-98d9-1c2274d4c22e: {'client_id': 'db06faa1-cc21-44df-98d9-1c2274d4c22e', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 7.00ms
+INFO [2024-01-23 16:38:18] root - Client_id (db06faa1-cc21-44df-98d9-1c2274d4c22e) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client f0148931-397d-4e84-8a25-269d53882a54: {'client_id': 'f0148931-397d-4e84-8a25-269d53882a54', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 7.43ms
+INFO [2024-01-23 16:38:18] root - Client_id (f0148931-397d-4e84-8a25-269d53882a54) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 9a40ba21-11cd-48b6-9ee7-6db8d9945c1e: {'client_id': '9a40ba21-11cd-48b6-9ee7-6db8d9945c1e', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 7.80ms
+INFO [2024-01-23 16:38:18] root - Client_id (9a40ba21-11cd-48b6-9ee7-6db8d9945c1e) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 94079c17-3a3f-424a-bad7-3656424cbc9d: {'client_id': '94079c17-3a3f-424a-bad7-3656424cbc9d', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 8.18ms
+INFO [2024-01-23 16:38:18] root - Client_id (94079c17-3a3f-424a-bad7-3656424cbc9d) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 61647704-e7e0-4174-a9a7-817e9c13a937: {'client_id': '61647704-e7e0-4174-a9a7-817e9c13a937', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 8.58ms
+INFO [2024-01-23 16:38:18] root - Client_id (61647704-e7e0-4174-a9a7-817e9c13a937) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 8505be91-73aa-4a16-8de8-1b267aa79740: {'client_id': '8505be91-73aa-4a16-8de8-1b267aa79740', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 8.96ms
+INFO [2024-01-23 16:38:18] root - Client_id (8505be91-73aa-4a16-8de8-1b267aa79740) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 3f5f781e-5a71-4990-9193-bc5f731545a4: {'client_id': '3f5f781e-5a71-4990-9193-bc5f731545a4', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 9.39ms
+INFO [2024-01-23 16:38:18] root - Client_id (3f5f781e-5a71-4990-9193-bc5f731545a4) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client c3b81261-74e9-4b44-9c7c-bd4b02e67570: {'client_id': 'c3b81261-74e9-4b44-9c7c-bd4b02e67570', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 9.76ms
+INFO [2024-01-23 16:38:18] root - Client_id (c3b81261-74e9-4b44-9c7c-bd4b02e67570) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client b71725b3-5f04-4678-a012-262001347ccd: {'client_id': 'b71725b3-5f04-4678-a012-262001347ccd', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 10.10ms
+INFO [2024-01-23 16:38:18] root - Client_id (b71725b3-5f04-4678-a012-262001347ccd) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 849ac06f-7e32-410a-868a-9adffc2bd7ae: {'client_id': '849ac06f-7e32-410a-868a-9adffc2bd7ae', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 10.46ms
+INFO [2024-01-23 16:38:18] root - Client_id (849ac06f-7e32-410a-868a-9adffc2bd7ae) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 997a033e-ab99-4a8d-bcc8-d9d34f9114e8: {'client_id': '997a033e-ab99-4a8d-bcc8-d9d34f9114e8', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 10.87ms
+INFO [2024-01-23 16:38:18] root - Client_id (997a033e-ab99-4a8d-bcc8-d9d34f9114e8) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 24a7b863-fdf0-4d46-bea5-d18f6ae414d4: {'client_id': '24a7b863-fdf0-4d46-bea5-d18f6ae414d4', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 11.24ms
+INFO [2024-01-23 16:38:18] root - Client_id (24a7b863-fdf0-4d46-bea5-d18f6ae414d4) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client c89668e3-4cc7-4026-bedf-c941535384f9: {'client_id': 'c89668e3-4cc7-4026-bedf-c941535384f9', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 11.61ms
+INFO [2024-01-23 16:38:18] root - Client_id (c89668e3-4cc7-4026-bedf-c941535384f9) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client ec87d0e5-c151-4fe0-a70a-e19da5b9b0f0: {'client_id': 'ec87d0e5-c151-4fe0-a70a-e19da5b9b0f0', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 11.98ms
+INFO [2024-01-23 16:38:18] root - Client_id (ec87d0e5-c151-4fe0-a70a-e19da5b9b0f0) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 6030965e-a2e0-46fc-88e5-0f0bcf0f4121: {'client_id': '6030965e-a2e0-46fc-88e5-0f0bcf0f4121', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 45.84ms
+INFO [2024-01-23 16:38:18] root - Client_id (6030965e-a2e0-46fc-88e5-0f0bcf0f4121) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 0f5736ef-a3e9-4ba1-9ae0-51592e92cd84: {'client_id': '0f5736ef-a3e9-4ba1-9ae0-51592e92cd84', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 46.30ms
+INFO [2024-01-23 16:38:18] root - Client_id (0f5736ef-a3e9-4ba1-9ae0-51592e92cd84) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client f66a6161-bae0-4f53-bf95-b87bc3ceb766: {'client_id': 'f66a6161-bae0-4f53-bf95-b87bc3ceb766', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 2.82ms
+INFO [2024-01-23 16:38:18] root - Client_id (f66a6161-bae0-4f53-bf95-b87bc3ceb766) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 2ac39d70-6d4c-4fb0-8271-47a31b5b05c3: {'client_id': '2ac39d70-6d4c-4fb0-8271-47a31b5b05c3', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 2.34ms
+INFO [2024-01-23 16:38:18] root - Client_id (2ac39d70-6d4c-4fb0-8271-47a31b5b05c3) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client a181f71d-b279-4e57-8df5-6724c1bdf2f9: {'client_id': 'a181f71d-b279-4e57-8df5-6724c1bdf2f9', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 2.72ms
+INFO [2024-01-23 16:38:18] root - Client_id (a181f71d-b279-4e57-8df5-6724c1bdf2f9) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 3e0c2595-87e1-4ceb-b0f7-09914039201a: {'client_id': '3e0c2595-87e1-4ceb-b0f7-09914039201a', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 3.10ms
+INFO [2024-01-23 16:38:18] root - Client_id (3e0c2595-87e1-4ceb-b0f7-09914039201a) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 41fa1f99-51ce-4b5a-b4aa-a16d9ed55f4c: {'client_id': '41fa1f99-51ce-4b5a-b4aa-a16d9ed55f4c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 3.47ms
+INFO [2024-01-23 16:38:18] root - Client_id (41fa1f99-51ce-4b5a-b4aa-a16d9ed55f4c) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client b92a7fdd-b8ad-484f-86a6-8f41158516de: {'client_id': 'b92a7fdd-b8ad-484f-86a6-8f41158516de', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 3.83ms
+INFO [2024-01-23 16:38:18] root - Client_id (b92a7fdd-b8ad-484f-86a6-8f41158516de) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client c757b8d4-9627-466a-8ec0-a9e7189b86e8: {'client_id': 'c757b8d4-9627-466a-8ec0-a9e7189b86e8', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 4.25ms
+INFO [2024-01-23 16:38:18] root - Client_id (c757b8d4-9627-466a-8ec0-a9e7189b86e8) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client b6b49e07-5e85-4051-89a9-4d0c5e6157aa: {'client_id': 'b6b49e07-5e85-4051-89a9-4d0c5e6157aa', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 4.66ms
+INFO [2024-01-23 16:38:18] root - Client_id (b6b49e07-5e85-4051-89a9-4d0c5e6157aa) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 09276761-f3de-4b08-adbf-79a974f0f9f0: {'client_id': '09276761-f3de-4b08-adbf-79a974f0f9f0', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 5.07ms
+INFO [2024-01-23 16:38:18] root - Client_id (09276761-f3de-4b08-adbf-79a974f0f9f0) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client e48a33e3-59f3-4bca-900c-b6dca82b0c9d: {'client_id': 'e48a33e3-59f3-4bca-900c-b6dca82b0c9d', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 5.40ms
+INFO [2024-01-23 16:38:18] root - Client_id (e48a33e3-59f3-4bca-900c-b6dca82b0c9d) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 4fa0dbf3-ea73-4ed6-90a4-ca668b77ea17: {'client_id': '4fa0dbf3-ea73-4ed6-90a4-ca668b77ea17', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 5.78ms
+INFO [2024-01-23 16:38:18] root - Client_id (4fa0dbf3-ea73-4ed6-90a4-ca668b77ea17) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 170321f4-876d-48b8-b2dc-13036caca686: {'client_id': '170321f4-876d-48b8-b2dc-13036caca686', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 6.20ms
+INFO [2024-01-23 16:38:18] root - Client_id (170321f4-876d-48b8-b2dc-13036caca686) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 4abdd6df-70a4-4427-9b2b-fc54db6e6ac2: {'client_id': '4abdd6df-70a4-4427-9b2b-fc54db6e6ac2', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 6.59ms
+INFO [2024-01-23 16:38:18] root - Client_id (4abdd6df-70a4-4427-9b2b-fc54db6e6ac2) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 918c6280-70d0-45bd-b860-f05057e9c57c: {'client_id': '918c6280-70d0-45bd-b860-f05057e9c57c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 7.00ms
+INFO [2024-01-23 16:38:18] root - Client_id (918c6280-70d0-45bd-b860-f05057e9c57c) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 5ad092bd-cc46-4e31-a5dc-d1abaa2c887e: {'client_id': '5ad092bd-cc46-4e31-a5dc-d1abaa2c887e', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 7.41ms
+INFO [2024-01-23 16:38:18] root - Client_id (5ad092bd-cc46-4e31-a5dc-d1abaa2c887e) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 4e13be24-ddf8-4f6d-a169-bddb9fc462f3: {'client_id': '4e13be24-ddf8-4f6d-a169-bddb9fc462f3', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 7.79ms
+INFO [2024-01-23 16:38:18] root - Client_id (4e13be24-ddf8-4f6d-a169-bddb9fc462f3) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client ef8e9107-7cba-4887-84ea-138efd17ab0c: {'client_id': 'ef8e9107-7cba-4887-84ea-138efd17ab0c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 8.11ms
+INFO [2024-01-23 16:38:18] root - Client_id (ef8e9107-7cba-4887-84ea-138efd17ab0c) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client c94df9ed-9af8-47b9-9ac4-abb96dd73ec0: {'client_id': 'c94df9ed-9af8-47b9-9ac4-abb96dd73ec0', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 0.77ms
+INFO [2024-01-23 16:38:18] root - Client_id (c94df9ed-9af8-47b9-9ac4-abb96dd73ec0) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 7563dc5d-f7af-440e-868f-09e703223128: {'client_id': '7563dc5d-f7af-440e-868f-09e703223128', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 1.33ms
+INFO [2024-01-23 16:38:18] root - Client_id (7563dc5d-f7af-440e-868f-09e703223128) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client b0fb22b2-502d-4c53-ac51-67bb07d5d50d: {'client_id': 'b0fb22b2-502d-4c53-ac51-67bb07d5d50d', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 1.74ms
+INFO [2024-01-23 16:38:18] root - Client_id (b0fb22b2-502d-4c53-ac51-67bb07d5d50d) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 13c9ab48-3c79-460e-ad1c-658cb36266b4: {'client_id': '13c9ab48-3c79-460e-ad1c-658cb36266b4', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 2.13ms
+INFO [2024-01-23 16:38:18] root - Client_id (13c9ab48-3c79-460e-ad1c-658cb36266b4) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 3e661d79-6ea6-4bac-8e80-2859c49e6fb2: {'client_id': '3e661d79-6ea6-4bac-8e80-2859c49e6fb2', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 2.47ms
+INFO [2024-01-23 16:38:18] root - Client_id (3e661d79-6ea6-4bac-8e80-2859c49e6fb2) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 2a81375e-72bf-4e4c-96df-db31f7b916e4: {'client_id': '2a81375e-72bf-4e4c-96df-db31f7b916e4', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 2.30ms
+INFO [2024-01-23 16:38:18] root - Client_id (2a81375e-72bf-4e4c-96df-db31f7b916e4) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client 6b5d8f35-5744-4df5-aae3-3c778a11256b: {'client_id': '6b5d8f35-5744-4df5-aae3-3c778a11256b', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 0.76ms
+INFO [2024-01-23 16:38:18] root - Client_id (6b5d8f35-5744-4df5-aae3-3c778a11256b) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client e5899596-3189-4c1f-abbf-af3df0cc932e: {'client_id': 'e5899596-3189-4c1f-abbf-af3df0cc932e', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 0.78ms
+INFO [2024-01-23 16:38:18] root - Client_id (e5899596-3189-4c1f-abbf-af3df0cc932e) sent to the client.
+INFO [2024-01-23 16:38:18] root - Response from client af21fc06-5583-4d09-b56b-ab1bcdb07d53: {'client_id': 'af21fc06-5583-4d09-b56b-ab1bcdb07d53', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+INFO [2024-01-23 16:38:18] tornado.access - 200 POST / (::1) 0.48ms
+INFO [2024-01-23 16:38:18] root - Client_id (af21fc06-5583-4d09-b56b-ab1bcdb07d53) sent to the client.
+INFO [2024-01-23 16:38:18] root - Data with client_id - 5c59fc10-266a-4fca-8b2d-4863e617e0f3 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=5c59fc10-266a-4fca-8b2d-4863e617e0f3 (::1) 0.50ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - bd50fbe9-e2a3-4ed7-b1c2-6ac926c596c4 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=bd50fbe9-e2a3-4ed7-b1c2-6ac926c596c4 (::1) 0.34ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - ef939680-ddaa-4317-8268-ec9ff48f71e9 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=ef939680-ddaa-4317-8268-ec9ff48f71e9 (::1) 0.31ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 827492f5-aade-4208-98da-c7099e8138a8 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=827492f5-aade-4208-98da-c7099e8138a8 (::1) 0.28ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - a4c8897e-233b-4f64-a543-ce078ac2ef03 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=a4c8897e-233b-4f64-a543-ce078ac2ef03 (::1) 0.30ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - c1181d70-485a-4fca-a785-57a10457087d sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=c1181d70-485a-4fca-a785-57a10457087d (::1) 0.31ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 054633ef-2a69-45e7-bbbb-50fde0a1243c sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=054633ef-2a69-45e7-bbbb-50fde0a1243c (::1) 0.28ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 71d3b666-95cd-43f3-9831-9ff75fb8cf18 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=71d3b666-95cd-43f3-9831-9ff75fb8cf18 (::1) 0.25ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 0e697789-d4ce-4896-be65-df61aebe92ac sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=0e697789-d4ce-4896-be65-df61aebe92ac (::1) 0.38ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 62c2cbb7-51e7-44e9-877e-92352ef13bb6 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=62c2cbb7-51e7-44e9-877e-92352ef13bb6 (::1) 0.34ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - cd0bd6bd-0075-4208-80c2-d189f84f81fd sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=cd0bd6bd-0075-4208-80c2-d189f84f81fd (::1) 0.31ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 031ec3d7-6d08-4193-b5dd-228ca141b62c sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=031ec3d7-6d08-4193-b5dd-228ca141b62c (::1) 0.32ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - a045f2d1-b33b-45f3-9aad-f6bd30ad5089 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=a045f2d1-b33b-45f3-9aad-f6bd30ad5089 (::1) 0.39ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 4e75ea9e-fcb1-45f8-a9da-fe2777e2cfd4 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=4e75ea9e-fcb1-45f8-a9da-fe2777e2cfd4 (::1) 0.35ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - ee8d712f-53a7-4a91-934d-4254d1eda230 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=ee8d712f-53a7-4a91-934d-4254d1eda230 (::1) 0.30ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 918d6585-4de7-410e-962a-28bdd1d6043c sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=918d6585-4de7-410e-962a-28bdd1d6043c (::1) 0.32ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 6030965e-a2e0-46fc-88e5-0f0bcf0f4121 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=6030965e-a2e0-46fc-88e5-0f0bcf0f4121 (::1) 0.31ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - a181f71d-b279-4e57-8df5-6724c1bdf2f9 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=a181f71d-b279-4e57-8df5-6724c1bdf2f9 (::1) 0.30ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - fa9bde91-c8de-48cb-a2ac-7d4299c4885c sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=fa9bde91-c8de-48cb-a2ac-7d4299c4885c (::1) 0.31ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 13c9ab48-3c79-460e-ad1c-658cb36266b4 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=13c9ab48-3c79-460e-ad1c-658cb36266b4 (::1) 0.31ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 6360b606-d16c-482a-8753-bcdea4ed7215 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=6360b606-d16c-482a-8753-bcdea4ed7215 (::1) 0.31ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 003fc3be-73fa-43a4-b5d7-0b52f3762ddc sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=003fc3be-73fa-43a4-b5d7-0b52f3762ddc (::1) 0.42ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - db06faa1-cc21-44df-98d9-1c2274d4c22e sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=db06faa1-cc21-44df-98d9-1c2274d4c22e (::1) 0.43ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 94079c17-3a3f-424a-bad7-3656424cbc9d sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=94079c17-3a3f-424a-bad7-3656424cbc9d (::1) 0.34ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 3f5f781e-5a71-4990-9193-bc5f731545a4 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=3f5f781e-5a71-4990-9193-bc5f731545a4 (::1) 0.36ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 849ac06f-7e32-410a-868a-9adffc2bd7ae sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=849ac06f-7e32-410a-868a-9adffc2bd7ae (::1) 0.33ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - c89668e3-4cc7-4026-bedf-c941535384f9 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=c89668e3-4cc7-4026-bedf-c941535384f9 (::1) 0.34ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 41fa1f99-51ce-4b5a-b4aa-a16d9ed55f4c sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=41fa1f99-51ce-4b5a-b4aa-a16d9ed55f4c (::1) 0.30ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - b6b49e07-5e85-4051-89a9-4d0c5e6157aa sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=b6b49e07-5e85-4051-89a9-4d0c5e6157aa (::1) 0.30ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - e48a33e3-59f3-4bca-900c-b6dca82b0c9d sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=e48a33e3-59f3-4bca-900c-b6dca82b0c9d (::1) 0.30ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 918c6280-70d0-45bd-b860-f05057e9c57c sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=918c6280-70d0-45bd-b860-f05057e9c57c (::1) 0.30ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 5ad092bd-cc46-4e31-a5dc-d1abaa2c887e sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=5ad092bd-cc46-4e31-a5dc-d1abaa2c887e (::1) 0.28ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 7563dc5d-f7af-440e-868f-09e703223128 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=7563dc5d-f7af-440e-868f-09e703223128 (::1) 0.29ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - b0fb22b2-502d-4c53-ac51-67bb07d5d50d sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=b0fb22b2-502d-4c53-ac51-67bb07d5d50d (::1) 0.29ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 939bbaa1-faa3-4030-a890-32dbc3112138 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=939bbaa1-faa3-4030-a890-32dbc3112138 (::1) 0.28ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 76e7e4f9-082d-4e31-a23d-f1b2abbcab89 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=76e7e4f9-082d-4e31-a23d-f1b2abbcab89 (::1) 0.28ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - cb038048-e95d-4e13-9568-1232b2cc6691 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=cb038048-e95d-4e13-9568-1232b2cc6691 (::1) 0.28ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - a98e25ed-9e34-46fb-a18b-ba9857dc4b45 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=a98e25ed-9e34-46fb-a18b-ba9857dc4b45 (::1) 0.31ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - aee648c0-5ddf-4585-a847-fdc85fa7e670 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=aee648c0-5ddf-4585-a847-fdc85fa7e670 (::1) 0.37ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - bb2b8b82-230f-4b54-a957-dfb5eb2a23bf sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=bb2b8b82-230f-4b54-a957-dfb5eb2a23bf (::1) 0.37ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 41c871aa-77c9-469b-803e-99935ad4830f sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=41c871aa-77c9-469b-803e-99935ad4830f (::1) 0.35ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 53d4defe-b637-44ff-b98c-9d78bb9caa87 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=53d4defe-b637-44ff-b98c-9d78bb9caa87 (::1) 0.33ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - d11b8610-55f5-4cf6-aa31-c6a54313c3e1 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=d11b8610-55f5-4cf6-aa31-c6a54313c3e1 (::1) 0.30ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - c1a7363d-609b-4cbc-a6fb-ce9c507bdfb3 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=c1a7363d-609b-4cbc-a6fb-ce9c507bdfb3 (::1) 0.32ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 6199151d-6bec-41d9-9ba8-0853ce403fd2 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=6199151d-6bec-41d9-9ba8-0853ce403fd2 (::1) 0.30ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - f22684c9-456f-4fd8-b67b-af0fc73a3adc sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=f22684c9-456f-4fd8-b67b-af0fc73a3adc (::1) 0.30ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 96261e55-6262-43af-8371-3f889982f102 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=96261e55-6262-43af-8371-3f889982f102 (::1) 0.29ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 76a59de4-8526-423f-b5c7-bdcf20ede766 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=76a59de4-8526-423f-b5c7-bdcf20ede766 (::1) 0.29ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 144354c1-ceee-4e9e-907c-3c25070a68f8 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=144354c1-ceee-4e9e-907c-3c25070a68f8 (::1) 0.28ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 2ac39d70-6d4c-4fb0-8271-47a31b5b05c3 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=2ac39d70-6d4c-4fb0-8271-47a31b5b05c3 (::1) 0.32ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - f203d15b-066e-4046-910a-83a5cd427648 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=f203d15b-066e-4046-910a-83a5cd427648 (::1) 0.31ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - c94df9ed-9af8-47b9-9ac4-abb96dd73ec0 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=c94df9ed-9af8-47b9-9ac4-abb96dd73ec0 (::1) 0.29ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 1dc0c760-a469-4b5b-867f-f7e4c06b159f sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=1dc0c760-a469-4b5b-867f-f7e4c06b159f (::1) 0.38ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 4b18bf17-5552-46ce-9a51-cfa44f56fc1b sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=4b18bf17-5552-46ce-9a51-cfa44f56fc1b (::1) 0.30ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 26749d44-77ff-4502-be53-02c7a76ca504 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=26749d44-77ff-4502-be53-02c7a76ca504 (::1) 0.31ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 9a40ba21-11cd-48b6-9ee7-6db8d9945c1e sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=9a40ba21-11cd-48b6-9ee7-6db8d9945c1e (::1) 0.34ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 8505be91-73aa-4a16-8de8-1b267aa79740 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=8505be91-73aa-4a16-8de8-1b267aa79740 (::1) 0.32ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - b71725b3-5f04-4678-a012-262001347ccd sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=b71725b3-5f04-4678-a012-262001347ccd (::1) 0.31ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 2a81375e-72bf-4e4c-96df-db31f7b916e4 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=2a81375e-72bf-4e4c-96df-db31f7b916e4 (::1) 0.29ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 24a7b863-fdf0-4d46-bea5-d18f6ae414d4 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=24a7b863-fdf0-4d46-bea5-d18f6ae414d4 (::1) 0.30ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - c757b8d4-9627-466a-8ec0-a9e7189b86e8 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=c757b8d4-9627-466a-8ec0-a9e7189b86e8 (::1) 0.28ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 4fa0dbf3-ea73-4ed6-90a4-ca668b77ea17 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=4fa0dbf3-ea73-4ed6-90a4-ca668b77ea17 (::1) 0.28ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 4abdd6df-70a4-4427-9b2b-fc54db6e6ac2 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=4abdd6df-70a4-4427-9b2b-fc54db6e6ac2 (::1) 0.36ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 6b5d8f35-5744-4df5-aae3-3c778a11256b sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=6b5d8f35-5744-4df5-aae3-3c778a11256b (::1) 0.36ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - ef8e9107-7cba-4887-84ea-138efd17ab0c sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=ef8e9107-7cba-4887-84ea-138efd17ab0c (::1) 0.36ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - af21fc06-5583-4d09-b56b-ab1bcdb07d53 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=af21fc06-5583-4d09-b56b-ab1bcdb07d53 (::1) 0.31ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - de70a302-1db4-433c-a608-31344a344e67 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=de70a302-1db4-433c-a608-31344a344e67 (::1) 0.35ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - b00b30bb-473b-4e92-a69c-296d63e28fd1 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=b00b30bb-473b-4e92-a69c-296d63e28fd1 (::1) 0.31ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 1b4166ea-bcf2-434f-ac58-dae55b333caf sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=1b4166ea-bcf2-434f-ac58-dae55b333caf (::1) 0.33ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 5ea13cc4-5c7c-4f69-8eb5-185196a8a007 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=5ea13cc4-5c7c-4f69-8eb5-185196a8a007 (::1) 0.28ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 7c7dd2fd-0d61-41e3-b0a4-f05b0fb99f31 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=7c7dd2fd-0d61-41e3-b0a4-f05b0fb99f31 (::1) 0.34ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - ad1ac035-4382-422f-8b36-f2d1fbf7e2c2 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=ad1ac035-4382-422f-8b36-f2d1fbf7e2c2 (::1) 0.31ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 001793cf-b51e-44df-a4fd-4c592467a9c2 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=001793cf-b51e-44df-a4fd-4c592467a9c2 (::1) 0.32ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - b39d407b-bcf8-42bb-9c30-13fdf51cf4eb sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=b39d407b-bcf8-42bb-9c30-13fdf51cf4eb (::1) 0.31ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - eeec26ad-bbb3-4e37-b6cd-035fcc0a9d17 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=eeec26ad-bbb3-4e37-b6cd-035fcc0a9d17 (::1) 0.33ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 3e0c2595-87e1-4ceb-b0f7-09914039201a sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=3e0c2595-87e1-4ceb-b0f7-09914039201a (::1) 0.36ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 3e661d79-6ea6-4bac-8e80-2859c49e6fb2 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=3e661d79-6ea6-4bac-8e80-2859c49e6fb2 (::1) 0.33ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - f85f5462-2b42-412f-8c9d-dae6c545f0fa sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=f85f5462-2b42-412f-8c9d-dae6c545f0fa (::1) 0.32ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 61647704-e7e0-4174-a9a7-817e9c13a937 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=61647704-e7e0-4174-a9a7-817e9c13a937 (::1) 0.29ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 997a033e-ab99-4a8d-bcc8-d9d34f9114e8 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=997a033e-ab99-4a8d-bcc8-d9d34f9114e8 (::1) 0.34ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - b92a7fdd-b8ad-484f-86a6-8f41158516de sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=b92a7fdd-b8ad-484f-86a6-8f41158516de (::1) 0.29ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 170321f4-876d-48b8-b2dc-13036caca686 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=170321f4-876d-48b8-b2dc-13036caca686 (::1) 0.33ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 4e13be24-ddf8-4f6d-a169-bddb9fc462f3 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=4e13be24-ddf8-4f6d-a169-bddb9fc462f3 (::1) 0.29ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 2a8e4f2e-5491-472e-b067-517235ad1e11 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=2a8e4f2e-5491-472e-b067-517235ad1e11 (::1) 0.32ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 1f7a67ee-4662-4b17-b5f2-70606323351a sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=1f7a67ee-4662-4b17-b5f2-70606323351a (::1) 0.38ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 14a68af9-1634-488a-a144-0fbadc80bdb6 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=14a68af9-1634-488a-a144-0fbadc80bdb6 (::1) 0.32ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 4244042e-416a-4ff1-ac23-d7529c7a5f3d sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=4244042e-416a-4ff1-ac23-d7529c7a5f3d (::1) 0.37ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 0f5736ef-a3e9-4ba1-9ae0-51592e92cd84 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=0f5736ef-a3e9-4ba1-9ae0-51592e92cd84 (::1) 0.33ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 9c8b6014-1e55-42ff-a82e-3a8cf4dc7aa4 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=9c8b6014-1e55-42ff-a82e-3a8cf4dc7aa4 (::1) 0.32ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - c3b81261-74e9-4b44-9c7c-bd4b02e67570 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=c3b81261-74e9-4b44-9c7c-bd4b02e67570 (::1) 0.35ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 09276761-f3de-4b08-adbf-79a974f0f9f0 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=09276761-f3de-4b08-adbf-79a974f0f9f0 (::1) 0.33ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - e5899596-3189-4c1f-abbf-af3df0cc932e sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=e5899596-3189-4c1f-abbf-af3df0cc932e (::1) 0.32ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 82cbd5d7-96cc-497d-b76f-7a2991877a4c sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=82cbd5d7-96cc-497d-b76f-7a2991877a4c (::1) 0.29ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 4c86f133-4284-46df-a61b-bdef8e0fabab sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=4c86f133-4284-46df-a61b-bdef8e0fabab (::1) 0.34ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - f0148931-397d-4e84-8a25-269d53882a54 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=f0148931-397d-4e84-8a25-269d53882a54 (::1) 0.30ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - f66a6161-bae0-4f53-bf95-b87bc3ceb766 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=f66a6161-bae0-4f53-bf95-b87bc3ceb766 (::1) 0.28ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 8a0fc165-51cf-4149-9a8a-68e45ec50c6a sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=8a0fc165-51cf-4149-9a8a-68e45ec50c6a (::1) 0.32ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - ec87d0e5-c151-4fe0-a70a-e19da5b9b0f0 sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=ec87d0e5-c151-4fe0-a70a-e19da5b9b0f0 (::1) 0.29ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - 2eaec060-b3a2-40b9-83c0-ea72dc4b653a sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=2eaec060-b3a2-40b9-83c0-ea72dc4b653a (::1) 0.32ms
+INFO [2024-01-23 16:38:18] root - Data with client_id - c9524c46-54c2-469c-8222-60b3c31ba4ca sent.
+INFO [2024-01-23 16:38:18] tornado.access - 200 GET /?c_id=c9524c46-54c2-469c-8222-60b3c31ba4ca (::1) 0.33ms

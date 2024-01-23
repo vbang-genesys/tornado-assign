@@ -1,44 +1,73 @@
-import tornado.httpclient
-import json
+""""
 
-url = "http://localhost:8888/?name=Vidoosh&age=20"
+Server details:
+-> Tornado Server
+-> Database / file system
+-> Data preprocessing (clean, fill null)
+-> Replace print with logging
+-> Add comments and docstrings wherever necessary
+-> Apply Black formating to all files 
 
-http_client = tornado.httpclient.HTTPClient()
+"""
 
-try:
-    response = http_client.fetch(url, method="GET")
-    print("GET Response:", response.body.decode())
+import asyncio
+import httpx
+import logging
 
-except tornado.httpclient.HTTPError as e:
-    print(f"Error: {e}")
+logging.basicConfig(
+    filename="./logs/client_log.log",
+    format="%(levelname)s [%(asctime)s] %(name)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+    encoding="utf-8",
+    level=logging.DEBUG,
+)
 
-finally:
-    http_client.close()
 
-post_url = "http://localhost:8888/"
+async def send_request(client, method, url, data=None):
+    """
+    Post -> post data to url
+    Get -> get data from url (url contains the clien_id)
+    Return the response from the server
+    """
+    if method == "POST":
+        response = await client.post(url, json=data)
+    elif method == "GET":
+        response = await client.get(url)
 
-post_data = {
-    "name": "Vidoosh",
-    "age": "70",
-    "industry": "publiccvb",
-    "salary": "50",
-    "city": "Chennai",
-}
+    return response
 
-http_client = tornado.httpclient.HTTPClient()
 
-try:
-    request = tornado.httpclient.HTTPRequest(
-        post_url,
-        method="POST",
-        body=json.dumps(post_data),
-        headers={"Content-type": "application/json"},
-    )
-    response = http_client.fetch(request)
-    print("POST Response:", json.loads(response.body.decode()))
+async def main():
+    """
+    -> send the json data using post
+    -> receive the stored data from the server by sending the client_id
+    """
+    url = "http://localhost:8888"
+    data = {
+        "name": "Vidoosh",
+        "age": "70",
+        "industry": "publiccvb",
+        "salary": "50",
+        "city": "Chennai",
+    }
 
-except tornado.httpclient.HTTPError as e:
-    print(f"Error: {e}")
+    async with httpx.AsyncClient() as client:
+        tasks = [send_request(client, "POST", url, data) for _ in range(100)]
+        post_responses = await asyncio.gather(*tasks)
+        for i, post_response in enumerate(post_responses, start=1):
+            print(f"Response {i}: {post_response.text}")
+        get_tasks = [
+            send_request(client, "GET", url + f"?c_id={post_responze.text}")
+            for post_responze in post_responses
+        ]
+        get_responses = await asyncio.gather(*get_tasks)
+        for i, get_response in enumerate(get_responses, start=1):
+            print(f"Response {i}: {get_response.text}")
+        # c_id = input("Enter c_id: ")
+        # task = [send_request(client, "GET", url + f"?c_id={c_id}")]
+        # response = await asyncio.gather(*task)
+        # print(response[0].text)
 
-finally:
-    http_client.close()
+
+if __name__ == "__main__":
+    asyncio.run(main())
