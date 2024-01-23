@@ -24452,3 +24452,200 @@ DEBUG [2024-01-22 17:00:57] httpcore.connection - close.started
 DEBUG [2024-01-22 17:00:57] httpcore.connection - close.complete
 DEBUG [2024-01-22 17:00:57] httpcore.connection - close.started
 DEBUG [2024-01-22 17:00:57] httpcore.connection - close.complete
+DEBUG [2024-01-23 13:12:13] asyncio - Using selector: KqueueSelector
+DEBUG [2024-01-23 13:12:13] httpx - load_ssl_context verify=True cert=None trust_env=True http2=False
+DEBUG [2024-01-23 13:12:13] httpx - load_verify_locations cafile='/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/certifi/cacert.pem'
+DEBUG [2024-01-23 13:12:13] httpcore.connection - connect_tcp.started host='localhost' port=8888 local_address=None timeout=5.0 socket_options=None
+DEBUG [2024-01-23 13:12:13] httpcore.connection - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x10353a960>
+DEBUG [2024-01-23 13:12:13] httpcore.http11 - send_request_headers.started request=<Request [b'POST']>
+DEBUG [2024-01-23 13:12:13] httpcore.http11 - send_request_headers.complete
+DEBUG [2024-01-23 13:12:13] httpcore.http11 - send_request_body.started request=<Request [b'POST']>
+DEBUG [2024-01-23 13:12:13] httpcore.http11 - send_request_body.complete
+DEBUG [2024-01-23 13:12:13] httpcore.http11 - receive_response_headers.started request=<Request [b'POST']>
+DEBUG [2024-01-23 13:12:13] httpcore.http11 - receive_response_headers.complete return_value=(b'HTTP/1.1', 500, b'Internal Server Error', [(b'Server', b'TornadoServer/6.4'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Date', b'Tue, 23 Jan 2024 07:42:13 GMT'), (b'Content-Length', b'93')])
+INFO [2024-01-23 13:12:13] httpx - HTTP Request: POST http://localhost:8888 "HTTP/1.1 500 Internal Server Error"
+DEBUG [2024-01-23 13:12:13] httpcore.http11 - receive_response_body.started request=<Request [b'POST']>
+DEBUG [2024-01-23 13:12:13] httpcore.http11 - receive_response_body.complete
+DEBUG [2024-01-23 13:12:13] httpcore.http11 - response_closed.started
+DEBUG [2024-01-23 13:12:13] httpcore.http11 - response_closed.complete
+DEBUG [2024-01-23 13:12:13] httpcore.http11 - send_request_headers.started request=<Request [b'GET']>
+DEBUG [2024-01-23 13:12:13] httpcore.http11 - send_request_headers.complete
+DEBUG [2024-01-23 13:12:13] httpcore.http11 - send_request_body.started request=<Request [b'GET']>
+DEBUG [2024-01-23 13:12:13] httpcore.http11 - send_request_body.complete
+DEBUG [2024-01-23 13:12:13] httpcore.http11 - receive_response_headers.started request=<Request [b'GET']>
+DEBUG [2024-01-23 13:12:13] httpcore.http11 - receive_response_headers.complete return_value=(b'HTTP/1.1', 500, b'Internal Server Error', [(b'Server', b'TornadoServer/6.4'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Date', b'Tue, 23 Jan 2024 07:42:13 GMT'), (b'Content-Length', b'93')])
+INFO [2024-01-23 13:12:13] httpx - HTTP Request: GET http://localhost:8888?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E "HTTP/1.1 500 Internal Server Error"
+DEBUG [2024-01-23 13:12:13] httpcore.http11 - receive_response_body.started request=<Request [b'GET']>
+DEBUG [2024-01-23 13:12:13] httpcore.http11 - receive_response_body.complete
+DEBUG [2024-01-23 13:12:13] httpcore.http11 - response_closed.started
+DEBUG [2024-01-23 13:12:13] httpcore.http11 - response_closed.complete
+DEBUG [2024-01-23 13:12:13] httpcore.connection - close.started
+DEBUG [2024-01-23 13:12:13] httpcore.connection - close.complete
+DEBUG [2024-01-23 13:13:42] asyncio - Using selector: KqueueSelector
+DEBUG [2024-01-23 13:13:42] httpx - load_ssl_context verify=True cert=None trust_env=True http2=False
+DEBUG [2024-01-23 13:13:42] httpx - load_verify_locations cafile='/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/certifi/cacert.pem'
+DEBUG [2024-01-23 13:13:42] httpcore.connection - connect_tcp.started host='localhost' port=8888 local_address=None timeout=5.0 socket_options=None
+DEBUG [2024-01-23 13:13:42] httpcore.connection - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x10671a660>
+DEBUG [2024-01-23 13:13:42] httpcore.http11 - send_request_headers.started request=<Request [b'POST']>
+DEBUG [2024-01-23 13:13:42] httpcore.http11 - send_request_headers.complete
+DEBUG [2024-01-23 13:13:42] httpcore.http11 - send_request_body.started request=<Request [b'POST']>
+DEBUG [2024-01-23 13:13:42] httpcore.http11 - send_request_body.complete
+DEBUG [2024-01-23 13:13:42] httpcore.http11 - receive_response_headers.started request=<Request [b'POST']>
+DEBUG [2024-01-23 13:13:42] httpcore.http11 - receive_response_headers.complete return_value=(b'HTTP/1.1', 500, b'Internal Server Error', [(b'Server', b'TornadoServer/6.4'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Date', b'Tue, 23 Jan 2024 07:43:42 GMT'), (b'Content-Length', b'93')])
+INFO [2024-01-23 13:13:42] httpx - HTTP Request: POST http://localhost:8888 "HTTP/1.1 500 Internal Server Error"
+DEBUG [2024-01-23 13:13:42] httpcore.http11 - receive_response_body.started request=<Request [b'POST']>
+DEBUG [2024-01-23 13:13:42] httpcore.http11 - receive_response_body.complete
+DEBUG [2024-01-23 13:13:42] httpcore.http11 - response_closed.started
+DEBUG [2024-01-23 13:13:42] httpcore.http11 - response_closed.complete
+DEBUG [2024-01-23 13:13:42] httpcore.http11 - send_request_headers.started request=<Request [b'GET']>
+DEBUG [2024-01-23 13:13:42] httpcore.http11 - send_request_headers.complete
+DEBUG [2024-01-23 13:13:42] httpcore.http11 - send_request_body.started request=<Request [b'GET']>
+DEBUG [2024-01-23 13:13:42] httpcore.http11 - send_request_body.complete
+DEBUG [2024-01-23 13:13:42] httpcore.http11 - receive_response_headers.started request=<Request [b'GET']>
+DEBUG [2024-01-23 13:13:42] httpcore.http11 - receive_response_headers.complete return_value=(b'HTTP/1.1', 500, b'Internal Server Error', [(b'Server', b'TornadoServer/6.4'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Date', b'Tue, 23 Jan 2024 07:43:42 GMT'), (b'Content-Length', b'93')])
+INFO [2024-01-23 13:13:42] httpx - HTTP Request: GET http://localhost:8888?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E "HTTP/1.1 500 Internal Server Error"
+DEBUG [2024-01-23 13:13:42] httpcore.http11 - receive_response_body.started request=<Request [b'GET']>
+DEBUG [2024-01-23 13:13:42] httpcore.http11 - receive_response_body.complete
+DEBUG [2024-01-23 13:13:42] httpcore.http11 - response_closed.started
+DEBUG [2024-01-23 13:13:42] httpcore.http11 - response_closed.complete
+DEBUG [2024-01-23 13:13:42] httpcore.connection - close.started
+DEBUG [2024-01-23 13:13:42] httpcore.connection - close.complete
+DEBUG [2024-01-23 15:19:00] asyncio - Using selector: KqueueSelector
+DEBUG [2024-01-23 15:19:00] httpx - load_ssl_context verify=True cert=None trust_env=True http2=False
+DEBUG [2024-01-23 15:19:00] httpx - load_verify_locations cafile='/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/certifi/cacert.pem'
+DEBUG [2024-01-23 15:19:00] httpcore.connection - connect_tcp.started host='localhost' port=8888 local_address=None timeout=5.0 socket_options=None
+DEBUG [2024-01-23 15:19:00] httpcore.connection - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x101564e00>
+DEBUG [2024-01-23 15:19:00] httpcore.http11 - send_request_headers.started request=<Request [b'POST']>
+DEBUG [2024-01-23 15:19:00] httpcore.http11 - send_request_headers.complete
+DEBUG [2024-01-23 15:19:00] httpcore.http11 - send_request_body.started request=<Request [b'POST']>
+DEBUG [2024-01-23 15:19:00] httpcore.http11 - send_request_body.complete
+DEBUG [2024-01-23 15:19:00] httpcore.http11 - receive_response_headers.started request=<Request [b'POST']>
+DEBUG [2024-01-23 15:19:00] httpcore.http11 - receive_response_headers.complete return_value=(b'HTTP/1.1', 500, b'Internal Server Error', [(b'Server', b'TornadoServer/6.4'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Date', b'Tue, 23 Jan 2024 09:49:00 GMT'), (b'Content-Length', b'93')])
+INFO [2024-01-23 15:19:00] httpx - HTTP Request: POST http://localhost:8888 "HTTP/1.1 500 Internal Server Error"
+DEBUG [2024-01-23 15:19:00] httpcore.http11 - receive_response_body.started request=<Request [b'POST']>
+DEBUG [2024-01-23 15:19:00] httpcore.http11 - receive_response_body.complete
+DEBUG [2024-01-23 15:19:00] httpcore.http11 - response_closed.started
+DEBUG [2024-01-23 15:19:00] httpcore.http11 - response_closed.complete
+DEBUG [2024-01-23 15:19:00] httpcore.http11 - send_request_headers.started request=<Request [b'GET']>
+DEBUG [2024-01-23 15:19:00] httpcore.http11 - send_request_headers.complete
+DEBUG [2024-01-23 15:19:00] httpcore.http11 - send_request_body.started request=<Request [b'GET']>
+DEBUG [2024-01-23 15:19:00] httpcore.http11 - send_request_body.complete
+DEBUG [2024-01-23 15:19:00] httpcore.http11 - receive_response_headers.started request=<Request [b'GET']>
+DEBUG [2024-01-23 15:19:00] httpcore.http11 - receive_response_headers.complete return_value=(b'HTTP/1.1', 500, b'Internal Server Error', [(b'Server', b'TornadoServer/6.4'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Date', b'Tue, 23 Jan 2024 09:49:00 GMT'), (b'Content-Length', b'93')])
+INFO [2024-01-23 15:19:00] httpx - HTTP Request: GET http://localhost:8888?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E "HTTP/1.1 500 Internal Server Error"
+DEBUG [2024-01-23 15:19:00] httpcore.http11 - receive_response_body.started request=<Request [b'GET']>
+DEBUG [2024-01-23 15:19:00] httpcore.http11 - receive_response_body.complete
+DEBUG [2024-01-23 15:19:00] httpcore.http11 - response_closed.started
+DEBUG [2024-01-23 15:19:00] httpcore.http11 - response_closed.complete
+DEBUG [2024-01-23 15:19:00] httpcore.connection - close.started
+DEBUG [2024-01-23 15:19:00] httpcore.connection - close.complete
+DEBUG [2024-01-23 15:20:47] asyncio - Using selector: KqueueSelector
+DEBUG [2024-01-23 15:20:47] httpx - load_ssl_context verify=True cert=None trust_env=True http2=False
+DEBUG [2024-01-23 15:20:47] httpx - load_verify_locations cafile='/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/certifi/cacert.pem'
+DEBUG [2024-01-23 15:20:47] httpcore.connection - connect_tcp.started host='localhost' port=8888 local_address=None timeout=5.0 socket_options=None
+DEBUG [2024-01-23 15:20:47] httpcore.connection - connect_tcp.started host='localhost' port=8888 local_address=None timeout=5.0 socket_options=None
+DEBUG [2024-01-23 15:20:47] httpcore.connection - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x103a980e0>
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - send_request_headers.started request=<Request [b'POST']>
+DEBUG [2024-01-23 15:20:47] httpcore.connection - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x103393cb0>
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - send_request_headers.complete
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - send_request_body.started request=<Request [b'POST']>
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - send_request_headers.started request=<Request [b'POST']>
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - send_request_body.complete
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - receive_response_headers.started request=<Request [b'POST']>
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - send_request_headers.complete
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - send_request_body.started request=<Request [b'POST']>
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - send_request_body.complete
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - receive_response_headers.started request=<Request [b'POST']>
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - receive_response_headers.complete return_value=(b'HTTP/1.1', 500, b'Internal Server Error', [(b'Server', b'TornadoServer/6.4'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Date', b'Tue, 23 Jan 2024 09:50:47 GMT'), (b'Content-Length', b'93')])
+INFO [2024-01-23 15:20:47] httpx - HTTP Request: POST http://localhost:8888 "HTTP/1.1 500 Internal Server Error"
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - receive_response_body.started request=<Request [b'POST']>
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - receive_response_body.complete
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - response_closed.started
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - response_closed.complete
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - receive_response_headers.complete return_value=(b'HTTP/1.1', 500, b'Internal Server Error', [(b'Server', b'TornadoServer/6.4'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Date', b'Tue, 23 Jan 2024 09:50:47 GMT'), (b'Content-Length', b'93')])
+INFO [2024-01-23 15:20:47] httpx - HTTP Request: POST http://localhost:8888 "HTTP/1.1 500 Internal Server Error"
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - receive_response_body.started request=<Request [b'POST']>
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - receive_response_body.complete
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - response_closed.started
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - response_closed.complete
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - send_request_headers.started request=<Request [b'GET']>
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - send_request_headers.complete
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - send_request_body.started request=<Request [b'GET']>
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - send_request_body.complete
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - receive_response_headers.started request=<Request [b'GET']>
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - send_request_headers.started request=<Request [b'GET']>
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - send_request_headers.complete
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - send_request_body.started request=<Request [b'GET']>
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - send_request_body.complete
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - receive_response_headers.started request=<Request [b'GET']>
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - receive_response_headers.complete return_value=(b'HTTP/1.1', 500, b'Internal Server Error', [(b'Server', b'TornadoServer/6.4'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Date', b'Tue, 23 Jan 2024 09:50:47 GMT'), (b'Content-Length', b'93')])
+INFO [2024-01-23 15:20:47] httpx - HTTP Request: GET http://localhost:8888?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E "HTTP/1.1 500 Internal Server Error"
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - receive_response_body.started request=<Request [b'GET']>
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - receive_response_body.complete
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - response_closed.started
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - response_closed.complete
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - receive_response_headers.complete return_value=(b'HTTP/1.1', 500, b'Internal Server Error', [(b'Server', b'TornadoServer/6.4'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Date', b'Tue, 23 Jan 2024 09:50:47 GMT'), (b'Content-Length', b'93')])
+INFO [2024-01-23 15:20:47] httpx - HTTP Request: GET http://localhost:8888?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E "HTTP/1.1 500 Internal Server Error"
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - receive_response_body.started request=<Request [b'GET']>
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - receive_response_body.complete
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - response_closed.started
+DEBUG [2024-01-23 15:20:47] httpcore.http11 - response_closed.complete
+DEBUG [2024-01-23 15:20:47] httpcore.connection - close.started
+DEBUG [2024-01-23 15:20:47] httpcore.connection - close.complete
+DEBUG [2024-01-23 15:20:47] httpcore.connection - close.started
+DEBUG [2024-01-23 15:20:47] httpcore.connection - close.complete
+DEBUG [2024-01-23 15:22:36] asyncio - Using selector: KqueueSelector
+DEBUG [2024-01-23 15:22:36] httpx - load_ssl_context verify=True cert=None trust_env=True http2=False
+DEBUG [2024-01-23 15:22:36] httpx - load_verify_locations cafile='/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/certifi/cacert.pem'
+DEBUG [2024-01-23 15:22:36] httpcore.connection - connect_tcp.started host='localhost' port=8888 local_address=None timeout=5.0 socket_options=None
+DEBUG [2024-01-23 15:22:36] httpcore.connection - connect_tcp.started host='localhost' port=8888 local_address=None timeout=5.0 socket_options=None
+DEBUG [2024-01-23 15:22:36] httpcore.connection - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x10557c0e0>
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - send_request_headers.started request=<Request [b'POST']>
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - send_request_headers.complete
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - send_request_body.started request=<Request [b'POST']>
+DEBUG [2024-01-23 15:22:36] httpcore.connection - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x104e77cb0>
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - send_request_body.complete
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - receive_response_headers.started request=<Request [b'POST']>
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - send_request_headers.started request=<Request [b'POST']>
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - send_request_headers.complete
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - send_request_body.started request=<Request [b'POST']>
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - send_request_body.complete
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - receive_response_headers.started request=<Request [b'POST']>
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - receive_response_headers.complete return_value=(b'HTTP/1.1', 500, b'Internal Server Error', [(b'Server', b'TornadoServer/6.4'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Date', b'Tue, 23 Jan 2024 09:52:36 GMT'), (b'Content-Length', b'93')])
+INFO [2024-01-23 15:22:36] httpx - HTTP Request: POST http://localhost:8888 "HTTP/1.1 500 Internal Server Error"
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - receive_response_body.started request=<Request [b'POST']>
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - receive_response_body.complete
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - response_closed.started
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - response_closed.complete
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - receive_response_headers.complete return_value=(b'HTTP/1.1', 500, b'Internal Server Error', [(b'Server', b'TornadoServer/6.4'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Date', b'Tue, 23 Jan 2024 09:52:36 GMT'), (b'Content-Length', b'93')])
+INFO [2024-01-23 15:22:36] httpx - HTTP Request: POST http://localhost:8888 "HTTP/1.1 500 Internal Server Error"
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - receive_response_body.started request=<Request [b'POST']>
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - receive_response_body.complete
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - response_closed.started
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - response_closed.complete
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - send_request_headers.started request=<Request [b'GET']>
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - send_request_headers.complete
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - send_request_body.started request=<Request [b'GET']>
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - send_request_body.complete
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - receive_response_headers.started request=<Request [b'GET']>
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - send_request_headers.started request=<Request [b'GET']>
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - send_request_headers.complete
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - send_request_body.started request=<Request [b'GET']>
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - send_request_body.complete
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - receive_response_headers.started request=<Request [b'GET']>
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - receive_response_headers.complete return_value=(b'HTTP/1.1', 500, b'Internal Server Error', [(b'Server', b'TornadoServer/6.4'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Date', b'Tue, 23 Jan 2024 09:52:36 GMT'), (b'Content-Length', b'93')])
+INFO [2024-01-23 15:22:36] httpx - HTTP Request: GET http://localhost:8888?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E "HTTP/1.1 500 Internal Server Error"
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - receive_response_body.started request=<Request [b'GET']>
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - receive_response_body.complete
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - response_closed.started
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - response_closed.complete
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - receive_response_headers.complete return_value=(b'HTTP/1.1', 500, b'Internal Server Error', [(b'Server', b'TornadoServer/6.4'), (b'Content-Type', b'text/html; charset=UTF-8'), (b'Date', b'Tue, 23 Jan 2024 09:52:36 GMT'), (b'Content-Length', b'93')])
+INFO [2024-01-23 15:22:36] httpx - HTTP Request: GET http://localhost:8888?c_id=%3Chtml%3E%3Ctitle%3E500:%20Internal%20Server%20Error%3C/title%3E%3Cbody%3E500:%20Internal%20Server%20Error%3C/body%3E%3C/html%3E "HTTP/1.1 500 Internal Server Error"
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - receive_response_body.started request=<Request [b'GET']>
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - receive_response_body.complete
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - response_closed.started
+DEBUG [2024-01-23 15:22:36] httpcore.http11 - response_closed.complete
+DEBUG [2024-01-23 15:22:36] httpcore.connection - close.started
+DEBUG [2024-01-23 15:22:36] httpcore.connection - close.complete
+DEBUG [2024-01-23 15:22:36] httpcore.connection - close.started
+DEBUG [2024-01-23 15:22:36] httpcore.connection - close.complete

@@ -50,7 +50,7 @@ async def main():
     }
 
     async with httpx.AsyncClient() as client:
-        tasks = [send_request(client, "POST", url, data) for _ in range(800)]
+        tasks = [send_request(client, "POST", url, data) for _ in range(2)]
         post_responses = await asyncio.gather(*tasks)
         for i, post_response in enumerate(post_responses, start=1):
             print(f"Response {i}: {post_response.text}")

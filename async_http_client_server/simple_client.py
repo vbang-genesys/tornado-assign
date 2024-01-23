@@ -8,7 +8,7 @@ http_client = tornado.httpclient.HTTPClient()
 post_data = {
     "name": "Vidoosh",
     "age": "70",
-    "industry": "publiccvb",
+    "industry": "private",
     "salary": "50",
     "city": "Chennai",
 }
