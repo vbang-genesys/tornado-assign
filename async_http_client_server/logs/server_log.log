@@ -599,3 +599,605 @@
 2024-01-24 10:47:16,749 — __main__ — INFO — Data with client_id - b090974f-e6a8-4dd2-8fd6-01df1c39e353 sent.
 2024-01-24 10:47:16,750 — __main__ — INFO — Data with client_id - 284695b6-1a28-4896-9bea-8fda44ecc968 sent.
 2024-01-24 10:47:16,751 — __main__ — INFO — Data with client_id - 517d201f-38fe-4ba9-80a8-e3c9cc33303d sent.
+2024-01-24 12:03:50,788 — __main__ — INFO — Listening on port 8888
+2024-01-24 12:04:03,420 — __main__ — INFO — Response from client a295f01b-ad0c-47eb-9f72-3b07b292ec29: {'client_id': 'a295f01b-ad0c-47eb-9f72-3b07b292ec29', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,422 — __main__ — INFO — Client_id (a295f01b-ad0c-47eb-9f72-3b07b292ec29) sent to the client.
+2024-01-24 12:04:03,427 — __main__ — INFO — Response from client 98b1bf1d-4320-491f-b68e-82b6db2bde39: {'client_id': '98b1bf1d-4320-491f-b68e-82b6db2bde39', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,428 — __main__ — INFO — Client_id (98b1bf1d-4320-491f-b68e-82b6db2bde39) sent to the client.
+2024-01-24 12:04:03,429 — __main__ — INFO — Response from client 8c991a53-f6cf-4899-b9a0-b831093cacab: {'client_id': '8c991a53-f6cf-4899-b9a0-b831093cacab', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,430 — __main__ — INFO — Client_id (8c991a53-f6cf-4899-b9a0-b831093cacab) sent to the client.
+2024-01-24 12:04:03,430 — __main__ — INFO — Response from client 0d7a5897-ed1f-47b0-ab56-a9fe9aa7d9f5: {'client_id': '0d7a5897-ed1f-47b0-ab56-a9fe9aa7d9f5', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,431 — __main__ — INFO — Client_id (0d7a5897-ed1f-47b0-ab56-a9fe9aa7d9f5) sent to the client.
+2024-01-24 12:04:03,431 — __main__ — INFO — Response from client 19e576e4-d0dd-441f-ac0c-0091d8486198: {'client_id': '19e576e4-d0dd-441f-ac0c-0091d8486198', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,432 — __main__ — INFO — Client_id (19e576e4-d0dd-441f-ac0c-0091d8486198) sent to the client.
+2024-01-24 12:04:03,433 — __main__ — INFO — Response from client 07ccdf0e-c3c8-4f74-974e-03e2cab584d3: {'client_id': '07ccdf0e-c3c8-4f74-974e-03e2cab584d3', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,434 — __main__ — INFO — Client_id (07ccdf0e-c3c8-4f74-974e-03e2cab584d3) sent to the client.
+2024-01-24 12:04:03,434 — __main__ — INFO — Response from client 5bd3b2e2-60dc-405b-9319-5afe4f9b39c7: {'client_id': '5bd3b2e2-60dc-405b-9319-5afe4f9b39c7', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,435 — __main__ — INFO — Client_id (5bd3b2e2-60dc-405b-9319-5afe4f9b39c7) sent to the client.
+2024-01-24 12:04:03,435 — __main__ — INFO — Response from client c02b4110-4f35-43d4-89a0-839d72bfb5b7: {'client_id': 'c02b4110-4f35-43d4-89a0-839d72bfb5b7', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,435 — __main__ — INFO — Client_id (c02b4110-4f35-43d4-89a0-839d72bfb5b7) sent to the client.
+2024-01-24 12:04:03,436 — __main__ — INFO — Response from client 475a2f18-e3e4-46f3-affe-685181a7e84a: {'client_id': '475a2f18-e3e4-46f3-affe-685181a7e84a', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,436 — __main__ — INFO — Client_id (475a2f18-e3e4-46f3-affe-685181a7e84a) sent to the client.
+2024-01-24 12:04:03,437 — __main__ — INFO — Response from client e19d410d-e4f4-414e-817d-2fda0823c397: {'client_id': 'e19d410d-e4f4-414e-817d-2fda0823c397', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,437 — __main__ — INFO — Client_id (e19d410d-e4f4-414e-817d-2fda0823c397) sent to the client.
+2024-01-24 12:04:03,438 — __main__ — INFO — Response from client ab87c006-95bb-4254-8d29-52d8eb0e3b56: {'client_id': 'ab87c006-95bb-4254-8d29-52d8eb0e3b56', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,438 — __main__ — INFO — Client_id (ab87c006-95bb-4254-8d29-52d8eb0e3b56) sent to the client.
+2024-01-24 12:04:03,438 — __main__ — INFO — Response from client 207943d4-c95a-4bd7-b2ad-a36b806d65b9: {'client_id': '207943d4-c95a-4bd7-b2ad-a36b806d65b9', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,439 — __main__ — INFO — Client_id (207943d4-c95a-4bd7-b2ad-a36b806d65b9) sent to the client.
+2024-01-24 12:04:03,439 — __main__ — INFO — Response from client 38698ab3-116b-428a-a6c5-badfe566d8a2: {'client_id': '38698ab3-116b-428a-a6c5-badfe566d8a2', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,440 — __main__ — INFO — Client_id (38698ab3-116b-428a-a6c5-badfe566d8a2) sent to the client.
+2024-01-24 12:04:03,440 — __main__ — INFO — Response from client 885b24e0-4bcc-4e60-bfe6-f75ccf52e339: {'client_id': '885b24e0-4bcc-4e60-bfe6-f75ccf52e339', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,441 — __main__ — INFO — Client_id (885b24e0-4bcc-4e60-bfe6-f75ccf52e339) sent to the client.
+2024-01-24 12:04:03,441 — __main__ — INFO — Response from client 375205de-41c4-4a28-942f-a28fac2a070b: {'client_id': '375205de-41c4-4a28-942f-a28fac2a070b', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,441 — __main__ — INFO — Client_id (375205de-41c4-4a28-942f-a28fac2a070b) sent to the client.
+2024-01-24 12:04:03,442 — __main__ — INFO — Response from client aaa105e1-4b03-4ea5-8323-b1bd0eb0debd: {'client_id': 'aaa105e1-4b03-4ea5-8323-b1bd0eb0debd', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,442 — __main__ — INFO — Client_id (aaa105e1-4b03-4ea5-8323-b1bd0eb0debd) sent to the client.
+2024-01-24 12:04:03,443 — __main__ — INFO — Response from client c3c5a81a-9fcc-46af-803e-4936cf313231: {'client_id': 'c3c5a81a-9fcc-46af-803e-4936cf313231', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,443 — __main__ — INFO — Client_id (c3c5a81a-9fcc-46af-803e-4936cf313231) sent to the client.
+2024-01-24 12:04:03,444 — __main__ — INFO — Response from client 6331decd-81f5-4ac5-ae8a-700c2c251d6c: {'client_id': '6331decd-81f5-4ac5-ae8a-700c2c251d6c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,444 — __main__ — INFO — Client_id (6331decd-81f5-4ac5-ae8a-700c2c251d6c) sent to the client.
+2024-01-24 12:04:03,445 — __main__ — INFO — Response from client 0b3064d0-ac6e-47d3-937c-fac0ea9955ba: {'client_id': '0b3064d0-ac6e-47d3-937c-fac0ea9955ba', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,445 — __main__ — INFO — Client_id (0b3064d0-ac6e-47d3-937c-fac0ea9955ba) sent to the client.
+2024-01-24 12:04:03,446 — __main__ — INFO — Response from client 6fe779d9-6da5-4d37-a95e-e70afc73af70: {'client_id': '6fe779d9-6da5-4d37-a95e-e70afc73af70', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,446 — __main__ — INFO — Client_id (6fe779d9-6da5-4d37-a95e-e70afc73af70) sent to the client.
+2024-01-24 12:04:03,446 — __main__ — INFO — Response from client 3c14cdcf-3fab-497d-a565-590e035c72ef: {'client_id': '3c14cdcf-3fab-497d-a565-590e035c72ef', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,447 — __main__ — INFO — Client_id (3c14cdcf-3fab-497d-a565-590e035c72ef) sent to the client.
+2024-01-24 12:04:03,449 — __main__ — INFO — Response from client f6f909b3-15eb-4bce-9f68-669320acbd00: {'client_id': 'f6f909b3-15eb-4bce-9f68-669320acbd00', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,450 — __main__ — INFO — Client_id (f6f909b3-15eb-4bce-9f68-669320acbd00) sent to the client.
+2024-01-24 12:04:03,450 — __main__ — INFO — Response from client f26d0a8b-bb66-4202-b6aa-03405dd90cea: {'client_id': 'f26d0a8b-bb66-4202-b6aa-03405dd90cea', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,451 — __main__ — INFO — Client_id (f26d0a8b-bb66-4202-b6aa-03405dd90cea) sent to the client.
+2024-01-24 12:04:03,451 — __main__ — INFO — Response from client db18770e-9b72-430c-8ec5-22c26d5e053b: {'client_id': 'db18770e-9b72-430c-8ec5-22c26d5e053b', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,451 — __main__ — INFO — Client_id (db18770e-9b72-430c-8ec5-22c26d5e053b) sent to the client.
+2024-01-24 12:04:03,452 — __main__ — INFO — Response from client caf9ff34-3071-40e1-bd8a-33e4f63d75f4: {'client_id': 'caf9ff34-3071-40e1-bd8a-33e4f63d75f4', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,452 — __main__ — INFO — Client_id (caf9ff34-3071-40e1-bd8a-33e4f63d75f4) sent to the client.
+2024-01-24 12:04:03,453 — __main__ — INFO — Response from client e43b1b73-3bc6-43f8-a226-7bf68588ab0e: {'client_id': 'e43b1b73-3bc6-43f8-a226-7bf68588ab0e', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,453 — __main__ — INFO — Client_id (e43b1b73-3bc6-43f8-a226-7bf68588ab0e) sent to the client.
+2024-01-24 12:04:03,454 — __main__ — INFO — Response from client 147a2202-29c8-48d6-851e-06f4ad94e249: {'client_id': '147a2202-29c8-48d6-851e-06f4ad94e249', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,454 — __main__ — INFO — Client_id (147a2202-29c8-48d6-851e-06f4ad94e249) sent to the client.
+2024-01-24 12:04:03,455 — __main__ — INFO — Response from client 3facfa9a-87cd-4124-b3d3-df126ef457e2: {'client_id': '3facfa9a-87cd-4124-b3d3-df126ef457e2', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,455 — __main__ — INFO — Client_id (3facfa9a-87cd-4124-b3d3-df126ef457e2) sent to the client.
+2024-01-24 12:04:03,455 — __main__ — INFO — Response from client a6ddb6cd-ccf5-4d47-806e-9ed6f0a6cbe6: {'client_id': 'a6ddb6cd-ccf5-4d47-806e-9ed6f0a6cbe6', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,456 — __main__ — INFO — Client_id (a6ddb6cd-ccf5-4d47-806e-9ed6f0a6cbe6) sent to the client.
+2024-01-24 12:04:03,456 — __main__ — INFO — Response from client 1b4a00d0-8df9-4fe3-abf1-dd7b4dc11cbb: {'client_id': '1b4a00d0-8df9-4fe3-abf1-dd7b4dc11cbb', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,457 — __main__ — INFO — Client_id (1b4a00d0-8df9-4fe3-abf1-dd7b4dc11cbb) sent to the client.
+2024-01-24 12:04:03,457 — __main__ — INFO — Response from client 4ad40148-5442-4626-bdca-98bc60e91b95: {'client_id': '4ad40148-5442-4626-bdca-98bc60e91b95', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,457 — __main__ — INFO — Client_id (4ad40148-5442-4626-bdca-98bc60e91b95) sent to the client.
+2024-01-24 12:04:03,461 — __main__ — INFO — Response from client edad6fb7-7572-4f92-ad13-7de308400ec3: {'client_id': 'edad6fb7-7572-4f92-ad13-7de308400ec3', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,461 — __main__ — INFO — Client_id (edad6fb7-7572-4f92-ad13-7de308400ec3) sent to the client.
+2024-01-24 12:04:03,462 — __main__ — INFO — Response from client d235f258-e8cf-4c6c-9443-3df479986df2: {'client_id': 'd235f258-e8cf-4c6c-9443-3df479986df2', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,462 — __main__ — INFO — Client_id (d235f258-e8cf-4c6c-9443-3df479986df2) sent to the client.
+2024-01-24 12:04:03,462 — __main__ — INFO — Response from client bb5d5ccf-40cc-42ef-8558-b2e03eecc20a: {'client_id': 'bb5d5ccf-40cc-42ef-8558-b2e03eecc20a', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,462 — __main__ — INFO — Client_id (bb5d5ccf-40cc-42ef-8558-b2e03eecc20a) sent to the client.
+2024-01-24 12:04:03,463 — __main__ — INFO — Response from client 332223ef-270b-474e-ae02-e986bb681c2b: {'client_id': '332223ef-270b-474e-ae02-e986bb681c2b', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,463 — __main__ — INFO — Client_id (332223ef-270b-474e-ae02-e986bb681c2b) sent to the client.
+2024-01-24 12:04:03,463 — __main__ — INFO — Response from client cabd0fd1-e459-4fbf-9978-030cd1a7fed5: {'client_id': 'cabd0fd1-e459-4fbf-9978-030cd1a7fed5', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,463 — __main__ — INFO — Client_id (cabd0fd1-e459-4fbf-9978-030cd1a7fed5) sent to the client.
+2024-01-24 12:04:03,463 — __main__ — INFO — Response from client 6dd5da00-ce2f-41e7-86ff-ed4377f1f112: {'client_id': '6dd5da00-ce2f-41e7-86ff-ed4377f1f112', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,464 — __main__ — INFO — Client_id (6dd5da00-ce2f-41e7-86ff-ed4377f1f112) sent to the client.
+2024-01-24 12:04:03,464 — __main__ — INFO — Response from client ea5b3781-bde4-47c5-a2f3-7d3ba169077c: {'client_id': 'ea5b3781-bde4-47c5-a2f3-7d3ba169077c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,464 — __main__ — INFO — Client_id (ea5b3781-bde4-47c5-a2f3-7d3ba169077c) sent to the client.
+2024-01-24 12:04:03,465 — __main__ — INFO — Response from client 67fe3bf8-69af-4aec-a35a-01ed78873752: {'client_id': '67fe3bf8-69af-4aec-a35a-01ed78873752', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,465 — __main__ — INFO — Client_id (67fe3bf8-69af-4aec-a35a-01ed78873752) sent to the client.
+2024-01-24 12:04:03,465 — __main__ — INFO — Response from client 5a90f2ad-c2b1-4f65-b494-fbf4852a1da2: {'client_id': '5a90f2ad-c2b1-4f65-b494-fbf4852a1da2', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,465 — __main__ — INFO — Client_id (5a90f2ad-c2b1-4f65-b494-fbf4852a1da2) sent to the client.
+2024-01-24 12:04:03,466 — __main__ — INFO — Response from client 4d00620d-723c-411d-9161-7f9fa2dcd1a4: {'client_id': '4d00620d-723c-411d-9161-7f9fa2dcd1a4', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,466 — __main__ — INFO — Client_id (4d00620d-723c-411d-9161-7f9fa2dcd1a4) sent to the client.
+2024-01-24 12:04:03,466 — __main__ — INFO — Response from client 66325acc-65b2-49ca-ba3e-9d8da508aa45: {'client_id': '66325acc-65b2-49ca-ba3e-9d8da508aa45', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,466 — __main__ — INFO — Client_id (66325acc-65b2-49ca-ba3e-9d8da508aa45) sent to the client.
+2024-01-24 12:04:03,467 — __main__ — INFO — Response from client 3bf0ae07-84cd-425b-9056-895277367318: {'client_id': '3bf0ae07-84cd-425b-9056-895277367318', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,467 — __main__ — INFO — Client_id (3bf0ae07-84cd-425b-9056-895277367318) sent to the client.
+2024-01-24 12:04:03,467 — __main__ — INFO — Response from client 24968188-7a70-4044-8462-35f923c0e015: {'client_id': '24968188-7a70-4044-8462-35f923c0e015', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,467 — __main__ — INFO — Client_id (24968188-7a70-4044-8462-35f923c0e015) sent to the client.
+2024-01-24 12:04:03,468 — __main__ — INFO — Response from client 116224b5-c55a-42ab-94f0-da290448082a: {'client_id': '116224b5-c55a-42ab-94f0-da290448082a', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,468 — __main__ — INFO — Client_id (116224b5-c55a-42ab-94f0-da290448082a) sent to the client.
+2024-01-24 12:04:03,468 — __main__ — INFO — Response from client 62a7307a-0e9d-4c70-ba9a-2c87ac72cd6c: {'client_id': '62a7307a-0e9d-4c70-ba9a-2c87ac72cd6c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,468 — __main__ — INFO — Client_id (62a7307a-0e9d-4c70-ba9a-2c87ac72cd6c) sent to the client.
+2024-01-24 12:04:03,469 — __main__ — INFO — Response from client 656ac38b-897f-40d1-9aad-fbb1348af88b: {'client_id': '656ac38b-897f-40d1-9aad-fbb1348af88b', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,469 — __main__ — INFO — Client_id (656ac38b-897f-40d1-9aad-fbb1348af88b) sent to the client.
+2024-01-24 12:04:03,469 — __main__ — INFO — Response from client 849967f6-2a4f-4b8c-be2e-456107e7e030: {'client_id': '849967f6-2a4f-4b8c-be2e-456107e7e030', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,469 — __main__ — INFO — Client_id (849967f6-2a4f-4b8c-be2e-456107e7e030) sent to the client.
+2024-01-24 12:04:03,469 — __main__ — INFO — Response from client 7311f445-9d10-4f06-a592-8ff9586ee3c5: {'client_id': '7311f445-9d10-4f06-a592-8ff9586ee3c5', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,470 — __main__ — INFO — Client_id (7311f445-9d10-4f06-a592-8ff9586ee3c5) sent to the client.
+2024-01-24 12:04:03,470 — __main__ — INFO — Response from client d5b3b84e-edb3-4221-879e-f7af49bfa494: {'client_id': 'd5b3b84e-edb3-4221-879e-f7af49bfa494', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,470 — __main__ — INFO — Client_id (d5b3b84e-edb3-4221-879e-f7af49bfa494) sent to the client.
+2024-01-24 12:04:03,470 — __main__ — INFO — Response from client 606af04c-c35f-4b14-89a4-51307294e0c4: {'client_id': '606af04c-c35f-4b14-89a4-51307294e0c4', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,471 — __main__ — INFO — Client_id (606af04c-c35f-4b14-89a4-51307294e0c4) sent to the client.
+2024-01-24 12:04:03,471 — __main__ — INFO — Response from client 74ca2cca-b1ef-46c9-9c42-bf62a22c962c: {'client_id': '74ca2cca-b1ef-46c9-9c42-bf62a22c962c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,471 — __main__ — INFO — Client_id (74ca2cca-b1ef-46c9-9c42-bf62a22c962c) sent to the client.
+2024-01-24 12:04:03,471 — __main__ — INFO — Response from client a57abb4b-bc26-4185-9e8a-3e978d86f63b: {'client_id': 'a57abb4b-bc26-4185-9e8a-3e978d86f63b', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,472 — __main__ — INFO — Client_id (a57abb4b-bc26-4185-9e8a-3e978d86f63b) sent to the client.
+2024-01-24 12:04:03,472 — __main__ — INFO — Response from client b529f7f5-982b-44dd-a3c1-336ab4de284a: {'client_id': 'b529f7f5-982b-44dd-a3c1-336ab4de284a', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,472 — __main__ — INFO — Client_id (b529f7f5-982b-44dd-a3c1-336ab4de284a) sent to the client.
+2024-01-24 12:04:03,472 — __main__ — INFO — Response from client de387893-dd8c-490a-967b-8181873d04d7: {'client_id': 'de387893-dd8c-490a-967b-8181873d04d7', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,473 — __main__ — INFO — Client_id (de387893-dd8c-490a-967b-8181873d04d7) sent to the client.
+2024-01-24 12:04:03,473 — __main__ — INFO — Response from client 3ae0f68e-35f3-45e4-b819-9d7a929a0949: {'client_id': '3ae0f68e-35f3-45e4-b819-9d7a929a0949', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,473 — __main__ — INFO — Client_id (3ae0f68e-35f3-45e4-b819-9d7a929a0949) sent to the client.
+2024-01-24 12:04:03,473 — __main__ — INFO — Response from client e7b89ad3-5ee1-4725-8006-724b9580cfd8: {'client_id': 'e7b89ad3-5ee1-4725-8006-724b9580cfd8', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,473 — __main__ — INFO — Client_id (e7b89ad3-5ee1-4725-8006-724b9580cfd8) sent to the client.
+2024-01-24 12:04:03,474 — __main__ — INFO — Response from client 23621e52-1ec6-48a4-b114-71a55716b331: {'client_id': '23621e52-1ec6-48a4-b114-71a55716b331', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,474 — __main__ — INFO — Client_id (23621e52-1ec6-48a4-b114-71a55716b331) sent to the client.
+2024-01-24 12:04:03,474 — __main__ — INFO — Response from client fcc31bdb-da6f-4502-bf37-4207b59daeba: {'client_id': 'fcc31bdb-da6f-4502-bf37-4207b59daeba', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,475 — __main__ — INFO — Client_id (fcc31bdb-da6f-4502-bf37-4207b59daeba) sent to the client.
+2024-01-24 12:04:03,475 — __main__ — INFO — Response from client 4cd3b03c-1eba-497e-948a-d9f3a03d4dbf: {'client_id': '4cd3b03c-1eba-497e-948a-d9f3a03d4dbf', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,475 — __main__ — INFO — Client_id (4cd3b03c-1eba-497e-948a-d9f3a03d4dbf) sent to the client.
+2024-01-24 12:04:03,475 — __main__ — INFO — Response from client 5b58483b-4f26-4eae-b01d-7286137fccbb: {'client_id': '5b58483b-4f26-4eae-b01d-7286137fccbb', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,475 — __main__ — INFO — Client_id (5b58483b-4f26-4eae-b01d-7286137fccbb) sent to the client.
+2024-01-24 12:04:03,476 — __main__ — INFO — Response from client f7f2ab99-2eb5-4789-8b95-813b2b1568f4: {'client_id': 'f7f2ab99-2eb5-4789-8b95-813b2b1568f4', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,476 — __main__ — INFO — Client_id (f7f2ab99-2eb5-4789-8b95-813b2b1568f4) sent to the client.
+2024-01-24 12:04:03,476 — __main__ — INFO — Response from client 59237eb0-2efc-44b7-b203-094fa06c6ea9: {'client_id': '59237eb0-2efc-44b7-b203-094fa06c6ea9', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,476 — __main__ — INFO — Client_id (59237eb0-2efc-44b7-b203-094fa06c6ea9) sent to the client.
+2024-01-24 12:04:03,477 — __main__ — INFO — Response from client f5d77a59-f4d1-4be2-8758-578108b8b0bc: {'client_id': 'f5d77a59-f4d1-4be2-8758-578108b8b0bc', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,477 — __main__ — INFO — Client_id (f5d77a59-f4d1-4be2-8758-578108b8b0bc) sent to the client.
+2024-01-24 12:04:03,477 — __main__ — INFO — Response from client e0fff09c-33b2-4481-af0e-9b9464845850: {'client_id': 'e0fff09c-33b2-4481-af0e-9b9464845850', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,477 — __main__ — INFO — Client_id (e0fff09c-33b2-4481-af0e-9b9464845850) sent to the client.
+2024-01-24 12:04:03,478 — __main__ — INFO — Response from client 2dbbf556-f6ca-40a6-926a-de6665ca7d69: {'client_id': '2dbbf556-f6ca-40a6-926a-de6665ca7d69', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,478 — __main__ — INFO — Client_id (2dbbf556-f6ca-40a6-926a-de6665ca7d69) sent to the client.
+2024-01-24 12:04:03,478 — __main__ — INFO — Response from client c7a48972-7c7e-4f75-a7ce-309d81ae0dda: {'client_id': 'c7a48972-7c7e-4f75-a7ce-309d81ae0dda', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,478 — __main__ — INFO — Client_id (c7a48972-7c7e-4f75-a7ce-309d81ae0dda) sent to the client.
+2024-01-24 12:04:03,478 — __main__ — INFO — Response from client 342526a4-649c-4b0c-8e76-8adb3ed1cad9: {'client_id': '342526a4-649c-4b0c-8e76-8adb3ed1cad9', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,479 — __main__ — INFO — Client_id (342526a4-649c-4b0c-8e76-8adb3ed1cad9) sent to the client.
+2024-01-24 12:04:03,479 — __main__ — INFO — Response from client 8c7044e6-6671-4298-9c0d-045f59a3840f: {'client_id': '8c7044e6-6671-4298-9c0d-045f59a3840f', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,479 — __main__ — INFO — Client_id (8c7044e6-6671-4298-9c0d-045f59a3840f) sent to the client.
+2024-01-24 12:04:03,479 — __main__ — INFO — Response from client 64facf69-4475-49f5-866e-a3a87a10505a: {'client_id': '64facf69-4475-49f5-866e-a3a87a10505a', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,480 — __main__ — INFO — Client_id (64facf69-4475-49f5-866e-a3a87a10505a) sent to the client.
+2024-01-24 12:04:03,480 — __main__ — INFO — Response from client 940b4386-3323-4876-bb98-726c3e31e969: {'client_id': '940b4386-3323-4876-bb98-726c3e31e969', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,480 — __main__ — INFO — Client_id (940b4386-3323-4876-bb98-726c3e31e969) sent to the client.
+2024-01-24 12:04:03,480 — __main__ — INFO — Response from client ab522fe2-dc5a-4c0e-b484-2862b4b44237: {'client_id': 'ab522fe2-dc5a-4c0e-b484-2862b4b44237', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,480 — __main__ — INFO — Client_id (ab522fe2-dc5a-4c0e-b484-2862b4b44237) sent to the client.
+2024-01-24 12:04:03,481 — __main__ — INFO — Response from client c925fe0a-312a-4024-9efd-fd076444bd6a: {'client_id': 'c925fe0a-312a-4024-9efd-fd076444bd6a', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,481 — __main__ — INFO — Client_id (c925fe0a-312a-4024-9efd-fd076444bd6a) sent to the client.
+2024-01-24 12:04:03,481 — __main__ — INFO — Response from client 9e67cad4-20de-4bf2-936c-cde9aa44cc57: {'client_id': '9e67cad4-20de-4bf2-936c-cde9aa44cc57', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,481 — __main__ — INFO — Client_id (9e67cad4-20de-4bf2-936c-cde9aa44cc57) sent to the client.
+2024-01-24 12:04:03,482 — __main__ — INFO — Response from client 2498d04f-34ea-4117-a543-4f4bb4041fba: {'client_id': '2498d04f-34ea-4117-a543-4f4bb4041fba', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,482 — __main__ — INFO — Client_id (2498d04f-34ea-4117-a543-4f4bb4041fba) sent to the client.
+2024-01-24 12:04:03,482 — __main__ — INFO — Response from client 237e1ca7-20bc-43e2-8edc-5300ea0a9a3f: {'client_id': '237e1ca7-20bc-43e2-8edc-5300ea0a9a3f', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,482 — __main__ — INFO — Client_id (237e1ca7-20bc-43e2-8edc-5300ea0a9a3f) sent to the client.
+2024-01-24 12:04:03,482 — __main__ — INFO — Response from client 8b58e146-b0e4-41d0-9a65-fe0688cd02de: {'client_id': '8b58e146-b0e4-41d0-9a65-fe0688cd02de', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,483 — __main__ — INFO — Client_id (8b58e146-b0e4-41d0-9a65-fe0688cd02de) sent to the client.
+2024-01-24 12:04:03,483 — __main__ — INFO — Response from client 4575ff4b-48d5-4416-b75f-10bf994821f6: {'client_id': '4575ff4b-48d5-4416-b75f-10bf994821f6', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,483 — __main__ — INFO — Client_id (4575ff4b-48d5-4416-b75f-10bf994821f6) sent to the client.
+2024-01-24 12:04:03,483 — __main__ — INFO — Response from client 0069ca59-115b-4195-afc2-2257dcb5c948: {'client_id': '0069ca59-115b-4195-afc2-2257dcb5c948', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,483 — __main__ — INFO — Client_id (0069ca59-115b-4195-afc2-2257dcb5c948) sent to the client.
+2024-01-24 12:04:03,484 — __main__ — INFO — Response from client dfe952b2-891c-43d0-b8ac-6c6a162475b2: {'client_id': 'dfe952b2-891c-43d0-b8ac-6c6a162475b2', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,484 — __main__ — INFO — Client_id (dfe952b2-891c-43d0-b8ac-6c6a162475b2) sent to the client.
+2024-01-24 12:04:03,484 — __main__ — INFO — Response from client ccc9f8ea-584d-4c98-ac2b-662f7ccf60d7: {'client_id': 'ccc9f8ea-584d-4c98-ac2b-662f7ccf60d7', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,484 — __main__ — INFO — Client_id (ccc9f8ea-584d-4c98-ac2b-662f7ccf60d7) sent to the client.
+2024-01-24 12:04:03,485 — __main__ — INFO — Response from client d1b551d2-85bb-431d-b8c9-a41114279f6b: {'client_id': 'd1b551d2-85bb-431d-b8c9-a41114279f6b', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,485 — __main__ — INFO — Client_id (d1b551d2-85bb-431d-b8c9-a41114279f6b) sent to the client.
+2024-01-24 12:04:03,485 — __main__ — INFO — Response from client 0979bc45-db60-4f63-a04b-d1af0f0c583d: {'client_id': '0979bc45-db60-4f63-a04b-d1af0f0c583d', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,485 — __main__ — INFO — Client_id (0979bc45-db60-4f63-a04b-d1af0f0c583d) sent to the client.
+2024-01-24 12:04:03,485 — __main__ — INFO — Response from client b6927583-dd25-47fa-97fc-09da0f6f7d50: {'client_id': 'b6927583-dd25-47fa-97fc-09da0f6f7d50', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,486 — __main__ — INFO — Client_id (b6927583-dd25-47fa-97fc-09da0f6f7d50) sent to the client.
+2024-01-24 12:04:03,486 — __main__ — INFO — Response from client b07b26bc-6e03-4c45-943f-82e10f0efbba: {'client_id': 'b07b26bc-6e03-4c45-943f-82e10f0efbba', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,486 — __main__ — INFO — Client_id (b07b26bc-6e03-4c45-943f-82e10f0efbba) sent to the client.
+2024-01-24 12:04:03,487 — __main__ — INFO — Response from client 6388a2ed-89f5-4bb5-ae87-1c2946286181: {'client_id': '6388a2ed-89f5-4bb5-ae87-1c2946286181', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,487 — __main__ — INFO — Client_id (6388a2ed-89f5-4bb5-ae87-1c2946286181) sent to the client.
+2024-01-24 12:04:03,487 — __main__ — INFO — Response from client 664fb945-d0d3-4aca-9a6b-420d7a03ad5c: {'client_id': '664fb945-d0d3-4aca-9a6b-420d7a03ad5c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,488 — __main__ — INFO — Client_id (664fb945-d0d3-4aca-9a6b-420d7a03ad5c) sent to the client.
+2024-01-24 12:04:03,488 — __main__ — INFO — Response from client 9417ff5b-a419-44c2-a354-1e9e2ba9d2b9: {'client_id': '9417ff5b-a419-44c2-a354-1e9e2ba9d2b9', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,488 — __main__ — INFO — Client_id (9417ff5b-a419-44c2-a354-1e9e2ba9d2b9) sent to the client.
+2024-01-24 12:04:03,490 — __main__ — INFO — Response from client decf2b5c-bf83-4475-a55a-611bdcc18260: {'client_id': 'decf2b5c-bf83-4475-a55a-611bdcc18260', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,490 — __main__ — INFO — Client_id (decf2b5c-bf83-4475-a55a-611bdcc18260) sent to the client.
+2024-01-24 12:04:03,490 — __main__ — INFO — Response from client 7180773e-4e4f-4741-bb23-24124044fa0e: {'client_id': '7180773e-4e4f-4741-bb23-24124044fa0e', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,491 — __main__ — INFO — Client_id (7180773e-4e4f-4741-bb23-24124044fa0e) sent to the client.
+2024-01-24 12:04:03,491 — __main__ — INFO — Response from client 8a4fc64e-605a-41cf-a73c-e3af329599e4: {'client_id': '8a4fc64e-605a-41cf-a73c-e3af329599e4', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,491 — __main__ — INFO — Client_id (8a4fc64e-605a-41cf-a73c-e3af329599e4) sent to the client.
+2024-01-24 12:04:03,492 — __main__ — INFO — Response from client 7eced8c7-0680-4665-922f-cfdceab6023c: {'client_id': '7eced8c7-0680-4665-922f-cfdceab6023c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,492 — __main__ — INFO — Client_id (7eced8c7-0680-4665-922f-cfdceab6023c) sent to the client.
+2024-01-24 12:04:03,492 — __main__ — INFO — Response from client 374d1026-19ae-4f14-a65e-d5e04e13c961: {'client_id': '374d1026-19ae-4f14-a65e-d5e04e13c961', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,492 — __main__ — INFO — Client_id (374d1026-19ae-4f14-a65e-d5e04e13c961) sent to the client.
+2024-01-24 12:04:03,493 — __main__ — INFO — Response from client 98786cd4-17c8-4eec-b025-a80c7b51e4eb: {'client_id': '98786cd4-17c8-4eec-b025-a80c7b51e4eb', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,493 — __main__ — INFO — Client_id (98786cd4-17c8-4eec-b025-a80c7b51e4eb) sent to the client.
+2024-01-24 12:04:03,493 — __main__ — INFO — Response from client 7fc64f96-456e-49a2-82eb-4b435d4e6206: {'client_id': '7fc64f96-456e-49a2-82eb-4b435d4e6206', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,493 — __main__ — INFO — Client_id (7fc64f96-456e-49a2-82eb-4b435d4e6206) sent to the client.
+2024-01-24 12:04:03,494 — __main__ — INFO — Response from client a1ee3698-2e8d-4a74-a8c6-0e9149170446: {'client_id': 'a1ee3698-2e8d-4a74-a8c6-0e9149170446', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,494 — __main__ — INFO — Client_id (a1ee3698-2e8d-4a74-a8c6-0e9149170446) sent to the client.
+2024-01-24 12:04:03,494 — __main__ — INFO — Response from client 6edefb5a-74c5-4123-994f-af9a25799c55: {'client_id': '6edefb5a-74c5-4123-994f-af9a25799c55', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,495 — __main__ — INFO — Client_id (6edefb5a-74c5-4123-994f-af9a25799c55) sent to the client.
+2024-01-24 12:04:03,495 — __main__ — INFO — Response from client 62c45b0b-0783-41cf-8be9-c22bd7a7d07f: {'client_id': '62c45b0b-0783-41cf-8be9-c22bd7a7d07f', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,495 — __main__ — INFO — Client_id (62c45b0b-0783-41cf-8be9-c22bd7a7d07f) sent to the client.
+2024-01-24 12:04:03,495 — __main__ — INFO — Response from client 0dcee27d-43da-41f9-ae17-1a40fd1e77b4: {'client_id': '0dcee27d-43da-41f9-ae17-1a40fd1e77b4', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,496 — __main__ — INFO — Client_id (0dcee27d-43da-41f9-ae17-1a40fd1e77b4) sent to the client.
+2024-01-24 12:04:03,496 — __main__ — INFO — Response from client 57a4ccf0-0ade-4261-83e1-1db80a4d9d2c: {'client_id': '57a4ccf0-0ade-4261-83e1-1db80a4d9d2c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:04:03,496 — __main__ — INFO — Client_id (57a4ccf0-0ade-4261-83e1-1db80a4d9d2c) sent to the client.
+2024-01-24 12:04:03,506 — __main__ — INFO — Data with client_id - a295f01b-ad0c-47eb-9f72-3b07b292ec29 sent.
+2024-01-24 12:04:03,507 — __main__ — INFO — Data with client_id - 332223ef-270b-474e-ae02-e986bb681c2b sent.
+2024-01-24 12:04:03,508 — __main__ — INFO — Data with client_id - d235f258-e8cf-4c6c-9443-3df479986df2 sent.
+2024-01-24 12:04:03,509 — __main__ — INFO — Data with client_id - 8c991a53-f6cf-4899-b9a0-b831093cacab sent.
+2024-01-24 12:04:03,510 — __main__ — INFO — Data with client_id - cabd0fd1-e459-4fbf-9978-030cd1a7fed5 sent.
+2024-01-24 12:04:03,512 — __main__ — INFO — Data with client_id - 6dd5da00-ce2f-41e7-86ff-ed4377f1f112 sent.
+2024-01-24 12:04:03,513 — __main__ — INFO — Data with client_id - aaa105e1-4b03-4ea5-8323-b1bd0eb0debd sent.
+2024-01-24 12:04:03,514 — __main__ — INFO — Data with client_id - 67fe3bf8-69af-4aec-a35a-01ed78873752 sent.
+2024-01-24 12:04:03,515 — __main__ — INFO — Data with client_id - c02b4110-4f35-43d4-89a0-839d72bfb5b7 sent.
+2024-01-24 12:04:03,516 — __main__ — INFO — Data with client_id - 207943d4-c95a-4bd7-b2ad-a36b806d65b9 sent.
+2024-01-24 12:04:03,517 — __main__ — INFO — Data with client_id - ab87c006-95bb-4254-8d29-52d8eb0e3b56 sent.
+2024-01-24 12:04:03,518 — __main__ — INFO — Data with client_id - 6fe779d9-6da5-4d37-a95e-e70afc73af70 sent.
+2024-01-24 12:04:03,519 — __main__ — INFO — Data with client_id - b07b26bc-6e03-4c45-943f-82e10f0efbba sent.
+2024-01-24 12:04:03,521 — __main__ — INFO — Data with client_id - decf2b5c-bf83-4475-a55a-611bdcc18260 sent.
+2024-01-24 12:04:03,522 — __main__ — INFO — Data with client_id - 147a2202-29c8-48d6-851e-06f4ad94e249 sent.
+2024-01-24 12:04:03,523 — __main__ — INFO — Data with client_id - 1b4a00d0-8df9-4fe3-abf1-dd7b4dc11cbb sent.
+2024-01-24 12:04:03,524 — __main__ — INFO — Data with client_id - 3bf0ae07-84cd-425b-9056-895277367318 sent.
+2024-01-24 12:04:03,525 — __main__ — INFO — Data with client_id - 62a7307a-0e9d-4c70-ba9a-2c87ac72cd6c sent.
+2024-01-24 12:04:03,527 — __main__ — INFO — Data with client_id - 7311f445-9d10-4f06-a592-8ff9586ee3c5 sent.
+2024-01-24 12:04:03,528 — __main__ — INFO — Data with client_id - 74ca2cca-b1ef-46c9-9c42-bf62a22c962c sent.
+2024-01-24 12:04:03,529 — __main__ — INFO — Data with client_id - de387893-dd8c-490a-967b-8181873d04d7 sent.
+2024-01-24 12:04:03,530 — __main__ — INFO — Data with client_id - 23621e52-1ec6-48a4-b114-71a55716b331 sent.
+2024-01-24 12:04:03,531 — __main__ — INFO — Data with client_id - 5b58483b-4f26-4eae-b01d-7286137fccbb sent.
+2024-01-24 12:04:03,533 — __main__ — INFO — Data with client_id - f5d77a59-f4d1-4be2-8758-578108b8b0bc sent.
+2024-01-24 12:04:03,534 — __main__ — INFO — Data with client_id - 2dbbf556-f6ca-40a6-926a-de6665ca7d69 sent.
+2024-01-24 12:04:03,535 — __main__ — INFO — Data with client_id - 64facf69-4475-49f5-866e-a3a87a10505a sent.
+2024-01-24 12:04:03,536 — __main__ — INFO — Data with client_id - ab522fe2-dc5a-4c0e-b484-2862b4b44237 sent.
+2024-01-24 12:04:03,537 — __main__ — INFO — Data with client_id - 2498d04f-34ea-4117-a543-4f4bb4041fba sent.
+2024-01-24 12:04:03,538 — __main__ — INFO — Data with client_id - 4575ff4b-48d5-4416-b75f-10bf994821f6 sent.
+2024-01-24 12:04:03,539 — __main__ — INFO — Data with client_id - ccc9f8ea-584d-4c98-ac2b-662f7ccf60d7 sent.
+2024-01-24 12:04:03,541 — __main__ — INFO — Data with client_id - 8a4fc64e-605a-41cf-a73c-e3af329599e4 sent.
+2024-01-24 12:04:03,542 — __main__ — INFO — Data with client_id - 98786cd4-17c8-4eec-b025-a80c7b51e4eb sent.
+2024-01-24 12:04:03,543 — __main__ — INFO — Data with client_id - 6edefb5a-74c5-4123-994f-af9a25799c55 sent.
+2024-01-24 12:04:03,544 — __main__ — INFO — Data with client_id - 57a4ccf0-0ade-4261-83e1-1db80a4d9d2c sent.
+2024-01-24 12:04:03,544 — __main__ — INFO — Data with client_id - caf9ff34-3071-40e1-bd8a-33e4f63d75f4 sent.
+2024-01-24 12:04:03,545 — __main__ — INFO — Data with client_id - 19e576e4-d0dd-441f-ac0c-0091d8486198 sent.
+2024-01-24 12:04:03,546 — __main__ — INFO — Data with client_id - f6f909b3-15eb-4bce-9f68-669320acbd00 sent.
+2024-01-24 12:04:03,547 — __main__ — INFO — Data with client_id - 0d7a5897-ed1f-47b0-ab56-a9fe9aa7d9f5 sent.
+2024-01-24 12:04:03,547 — __main__ — INFO — Data with client_id - 4d00620d-723c-411d-9161-7f9fa2dcd1a4 sent.
+2024-01-24 12:04:03,548 — __main__ — INFO — Data with client_id - e19d410d-e4f4-414e-817d-2fda0823c397 sent.
+2024-01-24 12:04:03,549 — __main__ — INFO — Data with client_id - 885b24e0-4bcc-4e60-bfe6-f75ccf52e339 sent.
+2024-01-24 12:04:03,549 — __main__ — INFO — Data with client_id - 38698ab3-116b-428a-a6c5-badfe566d8a2 sent.
+2024-01-24 12:04:03,550 — __main__ — INFO — Data with client_id - 0b3064d0-ac6e-47d3-937c-fac0ea9955ba sent.
+2024-01-24 12:04:03,551 — __main__ — INFO — Data with client_id - c3c5a81a-9fcc-46af-803e-4936cf313231 sent.
+2024-01-24 12:04:03,552 — __main__ — INFO — Data with client_id - b6927583-dd25-47fa-97fc-09da0f6f7d50 sent.
+2024-01-24 12:04:03,552 — __main__ — INFO — Data with client_id - 9417ff5b-a419-44c2-a354-1e9e2ba9d2b9 sent.
+2024-01-24 12:04:03,553 — __main__ — INFO — Data with client_id - e43b1b73-3bc6-43f8-a226-7bf68588ab0e sent.
+2024-01-24 12:04:03,554 — __main__ — INFO — Data with client_id - a6ddb6cd-ccf5-4d47-806e-9ed6f0a6cbe6 sent.
+2024-01-24 12:04:03,554 — __main__ — INFO — Data with client_id - 66325acc-65b2-49ca-ba3e-9d8da508aa45 sent.
+2024-01-24 12:04:03,555 — __main__ — INFO — Data with client_id - 116224b5-c55a-42ab-94f0-da290448082a sent.
+2024-01-24 12:04:03,556 — __main__ — INFO — Data with client_id - 849967f6-2a4f-4b8c-be2e-456107e7e030 sent.
+2024-01-24 12:04:03,557 — __main__ — INFO — Data with client_id - 606af04c-c35f-4b14-89a4-51307294e0c4 sent.
+2024-01-24 12:04:03,557 — __main__ — INFO — Data with client_id - b529f7f5-982b-44dd-a3c1-336ab4de284a sent.
+2024-01-24 12:04:03,558 — __main__ — INFO — Data with client_id - e7b89ad3-5ee1-4725-8006-724b9580cfd8 sent.
+2024-01-24 12:04:03,559 — __main__ — INFO — Data with client_id - 4cd3b03c-1eba-497e-948a-d9f3a03d4dbf sent.
+2024-01-24 12:04:03,559 — __main__ — INFO — Data with client_id - 59237eb0-2efc-44b7-b203-094fa06c6ea9 sent.
+2024-01-24 12:04:03,560 — __main__ — INFO — Data with client_id - c7a48972-7c7e-4f75-a7ce-309d81ae0dda sent.
+2024-01-24 12:04:03,561 — __main__ — INFO — Data with client_id - 8c7044e6-6671-4298-9c0d-045f59a3840f sent.
+2024-01-24 12:04:03,561 — __main__ — INFO — Data with client_id - 940b4386-3323-4876-bb98-726c3e31e969 sent.
+2024-01-24 12:04:03,562 — __main__ — INFO — Data with client_id - 9e67cad4-20de-4bf2-936c-cde9aa44cc57 sent.
+2024-01-24 12:04:03,563 — __main__ — INFO — Data with client_id - 8b58e146-b0e4-41d0-9a65-fe0688cd02de sent.
+2024-01-24 12:04:03,563 — __main__ — INFO — Data with client_id - dfe952b2-891c-43d0-b8ac-6c6a162475b2 sent.
+2024-01-24 12:04:03,564 — __main__ — INFO — Data with client_id - 0979bc45-db60-4f63-a04b-d1af0f0c583d sent.
+2024-01-24 12:04:03,565 — __main__ — INFO — Data with client_id - 374d1026-19ae-4f14-a65e-d5e04e13c961 sent.
+2024-01-24 12:04:03,566 — __main__ — INFO — Data with client_id - a1ee3698-2e8d-4a74-a8c6-0e9149170446 sent.
+2024-01-24 12:04:03,566 — __main__ — INFO — Data with client_id - 0dcee27d-43da-41f9-ae17-1a40fd1e77b4 sent.
+2024-01-24 12:04:03,567 — __main__ — INFO — Data with client_id - bb5d5ccf-40cc-42ef-8558-b2e03eecc20a sent.
+2024-01-24 12:04:03,568 — __main__ — INFO — Data with client_id - db18770e-9b72-430c-8ec5-22c26d5e053b sent.
+2024-01-24 12:04:03,569 — __main__ — INFO — Data with client_id - ea5b3781-bde4-47c5-a2f3-7d3ba169077c sent.
+2024-01-24 12:04:03,570 — __main__ — INFO — Data with client_id - 07ccdf0e-c3c8-4f74-974e-03e2cab584d3 sent.
+2024-01-24 12:04:03,571 — __main__ — INFO — Data with client_id - 5bd3b2e2-60dc-405b-9319-5afe4f9b39c7 sent.
+2024-01-24 12:04:03,571 — __main__ — INFO — Data with client_id - 475a2f18-e3e4-46f3-affe-685181a7e84a sent.
+2024-01-24 12:04:03,572 — __main__ — INFO — Data with client_id - 3c14cdcf-3fab-497d-a565-590e035c72ef sent.
+2024-01-24 12:04:03,573 — __main__ — INFO — Data with client_id - 7180773e-4e4f-4741-bb23-24124044fa0e sent.
+2024-01-24 12:04:03,574 — __main__ — INFO — Data with client_id - 4ad40148-5442-4626-bdca-98bc60e91b95 sent.
+2024-01-24 12:04:03,575 — __main__ — INFO — Data with client_id - 656ac38b-897f-40d1-9aad-fbb1348af88b sent.
+2024-01-24 12:04:03,576 — __main__ — INFO — Data with client_id - a57abb4b-bc26-4185-9e8a-3e978d86f63b sent.
+2024-01-24 12:04:03,577 — __main__ — INFO — Data with client_id - fcc31bdb-da6f-4502-bf37-4207b59daeba sent.
+2024-01-24 12:04:03,578 — __main__ — INFO — Data with client_id - e0fff09c-33b2-4481-af0e-9b9464845850 sent.
+2024-01-24 12:04:03,579 — __main__ — INFO — Data with client_id - 6388a2ed-89f5-4bb5-ae87-1c2946286181 sent.
+2024-01-24 12:04:03,580 — __main__ — INFO — Data with client_id - 237e1ca7-20bc-43e2-8edc-5300ea0a9a3f sent.
+2024-01-24 12:04:03,581 — __main__ — INFO — Data with client_id - d1b551d2-85bb-431d-b8c9-a41114279f6b sent.
+2024-01-24 12:04:03,582 — __main__ — INFO — Data with client_id - 7fc64f96-456e-49a2-82eb-4b435d4e6206 sent.
+2024-01-24 12:04:03,583 — __main__ — INFO — Data with client_id - f26d0a8b-bb66-4202-b6aa-03405dd90cea sent.
+2024-01-24 12:04:03,584 — __main__ — INFO — Data with client_id - edad6fb7-7572-4f92-ad13-7de308400ec3 sent.
+2024-01-24 12:04:03,585 — __main__ — INFO — Data with client_id - 375205de-41c4-4a28-942f-a28fac2a070b sent.
+2024-01-24 12:04:03,586 — __main__ — INFO — Data with client_id - 664fb945-d0d3-4aca-9a6b-420d7a03ad5c sent.
+2024-01-24 12:04:03,587 — __main__ — INFO — Data with client_id - 24968188-7a70-4044-8462-35f923c0e015 sent.
+2024-01-24 12:04:03,588 — __main__ — INFO — Data with client_id - 3ae0f68e-35f3-45e4-b819-9d7a929a0949 sent.
+2024-01-24 12:04:03,589 — __main__ — INFO — Data with client_id - 342526a4-649c-4b0c-8e76-8adb3ed1cad9 sent.
+2024-01-24 12:04:03,590 — __main__ — INFO — Data with client_id - 0069ca59-115b-4195-afc2-2257dcb5c948 sent.
+2024-01-24 12:04:03,591 — __main__ — INFO — Data with client_id - 62c45b0b-0783-41cf-8be9-c22bd7a7d07f sent.
+2024-01-24 12:04:03,592 — __main__ — INFO — Data with client_id - 5a90f2ad-c2b1-4f65-b494-fbf4852a1da2 sent.
+2024-01-24 12:04:03,593 — __main__ — INFO — Data with client_id - 3facfa9a-87cd-4124-b3d3-df126ef457e2 sent.
+2024-01-24 12:04:03,594 — __main__ — INFO — Data with client_id - f7f2ab99-2eb5-4789-8b95-813b2b1568f4 sent.
+2024-01-24 12:04:03,595 — __main__ — INFO — Data with client_id - 7eced8c7-0680-4665-922f-cfdceab6023c sent.
+2024-01-24 12:04:03,596 — __main__ — INFO — Data with client_id - 6331decd-81f5-4ac5-ae8a-700c2c251d6c sent.
+2024-01-24 12:04:03,597 — __main__ — INFO — Data with client_id - c925fe0a-312a-4024-9efd-fd076444bd6a sent.
+2024-01-24 12:04:03,598 — __main__ — INFO — Data with client_id - d5b3b84e-edb3-4221-879e-f7af49bfa494 sent.
+2024-01-24 12:04:03,599 — __main__ — INFO — Data with client_id - 98b1bf1d-4320-491f-b68e-82b6db2bde39 sent.
+2024-01-24 12:06:54,274 — __main__ — INFO — Listening on port 8888
+2024-01-24 12:07:00,183 — __main__ — INFO — Response from client 58e40b44-fda2-46bc-941c-5f770a10633c: {'client_id': '58e40b44-fda2-46bc-941c-5f770a10633c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,185 — __main__ — INFO — Client_id (58e40b44-fda2-46bc-941c-5f770a10633c) sent to the client.
+2024-01-24 12:07:00,187 — __main__ — INFO — Response from client 8ece3a7e-7204-4ba2-b58f-b92472da714f: {'client_id': '8ece3a7e-7204-4ba2-b58f-b92472da714f', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,188 — __main__ — INFO — Client_id (8ece3a7e-7204-4ba2-b58f-b92472da714f) sent to the client.
+2024-01-24 12:07:00,188 — __main__ — INFO — Response from client 441a0568-e5b6-4fe7-b2aa-95cf3e78ed4f: {'client_id': '441a0568-e5b6-4fe7-b2aa-95cf3e78ed4f', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,189 — __main__ — INFO — Client_id (441a0568-e5b6-4fe7-b2aa-95cf3e78ed4f) sent to the client.
+2024-01-24 12:07:00,191 — __main__ — INFO — Response from client e69bfb62-1be9-4f5c-8419-182e9b93b22b: {'client_id': 'e69bfb62-1be9-4f5c-8419-182e9b93b22b', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,191 — __main__ — INFO — Client_id (e69bfb62-1be9-4f5c-8419-182e9b93b22b) sent to the client.
+2024-01-24 12:07:00,193 — __main__ — INFO — Response from client 2a5eaf9a-4ef6-4d06-878e-ec75a338da41: {'client_id': '2a5eaf9a-4ef6-4d06-878e-ec75a338da41', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,193 — __main__ — INFO — Client_id (2a5eaf9a-4ef6-4d06-878e-ec75a338da41) sent to the client.
+2024-01-24 12:07:00,194 — __main__ — INFO — Response from client db62921e-acf4-49d0-b32e-4a9474d70630: {'client_id': 'db62921e-acf4-49d0-b32e-4a9474d70630', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,195 — __main__ — INFO — Client_id (db62921e-acf4-49d0-b32e-4a9474d70630) sent to the client.
+2024-01-24 12:07:00,196 — __main__ — INFO — Response from client 07877aee-2498-416a-b7dc-4f8e1c6dad5d: {'client_id': '07877aee-2498-416a-b7dc-4f8e1c6dad5d', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,196 — __main__ — INFO — Client_id (07877aee-2498-416a-b7dc-4f8e1c6dad5d) sent to the client.
+2024-01-24 12:07:00,197 — __main__ — INFO — Response from client d6c1a3a3-9ed9-4092-9d71-e5bd105fb705: {'client_id': 'd6c1a3a3-9ed9-4092-9d71-e5bd105fb705', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,197 — __main__ — INFO — Client_id (d6c1a3a3-9ed9-4092-9d71-e5bd105fb705) sent to the client.
+2024-01-24 12:07:00,198 — __main__ — INFO — Response from client c026576b-34b8-4eb1-a921-4d057ef0e7f5: {'client_id': 'c026576b-34b8-4eb1-a921-4d057ef0e7f5', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,199 — __main__ — INFO — Client_id (c026576b-34b8-4eb1-a921-4d057ef0e7f5) sent to the client.
+2024-01-24 12:07:00,199 — __main__ — INFO — Response from client 5655ccfd-3f3c-4842-8637-93f4a7398972: {'client_id': '5655ccfd-3f3c-4842-8637-93f4a7398972', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,200 — __main__ — INFO — Client_id (5655ccfd-3f3c-4842-8637-93f4a7398972) sent to the client.
+2024-01-24 12:07:00,200 — __main__ — INFO — Response from client d2e0ef08-7510-45c3-9e4f-5d55096ada25: {'client_id': 'd2e0ef08-7510-45c3-9e4f-5d55096ada25', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,200 — __main__ — INFO — Client_id (d2e0ef08-7510-45c3-9e4f-5d55096ada25) sent to the client.
+2024-01-24 12:07:00,202 — __main__ — INFO — Response from client 9109fc40-9d56-4dd1-9af9-76e9fc55ec8b: {'client_id': '9109fc40-9d56-4dd1-9af9-76e9fc55ec8b', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,202 — __main__ — INFO — Client_id (9109fc40-9d56-4dd1-9af9-76e9fc55ec8b) sent to the client.
+2024-01-24 12:07:00,203 — __main__ — INFO — Response from client c420fbc3-a549-481c-afa8-5d685c29a113: {'client_id': 'c420fbc3-a549-481c-afa8-5d685c29a113', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,203 — __main__ — INFO — Client_id (c420fbc3-a549-481c-afa8-5d685c29a113) sent to the client.
+2024-01-24 12:07:00,203 — __main__ — INFO — Response from client 01219fc7-2b1b-40e4-b558-32404598b8da: {'client_id': '01219fc7-2b1b-40e4-b558-32404598b8da', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,204 — __main__ — INFO — Client_id (01219fc7-2b1b-40e4-b558-32404598b8da) sent to the client.
+2024-01-24 12:07:00,204 — __main__ — INFO — Response from client 01dbc27e-053b-4047-8db1-0f2f77ea22e7: {'client_id': '01dbc27e-053b-4047-8db1-0f2f77ea22e7', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,205 — __main__ — INFO — Client_id (01dbc27e-053b-4047-8db1-0f2f77ea22e7) sent to the client.
+2024-01-24 12:07:00,208 — __main__ — INFO — Response from client e0173026-7397-4fe3-8799-65184d0aadb9: {'client_id': 'e0173026-7397-4fe3-8799-65184d0aadb9', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,208 — __main__ — INFO — Client_id (e0173026-7397-4fe3-8799-65184d0aadb9) sent to the client.
+2024-01-24 12:07:00,209 — __main__ — INFO — Response from client 43f60afa-0014-41ca-8099-a579b19b14be: {'client_id': '43f60afa-0014-41ca-8099-a579b19b14be', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,209 — __main__ — INFO — Client_id (43f60afa-0014-41ca-8099-a579b19b14be) sent to the client.
+2024-01-24 12:07:00,210 — __main__ — INFO — Response from client 9116bece-54cd-4fe1-ab42-57f5980975bf: {'client_id': '9116bece-54cd-4fe1-ab42-57f5980975bf', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,210 — __main__ — INFO — Client_id (9116bece-54cd-4fe1-ab42-57f5980975bf) sent to the client.
+2024-01-24 12:07:00,211 — __main__ — INFO — Response from client 22ab7714-91ee-4b69-9b34-9ae41b565ee3: {'client_id': '22ab7714-91ee-4b69-9b34-9ae41b565ee3', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,211 — __main__ — INFO — Client_id (22ab7714-91ee-4b69-9b34-9ae41b565ee3) sent to the client.
+2024-01-24 12:07:00,211 — __main__ — INFO — Response from client b3ce5d62-1362-44d5-831d-1ed1357fda0e: {'client_id': 'b3ce5d62-1362-44d5-831d-1ed1357fda0e', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,212 — __main__ — INFO — Client_id (b3ce5d62-1362-44d5-831d-1ed1357fda0e) sent to the client.
+2024-01-24 12:07:00,212 — __main__ — INFO — Response from client d15eb6e0-c955-4b48-bc38-c892d16725e9: {'client_id': 'd15eb6e0-c955-4b48-bc38-c892d16725e9', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,213 — __main__ — INFO — Client_id (d15eb6e0-c955-4b48-bc38-c892d16725e9) sent to the client.
+2024-01-24 12:07:00,213 — __main__ — INFO — Response from client dadabda2-37d5-430d-b5f5-a2753ffc3d65: {'client_id': 'dadabda2-37d5-430d-b5f5-a2753ffc3d65', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,214 — __main__ — INFO — Client_id (dadabda2-37d5-430d-b5f5-a2753ffc3d65) sent to the client.
+2024-01-24 12:07:00,214 — __main__ — INFO — Response from client 423521c9-8a5c-43c8-a889-e42da165f1c2: {'client_id': '423521c9-8a5c-43c8-a889-e42da165f1c2', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,214 — __main__ — INFO — Client_id (423521c9-8a5c-43c8-a889-e42da165f1c2) sent to the client.
+2024-01-24 12:07:00,215 — __main__ — INFO — Response from client 0166f142-f17a-4a57-b91d-b11220f5658f: {'client_id': '0166f142-f17a-4a57-b91d-b11220f5658f', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,215 — __main__ — INFO — Client_id (0166f142-f17a-4a57-b91d-b11220f5658f) sent to the client.
+2024-01-24 12:07:00,216 — __main__ — INFO — Response from client 237be1fb-905a-47e6-91d0-a5a99d2562d6: {'client_id': '237be1fb-905a-47e6-91d0-a5a99d2562d6', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,216 — __main__ — INFO — Client_id (237be1fb-905a-47e6-91d0-a5a99d2562d6) sent to the client.
+2024-01-24 12:07:00,216 — __main__ — INFO — Response from client af4ea7dd-d7e4-4c15-a586-47bfedb4cfa4: {'client_id': 'af4ea7dd-d7e4-4c15-a586-47bfedb4cfa4', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,217 — __main__ — INFO — Client_id (af4ea7dd-d7e4-4c15-a586-47bfedb4cfa4) sent to the client.
+2024-01-24 12:07:00,217 — __main__ — INFO — Response from client 2ec5a1b9-03d8-4167-ba85-0d1cd24ed0b2: {'client_id': '2ec5a1b9-03d8-4167-ba85-0d1cd24ed0b2', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,218 — __main__ — INFO — Client_id (2ec5a1b9-03d8-4167-ba85-0d1cd24ed0b2) sent to the client.
+2024-01-24 12:07:00,218 — __main__ — INFO — Response from client a01e41aa-bf50-4da5-aa07-31a48bfe7681: {'client_id': 'a01e41aa-bf50-4da5-aa07-31a48bfe7681', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,219 — __main__ — INFO — Client_id (a01e41aa-bf50-4da5-aa07-31a48bfe7681) sent to the client.
+2024-01-24 12:07:00,219 — __main__ — INFO — Response from client b5a0174f-4a8d-4c89-8b06-c59d631c0c5c: {'client_id': 'b5a0174f-4a8d-4c89-8b06-c59d631c0c5c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,219 — __main__ — INFO — Client_id (b5a0174f-4a8d-4c89-8b06-c59d631c0c5c) sent to the client.
+2024-01-24 12:07:00,220 — __main__ — INFO — Response from client d3e7f202-0223-48ea-af28-3df53f2b0d3a: {'client_id': 'd3e7f202-0223-48ea-af28-3df53f2b0d3a', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,220 — __main__ — INFO — Client_id (d3e7f202-0223-48ea-af28-3df53f2b0d3a) sent to the client.
+2024-01-24 12:07:00,221 — __main__ — INFO — Response from client e4beaebe-94db-4c38-aaf0-b512ef4c8549: {'client_id': 'e4beaebe-94db-4c38-aaf0-b512ef4c8549', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,221 — __main__ — INFO — Client_id (e4beaebe-94db-4c38-aaf0-b512ef4c8549) sent to the client.
+2024-01-24 12:07:00,221 — __main__ — INFO — Response from client 0d753a5f-9c42-4072-90c5-8e8eb069e56a: {'client_id': '0d753a5f-9c42-4072-90c5-8e8eb069e56a', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,222 — __main__ — INFO — Client_id (0d753a5f-9c42-4072-90c5-8e8eb069e56a) sent to the client.
+2024-01-24 12:07:00,222 — __main__ — INFO — Response from client cf1a52d4-a8e4-41d2-8051-50f6008bd161: {'client_id': 'cf1a52d4-a8e4-41d2-8051-50f6008bd161', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,223 — __main__ — INFO — Client_id (cf1a52d4-a8e4-41d2-8051-50f6008bd161) sent to the client.
+2024-01-24 12:07:00,223 — __main__ — INFO — Response from client 9fb8584b-395e-4866-8590-605a1c37d2f7: {'client_id': '9fb8584b-395e-4866-8590-605a1c37d2f7', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,224 — __main__ — INFO — Client_id (9fb8584b-395e-4866-8590-605a1c37d2f7) sent to the client.
+2024-01-24 12:07:00,224 — __main__ — INFO — Response from client c1dba1d7-2334-45a8-b771-5fce051fdb6e: {'client_id': 'c1dba1d7-2334-45a8-b771-5fce051fdb6e', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,224 — __main__ — INFO — Client_id (c1dba1d7-2334-45a8-b771-5fce051fdb6e) sent to the client.
+2024-01-24 12:07:00,225 — __main__ — INFO — Response from client faf8e551-410c-4172-beea-5fe44095f788: {'client_id': 'faf8e551-410c-4172-beea-5fe44095f788', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,225 — __main__ — INFO — Client_id (faf8e551-410c-4172-beea-5fe44095f788) sent to the client.
+2024-01-24 12:07:00,226 — __main__ — INFO — Response from client 5506472a-36f6-4a9c-a58f-92d7a1e8a9f6: {'client_id': '5506472a-36f6-4a9c-a58f-92d7a1e8a9f6', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,226 — __main__ — INFO — Client_id (5506472a-36f6-4a9c-a58f-92d7a1e8a9f6) sent to the client.
+2024-01-24 12:07:00,226 — __main__ — INFO — Response from client a5561534-5029-487f-aa34-bf2d5a232e07: {'client_id': 'a5561534-5029-487f-aa34-bf2d5a232e07', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,227 — __main__ — INFO — Client_id (a5561534-5029-487f-aa34-bf2d5a232e07) sent to the client.
+2024-01-24 12:07:00,227 — __main__ — INFO — Response from client 5d8cb9e5-d282-4d0a-baaf-46f3a1c1e240: {'client_id': '5d8cb9e5-d282-4d0a-baaf-46f3a1c1e240', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,227 — __main__ — INFO — Client_id (5d8cb9e5-d282-4d0a-baaf-46f3a1c1e240) sent to the client.
+2024-01-24 12:07:00,228 — __main__ — INFO — Response from client 950cad82-a86e-4b71-a826-070cdb05d0fa: {'client_id': '950cad82-a86e-4b71-a826-070cdb05d0fa', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,228 — __main__ — INFO — Client_id (950cad82-a86e-4b71-a826-070cdb05d0fa) sent to the client.
+2024-01-24 12:07:00,228 — __main__ — INFO — Response from client 7b1740aa-85b1-4551-b444-7397fc0d197d: {'client_id': '7b1740aa-85b1-4551-b444-7397fc0d197d', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,229 — __main__ — INFO — Client_id (7b1740aa-85b1-4551-b444-7397fc0d197d) sent to the client.
+2024-01-24 12:07:00,229 — __main__ — INFO — Response from client bc39b3fb-c36a-4a4f-b0b4-b2e0f702fe0f: {'client_id': 'bc39b3fb-c36a-4a4f-b0b4-b2e0f702fe0f', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,229 — __main__ — INFO — Client_id (bc39b3fb-c36a-4a4f-b0b4-b2e0f702fe0f) sent to the client.
+2024-01-24 12:07:00,229 — __main__ — INFO — Response from client 2819381b-bd49-4f2d-9863-aaa76b6712ec: {'client_id': '2819381b-bd49-4f2d-9863-aaa76b6712ec', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,230 — __main__ — INFO — Client_id (2819381b-bd49-4f2d-9863-aaa76b6712ec) sent to the client.
+2024-01-24 12:07:00,230 — __main__ — INFO — Response from client efe9c156-7095-42c9-82da-ce5ba3698c8f: {'client_id': 'efe9c156-7095-42c9-82da-ce5ba3698c8f', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,230 — __main__ — INFO — Client_id (efe9c156-7095-42c9-82da-ce5ba3698c8f) sent to the client.
+2024-01-24 12:07:00,230 — __main__ — INFO — Response from client 72ed5118-0b13-4b6e-a87f-7d2977b0e230: {'client_id': '72ed5118-0b13-4b6e-a87f-7d2977b0e230', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,231 — __main__ — INFO — Client_id (72ed5118-0b13-4b6e-a87f-7d2977b0e230) sent to the client.
+2024-01-24 12:07:00,231 — __main__ — INFO — Response from client c63d98c8-a06c-4423-8dd9-199f8d3c7c79: {'client_id': 'c63d98c8-a06c-4423-8dd9-199f8d3c7c79', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,231 — __main__ — INFO — Client_id (c63d98c8-a06c-4423-8dd9-199f8d3c7c79) sent to the client.
+2024-01-24 12:07:00,231 — __main__ — INFO — Response from client 6c6f6e3c-1445-4510-b54b-ad2881133952: {'client_id': '6c6f6e3c-1445-4510-b54b-ad2881133952', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,232 — __main__ — INFO — Client_id (6c6f6e3c-1445-4510-b54b-ad2881133952) sent to the client.
+2024-01-24 12:07:00,232 — __main__ — INFO — Response from client b03069b9-f422-4dea-9b83-f627478ec815: {'client_id': 'b03069b9-f422-4dea-9b83-f627478ec815', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,232 — __main__ — INFO — Client_id (b03069b9-f422-4dea-9b83-f627478ec815) sent to the client.
+2024-01-24 12:07:00,232 — __main__ — INFO — Response from client 7dd9d492-367c-479b-960a-31c5713d0315: {'client_id': '7dd9d492-367c-479b-960a-31c5713d0315', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,232 — __main__ — INFO — Client_id (7dd9d492-367c-479b-960a-31c5713d0315) sent to the client.
+2024-01-24 12:07:00,233 — __main__ — INFO — Response from client 6752bc45-11c2-4106-8eaf-fa1970196ae6: {'client_id': '6752bc45-11c2-4106-8eaf-fa1970196ae6', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,233 — __main__ — INFO — Client_id (6752bc45-11c2-4106-8eaf-fa1970196ae6) sent to the client.
+2024-01-24 12:07:00,233 — __main__ — INFO — Response from client b4232fd5-6ef7-482f-a818-7e4127715c6c: {'client_id': 'b4232fd5-6ef7-482f-a818-7e4127715c6c', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,233 — __main__ — INFO — Client_id (b4232fd5-6ef7-482f-a818-7e4127715c6c) sent to the client.
+2024-01-24 12:07:00,234 — __main__ — INFO — Response from client 0436c839-5a8a-457f-b5c8-40d398bed569: {'client_id': '0436c839-5a8a-457f-b5c8-40d398bed569', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,235 — __main__ — INFO — Client_id (0436c839-5a8a-457f-b5c8-40d398bed569) sent to the client.
+2024-01-24 12:07:00,235 — __main__ — INFO — Response from client 88b2a447-c3a4-4430-8664-219fa7c7a93a: {'client_id': '88b2a447-c3a4-4430-8664-219fa7c7a93a', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,235 — __main__ — INFO — Client_id (88b2a447-c3a4-4430-8664-219fa7c7a93a) sent to the client.
+2024-01-24 12:07:00,235 — __main__ — INFO — Response from client 68261839-bb9c-4f37-8290-f41a40b565fa: {'client_id': '68261839-bb9c-4f37-8290-f41a40b565fa', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,236 — __main__ — INFO — Client_id (68261839-bb9c-4f37-8290-f41a40b565fa) sent to the client.
+2024-01-24 12:07:00,236 — __main__ — INFO — Response from client c123573b-583f-4c3e-92be-54b2adf43110: {'client_id': 'c123573b-583f-4c3e-92be-54b2adf43110', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,236 — __main__ — INFO — Client_id (c123573b-583f-4c3e-92be-54b2adf43110) sent to the client.
+2024-01-24 12:07:00,239 — __main__ — INFO — Response from client 2a96480d-759b-40f8-8004-c8b9c2542c92: {'client_id': '2a96480d-759b-40f8-8004-c8b9c2542c92', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,240 — __main__ — INFO — Client_id (2a96480d-759b-40f8-8004-c8b9c2542c92) sent to the client.
+2024-01-24 12:07:00,240 — __main__ — INFO — Response from client 9b16cce3-0835-40e3-99da-2b5b7ee7cc92: {'client_id': '9b16cce3-0835-40e3-99da-2b5b7ee7cc92', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,240 — __main__ — INFO — Client_id (9b16cce3-0835-40e3-99da-2b5b7ee7cc92) sent to the client.
+2024-01-24 12:07:00,240 — __main__ — INFO — Response from client 6b397afb-790d-415a-9585-f123f4a3f17e: {'client_id': '6b397afb-790d-415a-9585-f123f4a3f17e', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,241 — __main__ — INFO — Client_id (6b397afb-790d-415a-9585-f123f4a3f17e) sent to the client.
+2024-01-24 12:07:00,241 — __main__ — INFO — Response from client 819da983-695e-42f7-af5f-470d0d6d8f5a: {'client_id': '819da983-695e-42f7-af5f-470d0d6d8f5a', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,241 — __main__ — INFO — Client_id (819da983-695e-42f7-af5f-470d0d6d8f5a) sent to the client.
+2024-01-24 12:07:00,241 — __main__ — INFO — Response from client 8e4bc366-de15-4e94-9c4a-1d5fa4a3a367: {'client_id': '8e4bc366-de15-4e94-9c4a-1d5fa4a3a367', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,242 — __main__ — INFO — Client_id (8e4bc366-de15-4e94-9c4a-1d5fa4a3a367) sent to the client.
+2024-01-24 12:07:00,242 — __main__ — INFO — Response from client 090c8a27-34cf-45d4-9c4d-25012e1aebd6: {'client_id': '090c8a27-34cf-45d4-9c4d-25012e1aebd6', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,242 — __main__ — INFO — Client_id (090c8a27-34cf-45d4-9c4d-25012e1aebd6) sent to the client.
+2024-01-24 12:07:00,242 — __main__ — INFO — Response from client 76dabca4-690c-4a95-aa02-eb2122053a75: {'client_id': '76dabca4-690c-4a95-aa02-eb2122053a75', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,242 — __main__ — INFO — Client_id (76dabca4-690c-4a95-aa02-eb2122053a75) sent to the client.
+2024-01-24 12:07:00,243 — __main__ — INFO — Response from client ce1b9ea3-eebc-4a59-84f2-1bf6adb4363b: {'client_id': 'ce1b9ea3-eebc-4a59-84f2-1bf6adb4363b', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,243 — __main__ — INFO — Client_id (ce1b9ea3-eebc-4a59-84f2-1bf6adb4363b) sent to the client.
+2024-01-24 12:07:00,243 — __main__ — INFO — Response from client 6a3864cb-18be-46ff-8cfb-73b46ae0b3c0: {'client_id': '6a3864cb-18be-46ff-8cfb-73b46ae0b3c0', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,243 — __main__ — INFO — Client_id (6a3864cb-18be-46ff-8cfb-73b46ae0b3c0) sent to the client.
+2024-01-24 12:07:00,244 — __main__ — INFO — Response from client 974bd629-660e-4eb2-b18a-6dd83874182b: {'client_id': '974bd629-660e-4eb2-b18a-6dd83874182b', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,244 — __main__ — INFO — Client_id (974bd629-660e-4eb2-b18a-6dd83874182b) sent to the client.
+2024-01-24 12:07:00,244 — __main__ — INFO — Response from client 8b5fa49f-795f-4715-a9a2-c12c4495ffe4: {'client_id': '8b5fa49f-795f-4715-a9a2-c12c4495ffe4', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,244 — __main__ — INFO — Client_id (8b5fa49f-795f-4715-a9a2-c12c4495ffe4) sent to the client.
+2024-01-24 12:07:00,245 — __main__ — INFO — Response from client faf30891-afad-4d69-89e7-7f3c563c1ff9: {'client_id': 'faf30891-afad-4d69-89e7-7f3c563c1ff9', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,245 — __main__ — INFO — Client_id (faf30891-afad-4d69-89e7-7f3c563c1ff9) sent to the client.
+2024-01-24 12:07:00,245 — __main__ — INFO — Response from client b53030b0-7c50-4e81-8ebf-d6ef79eb49b1: {'client_id': 'b53030b0-7c50-4e81-8ebf-d6ef79eb49b1', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,245 — __main__ — INFO — Client_id (b53030b0-7c50-4e81-8ebf-d6ef79eb49b1) sent to the client.
+2024-01-24 12:07:00,246 — __main__ — INFO — Response from client 342c2cb3-e72f-462b-9030-38daa56d240f: {'client_id': '342c2cb3-e72f-462b-9030-38daa56d240f', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,246 — __main__ — INFO — Client_id (342c2cb3-e72f-462b-9030-38daa56d240f) sent to the client.
+2024-01-24 12:07:00,246 — __main__ — INFO — Response from client e3bd7917-2281-40e5-8da7-046333807e4a: {'client_id': 'e3bd7917-2281-40e5-8da7-046333807e4a', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,246 — __main__ — INFO — Client_id (e3bd7917-2281-40e5-8da7-046333807e4a) sent to the client.
+2024-01-24 12:07:00,246 — __main__ — INFO — Response from client e13e3920-754f-4265-9cf8-38d777646582: {'client_id': 'e13e3920-754f-4265-9cf8-38d777646582', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,247 — __main__ — INFO — Client_id (e13e3920-754f-4265-9cf8-38d777646582) sent to the client.
+2024-01-24 12:07:00,247 — __main__ — INFO — Response from client a30961cd-001f-4e59-839d-a21f9a6bb493: {'client_id': 'a30961cd-001f-4e59-839d-a21f9a6bb493', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,247 — __main__ — INFO — Client_id (a30961cd-001f-4e59-839d-a21f9a6bb493) sent to the client.
+2024-01-24 12:07:00,247 — __main__ — INFO — Response from client 900f1633-1b94-4943-bbc7-8837dbb2bc8a: {'client_id': '900f1633-1b94-4943-bbc7-8837dbb2bc8a', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,247 — __main__ — INFO — Client_id (900f1633-1b94-4943-bbc7-8837dbb2bc8a) sent to the client.
+2024-01-24 12:07:00,248 — __main__ — INFO — Response from client 37208c20-177c-43a0-81f5-53a5fa7490a6: {'client_id': '37208c20-177c-43a0-81f5-53a5fa7490a6', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,248 — __main__ — INFO — Client_id (37208c20-177c-43a0-81f5-53a5fa7490a6) sent to the client.
+2024-01-24 12:07:00,248 — __main__ — INFO — Response from client e163a14d-8c66-4f91-b328-6ced6f3a81f1: {'client_id': 'e163a14d-8c66-4f91-b328-6ced6f3a81f1', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,248 — __main__ — INFO — Client_id (e163a14d-8c66-4f91-b328-6ced6f3a81f1) sent to the client.
+2024-01-24 12:07:00,248 — __main__ — INFO — Response from client 17b1470b-1878-48e9-a2fc-b205cd8cb723: {'client_id': '17b1470b-1878-48e9-a2fc-b205cd8cb723', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,249 — __main__ — INFO — Client_id (17b1470b-1878-48e9-a2fc-b205cd8cb723) sent to the client.
+2024-01-24 12:07:00,249 — __main__ — INFO — Response from client 9b519d64-0738-4c66-92d1-f81da767d9ad: {'client_id': '9b519d64-0738-4c66-92d1-f81da767d9ad', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,250 — __main__ — INFO — Client_id (9b519d64-0738-4c66-92d1-f81da767d9ad) sent to the client.
+2024-01-24 12:07:00,250 — __main__ — INFO — Response from client 935caac2-78ea-4bae-99d9-6781ebf8f021: {'client_id': '935caac2-78ea-4bae-99d9-6781ebf8f021', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,250 — __main__ — INFO — Client_id (935caac2-78ea-4bae-99d9-6781ebf8f021) sent to the client.
+2024-01-24 12:07:00,250 — __main__ — INFO — Response from client 1bb7e513-7e88-47e3-a337-fd9aad2fb0f7: {'client_id': '1bb7e513-7e88-47e3-a337-fd9aad2fb0f7', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,251 — __main__ — INFO — Client_id (1bb7e513-7e88-47e3-a337-fd9aad2fb0f7) sent to the client.
+2024-01-24 12:07:00,251 — __main__ — INFO — Response from client 3f4d094d-a9cf-46e8-b69c-4180a6a106bc: {'client_id': '3f4d094d-a9cf-46e8-b69c-4180a6a106bc', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,251 — __main__ — INFO — Client_id (3f4d094d-a9cf-46e8-b69c-4180a6a106bc) sent to the client.
+2024-01-24 12:07:00,251 — __main__ — INFO — Response from client 4c1ffb92-5a3d-4463-9ede-1559c7e71d64: {'client_id': '4c1ffb92-5a3d-4463-9ede-1559c7e71d64', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,252 — __main__ — INFO — Client_id (4c1ffb92-5a3d-4463-9ede-1559c7e71d64) sent to the client.
+2024-01-24 12:07:00,252 — __main__ — INFO — Response from client 1d52fa7d-2bf3-47ca-b459-14eed43596c1: {'client_id': '1d52fa7d-2bf3-47ca-b459-14eed43596c1', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,252 — __main__ — INFO — Client_id (1d52fa7d-2bf3-47ca-b459-14eed43596c1) sent to the client.
+2024-01-24 12:07:00,252 — __main__ — INFO — Response from client 06d0ae8c-36f6-4956-b806-578841024fea: {'client_id': '06d0ae8c-36f6-4956-b806-578841024fea', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,253 — __main__ — INFO — Client_id (06d0ae8c-36f6-4956-b806-578841024fea) sent to the client.
+2024-01-24 12:07:00,253 — __main__ — INFO — Response from client 599c4110-1115-46de-a3c9-4023faf4331d: {'client_id': '599c4110-1115-46de-a3c9-4023faf4331d', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,253 — __main__ — INFO — Client_id (599c4110-1115-46de-a3c9-4023faf4331d) sent to the client.
+2024-01-24 12:07:00,253 — __main__ — INFO — Response from client dcdc356f-77b5-409e-80a6-f9af9978faf0: {'client_id': 'dcdc356f-77b5-409e-80a6-f9af9978faf0', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,253 — __main__ — INFO — Client_id (dcdc356f-77b5-409e-80a6-f9af9978faf0) sent to the client.
+2024-01-24 12:07:00,254 — __main__ — INFO — Response from client 9df59774-b897-47ba-860b-f86d4971acf1: {'client_id': '9df59774-b897-47ba-860b-f86d4971acf1', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,254 — __main__ — INFO — Client_id (9df59774-b897-47ba-860b-f86d4971acf1) sent to the client.
+2024-01-24 12:07:00,254 — __main__ — INFO — Response from client e1ffc8c5-7f26-4080-8635-f10b3952c044: {'client_id': 'e1ffc8c5-7f26-4080-8635-f10b3952c044', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,254 — __main__ — INFO — Client_id (e1ffc8c5-7f26-4080-8635-f10b3952c044) sent to the client.
+2024-01-24 12:07:00,254 — __main__ — INFO — Response from client 8632e8f7-af76-440e-8fd1-04c634e9a8e2: {'client_id': '8632e8f7-af76-440e-8fd1-04c634e9a8e2', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,255 — __main__ — INFO — Client_id (8632e8f7-af76-440e-8fd1-04c634e9a8e2) sent to the client.
+2024-01-24 12:07:00,255 — __main__ — INFO — Response from client 79987a7d-39a5-4d40-8003-920a08368337: {'client_id': '79987a7d-39a5-4d40-8003-920a08368337', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,255 — __main__ — INFO — Client_id (79987a7d-39a5-4d40-8003-920a08368337) sent to the client.
+2024-01-24 12:07:00,255 — __main__ — INFO — Response from client 64cb21f1-14a5-4d73-bd1d-ae6827849040: {'client_id': '64cb21f1-14a5-4d73-bd1d-ae6827849040', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,256 — __main__ — INFO — Client_id (64cb21f1-14a5-4d73-bd1d-ae6827849040) sent to the client.
+2024-01-24 12:07:00,256 — __main__ — INFO — Response from client 678fc246-8d9d-4681-af12-90b3ca3050bd: {'client_id': '678fc246-8d9d-4681-af12-90b3ca3050bd', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,256 — __main__ — INFO — Client_id (678fc246-8d9d-4681-af12-90b3ca3050bd) sent to the client.
+2024-01-24 12:07:00,256 — __main__ — INFO — Response from client f8a4a1d8-a9cb-4046-93b1-7dcf82f8b7fd: {'client_id': 'f8a4a1d8-a9cb-4046-93b1-7dcf82f8b7fd', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,256 — __main__ — INFO — Client_id (f8a4a1d8-a9cb-4046-93b1-7dcf82f8b7fd) sent to the client.
+2024-01-24 12:07:00,257 — __main__ — INFO — Response from client 056f0c39-1b94-465a-8560-3d751163cd87: {'client_id': '056f0c39-1b94-465a-8560-3d751163cd87', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,257 — __main__ — INFO — Client_id (056f0c39-1b94-465a-8560-3d751163cd87) sent to the client.
+2024-01-24 12:07:00,257 — __main__ — INFO — Response from client 539f03e7-b14d-4afc-9646-be3746533dd8: {'client_id': '539f03e7-b14d-4afc-9646-be3746533dd8', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,257 — __main__ — INFO — Client_id (539f03e7-b14d-4afc-9646-be3746533dd8) sent to the client.
+2024-01-24 12:07:00,258 — __main__ — INFO — Response from client 83763c08-7d39-40c3-856a-981ff3f15836: {'client_id': '83763c08-7d39-40c3-856a-981ff3f15836', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,258 — __main__ — INFO — Client_id (83763c08-7d39-40c3-856a-981ff3f15836) sent to the client.
+2024-01-24 12:07:00,258 — __main__ — INFO — Response from client 15be2f26-68cf-416c-8e4c-736748cecb6d: {'client_id': '15be2f26-68cf-416c-8e4c-736748cecb6d', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,258 — __main__ — INFO — Client_id (15be2f26-68cf-416c-8e4c-736748cecb6d) sent to the client.
+2024-01-24 12:07:00,258 — __main__ — INFO — Response from client e5b21d36-4791-4c93-8a69-aaebf93a47aa: {'client_id': 'e5b21d36-4791-4c93-8a69-aaebf93a47aa', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,259 — __main__ — INFO — Client_id (e5b21d36-4791-4c93-8a69-aaebf93a47aa) sent to the client.
+2024-01-24 12:07:00,259 — __main__ — INFO — Response from client 1ac9fd94-4e53-4af6-8f03-3940ce50de0b: {'client_id': '1ac9fd94-4e53-4af6-8f03-3940ce50de0b', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,259 — __main__ — INFO — Client_id (1ac9fd94-4e53-4af6-8f03-3940ce50de0b) sent to the client.
+2024-01-24 12:07:00,259 — __main__ — INFO — Response from client 72a49b96-c0e2-4e96-a8c4-0dd719ec48f3: {'client_id': '72a49b96-c0e2-4e96-a8c4-0dd719ec48f3', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,260 — __main__ — INFO — Client_id (72a49b96-c0e2-4e96-a8c4-0dd719ec48f3) sent to the client.
+2024-01-24 12:07:00,260 — __main__ — INFO — Response from client af5c8fb5-31e1-493c-99cb-e7ea0f226b3b: {'client_id': 'af5c8fb5-31e1-493c-99cb-e7ea0f226b3b', 'name': 'Vidoosh', 'age': '70', 'industry': 'publiccvb', 'salary': 'INR50', 'city': 'Chennai'}
+2024-01-24 12:07:00,260 — __main__ — INFO — Client_id (af5c8fb5-31e1-493c-99cb-e7ea0f226b3b) sent to the client.
+2024-01-24 12:07:00,269 — __main__ — INFO — Data with client_id - c026576b-34b8-4eb1-a921-4d057ef0e7f5 sent.
+2024-01-24 12:07:00,270 — __main__ — INFO — Data with client_id - 441a0568-e5b6-4fe7-b2aa-95cf3e78ed4f sent.
+2024-01-24 12:07:00,271 — __main__ — INFO — Data with client_id - d6c1a3a3-9ed9-4092-9d71-e5bd105fb705 sent.
+2024-01-24 12:07:00,273 — __main__ — INFO — Data with client_id - 07877aee-2498-416a-b7dc-4f8e1c6dad5d sent.
+2024-01-24 12:07:00,274 — __main__ — INFO — Data with client_id - e69bfb62-1be9-4f5c-8419-182e9b93b22b sent.
+2024-01-24 12:07:00,275 — __main__ — INFO — Data with client_id - e0173026-7397-4fe3-8799-65184d0aadb9 sent.
+2024-01-24 12:07:00,276 — __main__ — INFO — Data with client_id - 68261839-bb9c-4f37-8290-f41a40b565fa sent.
+2024-01-24 12:07:00,278 — __main__ — INFO — Data with client_id - 9b16cce3-0835-40e3-99da-2b5b7ee7cc92 sent.
+2024-01-24 12:07:00,279 — __main__ — INFO — Data with client_id - 22ab7714-91ee-4b69-9b34-9ae41b565ee3 sent.
+2024-01-24 12:07:00,280 — __main__ — INFO — Data with client_id - dadabda2-37d5-430d-b5f5-a2753ffc3d65 sent.
+2024-01-24 12:07:00,282 — __main__ — INFO — Data with client_id - af4ea7dd-d7e4-4c15-a586-47bfedb4cfa4 sent.
+2024-01-24 12:07:00,283 — __main__ — INFO — Data with client_id - a01e41aa-bf50-4da5-aa07-31a48bfe7681 sent.
+2024-01-24 12:07:00,284 — __main__ — INFO — Data with client_id - e4beaebe-94db-4c38-aaf0-b512ef4c8549 sent.
+2024-01-24 12:07:00,286 — __main__ — INFO — Data with client_id - c1dba1d7-2334-45a8-b771-5fce051fdb6e sent.
+2024-01-24 12:07:00,287 — __main__ — INFO — Data with client_id - 5506472a-36f6-4a9c-a58f-92d7a1e8a9f6 sent.
+2024-01-24 12:07:00,288 — __main__ — INFO — Data with client_id - 5d8cb9e5-d282-4d0a-baaf-46f3a1c1e240 sent.
+2024-01-24 12:07:00,289 — __main__ — INFO — Data with client_id - 2819381b-bd49-4f2d-9863-aaa76b6712ec sent.
+2024-01-24 12:07:00,290 — __main__ — INFO — Data with client_id - 1ac9fd94-4e53-4af6-8f03-3940ce50de0b sent.
+2024-01-24 12:07:00,291 — __main__ — INFO — Data with client_id - 72ed5118-0b13-4b6e-a87f-7d2977b0e230 sent.
+2024-01-24 12:07:00,293 — __main__ — INFO — Data with client_id - b03069b9-f422-4dea-9b83-f627478ec815 sent.
+2024-01-24 12:07:00,294 — __main__ — INFO — Data with client_id - b4232fd5-6ef7-482f-a818-7e4127715c6c sent.
+2024-01-24 12:07:00,295 — __main__ — INFO — Data with client_id - 0436c839-5a8a-457f-b5c8-40d398bed569 sent.
+2024-01-24 12:07:00,296 — __main__ — INFO — Data with client_id - ce1b9ea3-eebc-4a59-84f2-1bf6adb4363b sent.
+2024-01-24 12:07:00,298 — __main__ — INFO — Data with client_id - 8b5fa49f-795f-4715-a9a2-c12c4495ffe4 sent.
+2024-01-24 12:07:00,299 — __main__ — INFO — Data with client_id - 342c2cb3-e72f-462b-9030-38daa56d240f sent.
+2024-01-24 12:07:00,301 — __main__ — INFO — Data with client_id - a30961cd-001f-4e59-839d-a21f9a6bb493 sent.
+2024-01-24 12:07:00,302 — __main__ — INFO — Data with client_id - e163a14d-8c66-4f91-b328-6ced6f3a81f1 sent.
+2024-01-24 12:07:00,303 — __main__ — INFO — Data with client_id - 935caac2-78ea-4bae-99d9-6781ebf8f021 sent.
+2024-01-24 12:07:00,304 — __main__ — INFO — Data with client_id - 4c1ffb92-5a3d-4463-9ede-1559c7e71d64 sent.
+2024-01-24 12:07:00,305 — __main__ — INFO — Data with client_id - 599c4110-1115-46de-a3c9-4023faf4331d sent.
+2024-01-24 12:07:00,307 — __main__ — INFO — Data with client_id - e1ffc8c5-7f26-4080-8635-f10b3952c044 sent.
+2024-01-24 12:07:00,308 — __main__ — INFO — Data with client_id - 64cb21f1-14a5-4d73-bd1d-ae6827849040 sent.
+2024-01-24 12:07:00,309 — __main__ — INFO — Data with client_id - 056f0c39-1b94-465a-8560-3d751163cd87 sent.
+2024-01-24 12:07:00,309 — __main__ — INFO — Data with client_id - 15be2f26-68cf-416c-8e4c-736748cecb6d sent.
+2024-01-24 12:07:00,310 — __main__ — INFO — Data with client_id - 2a5eaf9a-4ef6-4d06-878e-ec75a338da41 sent.
+2024-01-24 12:07:00,311 — __main__ — INFO — Data with client_id - 9109fc40-9d56-4dd1-9af9-76e9fc55ec8b sent.
+2024-01-24 12:07:00,311 — __main__ — INFO — Data with client_id - c420fbc3-a549-481c-afa8-5d685c29a113 sent.
+2024-01-24 12:07:00,312 — __main__ — INFO — Data with client_id - 01dbc27e-053b-4047-8db1-0f2f77ea22e7 sent.
+2024-01-24 12:07:00,313 — __main__ — INFO — Data with client_id - 9116bece-54cd-4fe1-ab42-57f5980975bf sent.
+2024-01-24 12:07:00,313 — __main__ — INFO — Data with client_id - 2a96480d-759b-40f8-8004-c8b9c2542c92 sent.
+2024-01-24 12:07:00,314 — __main__ — INFO — Data with client_id - 819da983-695e-42f7-af5f-470d0d6d8f5a sent.
+2024-01-24 12:07:00,315 — __main__ — INFO — Data with client_id - d15eb6e0-c955-4b48-bc38-c892d16725e9 sent.
+2024-01-24 12:07:00,316 — __main__ — INFO — Data with client_id - 0166f142-f17a-4a57-b91d-b11220f5658f sent.
+2024-01-24 12:07:00,316 — __main__ — INFO — Data with client_id - 2ec5a1b9-03d8-4167-ba85-0d1cd24ed0b2 sent.
+2024-01-24 12:07:00,317 — __main__ — INFO — Data with client_id - d3e7f202-0223-48ea-af28-3df53f2b0d3a sent.
+2024-01-24 12:07:00,318 — __main__ — INFO — Data with client_id - cf1a52d4-a8e4-41d2-8051-50f6008bd161 sent.
+2024-01-24 12:07:00,318 — __main__ — INFO — Data with client_id - faf8e551-410c-4172-beea-5fe44095f788 sent.
+2024-01-24 12:07:00,319 — __main__ — INFO — Data with client_id - e5b21d36-4791-4c93-8a69-aaebf93a47aa sent.
+2024-01-24 12:07:00,320 — __main__ — INFO — Data with client_id - 7b1740aa-85b1-4551-b444-7397fc0d197d sent.
+2024-01-24 12:07:00,320 — __main__ — INFO — Data with client_id - efe9c156-7095-42c9-82da-ce5ba3698c8f sent.
+2024-01-24 12:07:00,321 — __main__ — INFO — Data with client_id - af5c8fb5-31e1-493c-99cb-e7ea0f226b3b sent.
+2024-01-24 12:07:00,322 — __main__ — INFO — Data with client_id - 6c6f6e3c-1445-4510-b54b-ad2881133952 sent.
+2024-01-24 12:07:00,323 — __main__ — INFO — Data with client_id - 6752bc45-11c2-4106-8eaf-fa1970196ae6 sent.
+2024-01-24 12:07:00,323 — __main__ — INFO — Data with client_id - 090c8a27-34cf-45d4-9c4d-25012e1aebd6 sent.
+2024-01-24 12:07:00,324 — __main__ — INFO — Data with client_id - 76dabca4-690c-4a95-aa02-eb2122053a75 sent.
+2024-01-24 12:07:00,325 — __main__ — INFO — Data with client_id - 974bd629-660e-4eb2-b18a-6dd83874182b sent.
+2024-01-24 12:07:00,325 — __main__ — INFO — Data with client_id - b53030b0-7c50-4e81-8ebf-d6ef79eb49b1 sent.
+2024-01-24 12:07:00,326 — __main__ — INFO — Data with client_id - e13e3920-754f-4265-9cf8-38d777646582 sent.
+2024-01-24 12:07:00,327 — __main__ — INFO — Data with client_id - 37208c20-177c-43a0-81f5-53a5fa7490a6 sent.
+2024-01-24 12:07:00,327 — __main__ — INFO — Data with client_id - 9b519d64-0738-4c66-92d1-f81da767d9ad sent.
+2024-01-24 12:07:00,328 — __main__ — INFO — Data with client_id - 3f4d094d-a9cf-46e8-b69c-4180a6a106bc sent.
+2024-01-24 12:07:00,329 — __main__ — INFO — Data with client_id - 06d0ae8c-36f6-4956-b806-578841024fea sent.
+2024-01-24 12:07:00,329 — __main__ — INFO — Data with client_id - 9df59774-b897-47ba-860b-f86d4971acf1 sent.
+2024-01-24 12:07:00,330 — __main__ — INFO — Data with client_id - 79987a7d-39a5-4d40-8003-920a08368337 sent.
+2024-01-24 12:07:00,331 — __main__ — INFO — Data with client_id - f8a4a1d8-a9cb-4046-93b1-7dcf82f8b7fd sent.
+2024-01-24 12:07:00,332 — __main__ — INFO — Data with client_id - 83763c08-7d39-40c3-856a-981ff3f15836 sent.
+2024-01-24 12:07:00,332 — __main__ — INFO — Data with client_id - 58e40b44-fda2-46bc-941c-5f770a10633c sent.
+2024-01-24 12:07:00,333 — __main__ — INFO — Data with client_id - 5655ccfd-3f3c-4842-8637-93f4a7398972 sent.
+2024-01-24 12:07:00,334 — __main__ — INFO — Data with client_id - d2e0ef08-7510-45c3-9e4f-5d55096ada25 sent.
+2024-01-24 12:07:00,335 — __main__ — INFO — Data with client_id - 43f60afa-0014-41ca-8099-a579b19b14be sent.
+2024-01-24 12:07:00,336 — __main__ — INFO — Data with client_id - 6b397afb-790d-415a-9585-f123f4a3f17e sent.
+2024-01-24 12:07:00,337 — __main__ — INFO — Data with client_id - 423521c9-8a5c-43c8-a889-e42da165f1c2 sent.
+2024-01-24 12:07:00,339 — __main__ — INFO — Data with client_id - b5a0174f-4a8d-4c89-8b06-c59d631c0c5c sent.
+2024-01-24 12:07:00,340 — __main__ — INFO — Data with client_id - 9fb8584b-395e-4866-8590-605a1c37d2f7 sent.
+2024-01-24 12:07:00,341 — __main__ — INFO — Data with client_id - 950cad82-a86e-4b71-a826-070cdb05d0fa sent.
+2024-01-24 12:07:00,342 — __main__ — INFO — Data with client_id - 72a49b96-c0e2-4e96-a8c4-0dd719ec48f3 sent.
+2024-01-24 12:07:00,342 — __main__ — INFO — Data with client_id - 7dd9d492-367c-479b-960a-31c5713d0315 sent.
+2024-01-24 12:07:00,344 — __main__ — INFO — Data with client_id - 88b2a447-c3a4-4430-8664-219fa7c7a93a sent.
+2024-01-24 12:07:00,345 — __main__ — INFO — Data with client_id - faf30891-afad-4d69-89e7-7f3c563c1ff9 sent.
+2024-01-24 12:07:00,346 — __main__ — INFO — Data with client_id - 900f1633-1b94-4943-bbc7-8837dbb2bc8a sent.
+2024-01-24 12:07:00,347 — __main__ — INFO — Data with client_id - 1bb7e513-7e88-47e3-a337-fd9aad2fb0f7 sent.
+2024-01-24 12:07:00,347 — __main__ — INFO — Data with client_id - dcdc356f-77b5-409e-80a6-f9af9978faf0 sent.
+2024-01-24 12:07:00,348 — __main__ — INFO — Data with client_id - 678fc246-8d9d-4681-af12-90b3ca3050bd sent.
+2024-01-24 12:07:00,350 — __main__ — INFO — Data with client_id - db62921e-acf4-49d0-b32e-4a9474d70630 sent.
+2024-01-24 12:07:00,351 — __main__ — INFO — Data with client_id - 01219fc7-2b1b-40e4-b558-32404598b8da sent.
+2024-01-24 12:07:00,352 — __main__ — INFO — Data with client_id - b3ce5d62-1362-44d5-831d-1ed1357fda0e sent.
+2024-01-24 12:07:00,353 — __main__ — INFO — Data with client_id - 0d753a5f-9c42-4072-90c5-8e8eb069e56a sent.
+2024-01-24 12:07:00,354 — __main__ — INFO — Data with client_id - bc39b3fb-c36a-4a4f-b0b4-b2e0f702fe0f sent.
+2024-01-24 12:07:00,355 — __main__ — INFO — Data with client_id - 8e4bc366-de15-4e94-9c4a-1d5fa4a3a367 sent.
+2024-01-24 12:07:00,356 — __main__ — INFO — Data with client_id - e3bd7917-2281-40e5-8da7-046333807e4a sent.
+2024-01-24 12:07:00,357 — __main__ — INFO — Data with client_id - 1d52fa7d-2bf3-47ca-b459-14eed43596c1 sent.
+2024-01-24 12:07:00,357 — __main__ — INFO — Data with client_id - 539f03e7-b14d-4afc-9646-be3746533dd8 sent.
+2024-01-24 12:07:00,358 — __main__ — INFO — Data with client_id - c123573b-583f-4c3e-92be-54b2adf43110 sent.
+2024-01-24 12:07:00,359 — __main__ — INFO — Data with client_id - a5561534-5029-487f-aa34-bf2d5a232e07 sent.
+2024-01-24 12:07:00,360 — __main__ — INFO — Data with client_id - 6a3864cb-18be-46ff-8cfb-73b46ae0b3c0 sent.
+2024-01-24 12:07:00,361 — __main__ — INFO — Data with client_id - 8632e8f7-af76-440e-8fd1-04c634e9a8e2 sent.
+2024-01-24 12:07:00,362 — __main__ — INFO — Data with client_id - 237be1fb-905a-47e6-91d0-a5a99d2562d6 sent.
+2024-01-24 12:07:00,363 — __main__ — INFO — Data with client_id - 17b1470b-1878-48e9-a2fc-b205cd8cb723 sent.
+2024-01-24 12:07:00,364 — __main__ — INFO — Data with client_id - c63d98c8-a06c-4423-8dd9-199f8d3c7c79 sent.
+2024-01-24 12:07:00,365 — __main__ — INFO — Data with client_id - 8ece3a7e-7204-4ba2-b58f-b92472da714f sent.

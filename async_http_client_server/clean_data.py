@@ -30,15 +30,3 @@ def clean(data):
     data["name"] = data["name"].title()
 
     return data
-
-
-# if __name__ == "__main__":
-#     d = {
-#             "client_id": "C01",
-#             "name": "name",
-#             "age": "23",
-#             "industry": "industry",
-#             "salary": "1200",
-#             "city": "Tokyo",
-#         }
-#     print(clean(d))
