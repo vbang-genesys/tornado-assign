@@ -21,6 +21,7 @@ def clean(data):
         return "bad request"
 
     data["salary"] = city[str(data["city"])] + data["salary"]
+    data["name"] = data["name"].title()
 
     return data
 
@@ -32,6 +33,6 @@ def clean(data):
 #             "age": "23",
 #             "industry": "industry",
 #             "salary": "1200",
-#             "city": "Tokeyo",
+#             "city": "Tokyo",
 #         }
 #     print(clean(d))
