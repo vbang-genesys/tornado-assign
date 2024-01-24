@@ -12,15 +12,10 @@ Server details:
 
 import asyncio
 import httpx
-import logging
+import log_util
 
-logging.basicConfig(
-    filename="./logs/client_log.log",
-    format="%(levelname)s [%(asctime)s] %(name)s - %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S",
-    encoding="utf-8",
-    level=logging.DEBUG,
-)
+
+logger = log_util.get_logger("./logs/client_log.log", __name__)
 
 
 async def send_request(client, method, url, data=None):
@@ -55,18 +50,14 @@ async def main():
         tasks = [send_request(client, "POST", url, data) for _ in range(100)]
         post_responses = await asyncio.gather(*tasks)
         for i, post_response in enumerate(post_responses, start=1):
-            print(f"Response {i}: {post_response.text}")
+            logger.info(f"Response {i}: {post_response.text}")
         get_tasks = [
             send_request(client, "GET", url + f"?c_id={post_responze.text}")
             for post_responze in post_responses
         ]
         get_responses = await asyncio.gather(*get_tasks)
         for i, get_response in enumerate(get_responses, start=1):
-            print(f"Response {i}: {get_response.text}")
-        # c_id = input("Enter c_id: ")
-        # task = [send_request(client, "GET", url + f"?c_id={c_id}")]
-        # response = await asyncio.gather(*task)
-        # print(response[0].text)
+            logger.info(f"Response {i}: {get_response.text}")
 
 
 if __name__ == "__main__":

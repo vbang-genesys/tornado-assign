@@ -22,18 +22,12 @@ import tornado.ioloop
 import tornado.web
 import json
 import uuid
-import logging
+import log_util
 import clean_data
 import client_database
 
-logging.basicConfig(
-    filename="./logs/server_log.log",
-    format="%(levelname)s [%(asctime)s] %(name)s - %(message)s",
-    datefmt="%Y-%m-%d %H:%M:%S",
-    encoding="utf-8",
-    level=logging.DEBUG,
-)
 
+logger = log_util.get_logger("./logs/server_log.log", __name__)
 
 class MainHandler(tornado.web.RequestHandler):
     async def post(self):
@@ -52,7 +46,7 @@ class MainHandler(tornado.web.RequestHandler):
             salary = data.get("salary", "50000")
             city = data.get("city", "New York")
             if name is None or age is None:
-                logging.error("Bad request: Name/age not mentioned.")
+                logger.error("Bad request: Name/age not mentioned.")
                 self.set_status(400)
                 self.finish({"error": "Name and age are required."})
             else:
@@ -66,17 +60,17 @@ class MainHandler(tornado.web.RequestHandler):
                 }
                 response_data = clean_data.clean(response_data)
                 if response_data == "bad request":
-                    logging.error("Bad request. Unknown city.")
+                    logger.error("Bad request. Unknown city.")
                     self.set_status(400)
                     self.finish({"error": "Input a valid city."})
 
                 else:
                     self.save_response(client_id, response_data)
                     self.finish(client_id)
-                    logging.info(f"Client_id ({client_id}) sent to the client.")
+                    logger.info(f"Client_id ({client_id}) sent to the client.")
 
         except json.JSONDecodeError:
-            logging.error("Bad request. Json dump not found.")
+            logger.error("Bad request. Json dump not found.")
             self.set_status(400)
             self.finish({"Error": "Invalid json"})
 
@@ -92,10 +86,10 @@ class MainHandler(tornado.web.RequestHandler):
         cur = db.cursor()
         lookup = client_database.data_lookup(cur, c_id)
         if lookup:
-            logging.info(f"Data with client_id - {c_id} sent.")
+            logger.info(f"Data with client_id - {c_id} sent.")
             self.finish(str(lookup))
         else:
-            logging.error(f"No client with client_id - {c_id} found.")
+            logger.error(f"No client with client_id - {c_id} found.")
             self.finish({"Error": "Client not found"})
         db.close()
 
@@ -103,7 +97,7 @@ class MainHandler(tornado.web.RequestHandler):
         """Save response in the database"""
         db = client_database.db_connect()
         cur = db.cursor()
-        logging.info(f"Response from client {client_id}: {response_data}")
+        logger.info(f"Response from client {client_id}: {response_data}")
         client_database.insert_data(cur, client_id, response_data)
         db.commit()
         db.close()
@@ -118,5 +112,5 @@ if __name__ == "__main__":
     app = make_app()
     port = 8888
     app.listen(port)
-    logging.info(f"Listening on port {port}")
+    logger.info(f"Listening on port {port}")
     tornado.ioloop.IOLoop.current().start()
