@@ -1,3 +1,9 @@
+"""
+-> Check city
+-> Add currency
+-> Name format
+"""
+
 import json
 
 

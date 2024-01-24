@@ -1,12 +1,11 @@
 """"
 
-Server details:
--> Tornado Server
--> Database / file system
--> Data preprocessing (clean, fill null)
+Client details:
+-> Httpx Client
+-> Send GET and POST requests
 -> Replace print with logging
 -> Add comments and docstrings wherever necessary
--> Apply Black formating to all files 
+-> Apply Black formating to all files
 
 """
 
@@ -34,8 +33,8 @@ async def send_request(client, method, url, data=None):
 
 async def main():
     """
-    -> send the json data using post
-    -> receive the stored data from the server by sending the client_id
+    -> POST the json data to the server
+    -> GET the stored data from the server by sending the client_id
     """
     url = "http://localhost:8888"
     data = {

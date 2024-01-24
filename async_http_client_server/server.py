@@ -2,8 +2,8 @@
 
 Server details:
 -> Tornado Server
--> Database / file system
--> Data preprocessing (clean, fill null)
+-> Store to mysql database
+-> Data preprocessing (clean, fill null, format)
 -> Replace print with logging
 -> Add comments and docstrings wherever necessary
 -> Apply Black formating to all files
@@ -13,7 +13,7 @@ post()
 get()
 clean()
 save_response()
-on_finish()
+log()x
 
 """
 
@@ -28,6 +28,7 @@ import client_database
 
 
 logger = log_util.get_logger("./logs/server_log.log", __name__)
+
 
 class MainHandler(tornado.web.RequestHandler):
     async def post(self):
