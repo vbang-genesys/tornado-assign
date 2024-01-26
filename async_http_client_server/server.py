@@ -13,7 +13,7 @@ post()
 get()
 clean()
 save_response()
-log()x
+log()
 
 """
 

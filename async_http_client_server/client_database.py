@@ -1,13 +1,15 @@
 import MySQLdb
 import json
-
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 def db_connect():
     """
     returns db object
     """
     return MySQLdb.connect(
-        host="localhost", user="root", password="vidoosh123", db="client_data"
+        host="localhost", user="root", password=os.environ.get("db_pass"), db="client_data"
     )
 
 

@@ -4,8 +4,6 @@
 -> Name format
 """
 
-import json
-
 
 def clean(data):
     """
