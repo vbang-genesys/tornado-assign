@@ -41,7 +41,7 @@ async def main():
         "name": "Vidoosh",
         "age": "70",
         "industry": "publiccvb",
-        "salary": "50",
+        "salary": "AUD50",
         "city": "Chennai",
     }
 
