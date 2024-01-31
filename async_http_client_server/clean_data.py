@@ -6,6 +6,7 @@
 
 import re
 
+
 def clean(data):
     """
     -> city in [Paris, Chennai, New York, Dhaka, Budapest, Tokyo, Sydney]
@@ -33,7 +34,6 @@ def clean(data):
 
 
 def clean_salary(cities, city, salary):
-    
     pattern = re.compile("^([A-Z]{3}\s?[0-9]+)$")
 
     if not pattern.match(salary):
@@ -42,17 +42,16 @@ def clean_salary(cities, city, salary):
     else:
         if salary[:3] != cities[city]:
             salary = currency_conversion(cities, city, salary)
-    
+
     return salary
 
 
 def currency_conversion(cities, city, amount):
-
     """
     AUD -> USD -> INR
     1.52    1      83
     """
-    
+
     rate_to_usd = {
         "INR": 83.12,
         "EUR": 0.92,
