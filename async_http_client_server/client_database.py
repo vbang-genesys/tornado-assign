@@ -9,7 +9,7 @@ def db_connect():
     returns db object
     """
     return MySQLdb.connect(
-        host="localhost", user="root", password=os.environ.get("db_pass"), db="client_data"
+        host=os.environ.get("host"), user=os.environ.get("user"), password=os.environ.get("db_pass"), db=os.environ.get("db")
     )
 
 
