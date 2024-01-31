@@ -25,6 +25,7 @@ import uuid
 import log_util
 import clean_data
 import client_database
+import os
 
 
 logger = log_util.get_logger("./logs/server_log.log", __name__)
@@ -111,7 +112,7 @@ def make_app():
 
 if __name__ == "__main__":
     app = make_app()
-    port = 8888
+    port = os.environ.get("port")
     app.listen(port)
     logger.info(f"Listening on port {port}")
     tornado.ioloop.IOLoop.current().start()
