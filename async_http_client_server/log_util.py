@@ -14,7 +14,7 @@ FORMATTER = logging.Formatter("%(asctime)s — %(name)s — %(levelname)s — %(
 def get_file_handler(LOG_FILE):
     """
     -> Use file format
-    -> Transfer logs to new files
+    -> Transfer logs to new file for eveery new day
     Return handler
     """
     file_handler = TimedRotatingFileHandler(LOG_FILE, when="midnight")
