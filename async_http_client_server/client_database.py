@@ -2,20 +2,24 @@ import MySQLdb
 import json
 import os
 from dotenv import load_dotenv
+import mysql.connector.pooling
 
 load_dotenv()
 
 
 def db_connect():
     """
-    returns db object
+    returns a pool of connections
     """
-    return MySQLdb.connect(
-        host=os.environ.get("host"),
-        user=os.environ.get("user"),
-        password=os.environ.get("db_pass"),
-        db=os.environ.get("db"),
-    )
+    dbconfig = {
+        "host" : os.environ.get("host"),
+        "user" : os.environ.get("user"),
+        "password" : os.environ.get("db_pass"),
+        "db" : os.environ.get("db"),
+    }
+    return mysql.connector.pooling.MySQLConnectionPool(pool_name = "mypool",
+                                                      pool_size = 3,
+                                                      **dbconfig)
 
 
 def insert_data(cursor, client_id, data):

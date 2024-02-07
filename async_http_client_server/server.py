@@ -29,6 +29,7 @@ import os
 
 
 logger = log_util.get_logger("./logs/server_log.log", __name__)
+conpool = client_database.db_connect()
 
 
 class MainHandler(tornado.web.RequestHandler):
@@ -67,7 +68,7 @@ class MainHandler(tornado.web.RequestHandler):
                     self.finish({"error": "Input a valid city."})
 
                 else:
-                    self.save_response(client_id, response_data)
+                    self.save_response(conpool, client_id, response_data)
                     self.finish(client_id)
                     logger.info(f"Client_id ({client_id}) sent to the client.")
 
@@ -84,7 +85,7 @@ class MainHandler(tornado.web.RequestHandler):
         -> Send the json to the client
         """
         c_id = str(self.get_argument("c_id"))
-        db = client_database.db_connect()
+        db = conpool.get_connection()
         cur = db.cursor()
         lookup = client_database.data_lookup(cur, c_id)
         if lookup:
@@ -95,9 +96,9 @@ class MainHandler(tornado.web.RequestHandler):
             self.finish({"Error": "Client not found"})
         db.close()
 
-    def save_response(self, client_id, response_data):
+    def save_response(self, conpool, client_id, response_data):
         """Save response in the database"""
-        db = client_database.db_connect()
+        db = conpool.get_connection()
         cur = db.cursor()
         logger.info(f"Response from client {client_id}: {response_data}")
         client_database.insert_data(cur, client_id, response_data)
